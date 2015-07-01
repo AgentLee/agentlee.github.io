@@ -89,7 +89,8 @@ body {
 }
 
 .wrapper p {
-	padding: 2% 6%;
+	text-align: center;
+	padding: 5%;
 }
 
 .page_heading {
