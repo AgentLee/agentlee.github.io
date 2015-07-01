@@ -1,17 +1,11 @@
 @font-face {
 	font-family: 'GloriaHallelujah';
-	src: url('../fonts-master/ofl/GloriaHallelujah/GloriaHallelujah.ttf');
-	src: local('GloriaHallelujah'), local('GloriaHallelujah'), url('../fonts-master/ofl/GloriaHallelujah/GloriaHallelujah.ttf') format('truetype');
+	src: url('GloriaHallelujah.ttf');
 }
 
-@font-face {
-	font-family: 'A Love of Thunder';
-	src: url(ALoveofThunder.ttf);
-	font-weight: normal;
-}
 
 body { 
-	font-family: 'A Love of Thunder', 'GloriaHallelujah', helvetica;
+	font-family: 'GloriaHallelujah', helvetica;
 	background-color: #00284F;
 }
 
