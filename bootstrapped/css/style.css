@@ -1,0 +1,145 @@
+body { 
+	font-family: 'Neucha', sans-serif;
+	background-color: #00284F;
+	margin-bottom: 75px;
+}
+
+.navbar-nav a {
+	color: #821;
+}
+
+.navbar-btn:hover {
+	background-color: #921;
+}
+
+.navbar-btn:visited {
+	color: #291;
+}
+
+.jumbotron {
+	font-family: 'Gloria Hallelujah', cursive;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.jumbotron h1 {
+	font-size: 40px;
+}
+
+.bucket {
+	color: #fff;
+}
+
+.page-header {
+	margin-top: 0;
+}
+
+.panel-body {
+	padding-top: 0;
+}
+
+.feature_img {
+	margin-bottom: 15px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #080808;
+}
+
+.footer .container ul {
+	background-color: #080808;
+}
+
+a {
+	margin-top: 10px;
+}
+
+a:hover {
+  color: #877 !important; 
+}
+
+.navbar-brand {
+	font-size: 45px;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.navbar ul {
+	font-size: 25px;
+}
+
+.navbar-toggle {
+	margin-top: 15px;
+}
+
+.navbar-btn:hover {
+	color: #877;
+	background-color: transparent;
+}
+
+.btn {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+  	background-color: #000;
+  	height: 125px;
+  }
+}
+
+.bucket {
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+
+#last {
+	margin-bottom: 100px;
+}
+
+.about {
+	margin-top: 15px;
+	margin-bottom: 75px;
+}
+
+.profile {
+	background-color: #291;
+	height: 300px;
+}
+
+.glyphicon-pencil {
+	color: #fff;
+}
+
+.glyphicon-pencil:hover {
+	color: #877;
+}
+
+.glyphicon-film {
+	color: #fff;
+}
+
+.glyphicon-film:hover {
+	color: #877;
+}
+
+.glyphicon-console {
+	color: #fff;
+}
+
+.glyphicon-console:hover {
+	color: #877;
+}
