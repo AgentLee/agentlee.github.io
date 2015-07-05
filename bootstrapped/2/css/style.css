@@ -1,0 +1,37 @@
+body {
+	font-family: 'Neucha', helvetica, cursive;
+}
+
+/* NAVBAR */
+.navbar-inverse {
+	background-color: #000;
+	border-radius: 0;
+}
+
+/* LOGO */
+.navbar-brand {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 55px;
+	color: #fff !important;
+}
+
+.navbar-brand:hover {
+	color: #877 !important;
+}
+
+/* NAVIGATION */
+.navbar-nav {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.navbar-nav a:hover {
+	color: #877 !important;
+}
+
+.navbar-toggle {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
