@@ -42,7 +42,7 @@ body {
 	background-color: #fff;
 	margin-top: -25px;
 	margin-bottom: -25px;
-	background: url(../images/castle3.jpg) no-repeat center center fixed; 
+	background: url(../images/castle4.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -51,8 +51,8 @@ body {
 }
 
 .jumbo-h1 {
-	margin: 50px 65px;
-	color: #fff !important;
+	margin: 20px 65px;
+	color: #000 !important;
 }
 
 .jumbo-p {
@@ -68,6 +68,7 @@ body {
 	-moz-animation-delay: .5s;
 	-moz-animation-delay: .5s;
 	-animation-delay: .5s;
+	color: #fff !important;
 }
 
 #check1 {
@@ -82,6 +83,7 @@ body {
 	-moz-animation-delay: 1.5s;
 	-moz-animation-delay: 1.5s;
 	-animation-delay: 1.5s;
+	color: #fff !important;
 }
 
 #check2 {
@@ -96,6 +98,7 @@ body {
 	-moz-animation-delay: 2.5s;
 	-moz-animation-delay: 2.5s;
 	-animation-delay: 2.5s;
+	color: #fff !important;
 }
 
 #check3 {
@@ -103,6 +106,21 @@ body {
 	-moz-animation-delay: 4.5s;
 	-moz-animation-delay: 4.5s;
 	-animation-delay: 4.5s;	
+}
+
+#content {
+	margin-top: -350px;
+}
+
+.content {
+	margin-top: 100px;
+	width: 100%;
+	background: none;
+}
+
+#name {
+	margin-top: -50px;
+	color: #fff !important;
 }
 
 /***** F O O T E R *****/
