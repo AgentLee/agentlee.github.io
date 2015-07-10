@@ -125,6 +125,7 @@ body {
 
 .viewPort {
 	margin-top: 30px;
+	background-color: 
 }
 
 .viewPort a {
@@ -136,6 +137,26 @@ body {
 	text-decoration: none;
 	color: #fff !important;
 }
+
+.heading {
+	margin-top: -30px;
+}
+
+/***** P O R T F O L I O *****/
+.jumbo-port {
+	height: 200px;
+}
+
+.port-h1 {
+	color: #fff !important;
+	text-align: center;
+	text-shadow: 0px 7px 14px rgba(0, 0, 0, 1);
+}
+
+.port {
+	margin-bottom: 35px;
+}
+
 
 /***** F O O T E R *****/
 .footer {
