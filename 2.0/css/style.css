@@ -127,6 +127,11 @@ body {
 	margin-top: 30px;
 }
 
+.viewPort a {
+	text-decoration: none;
+	color: #fff !important;
+}
+
 /***** F O O T E R *****/
 .footer {
 	border-style: none !important;
