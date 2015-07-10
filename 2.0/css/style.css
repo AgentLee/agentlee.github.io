@@ -158,6 +158,21 @@ body {
 }
 
 
+/***** A B O U T *****/
+#console {
+	-webkit-animation-delay: .25s;
+	-moz-animation-delay: .25s;
+	-moz-animation-delay: .25s;
+	-animation-delay: .25s;
+}
+
+#disney {
+	-webkit-animation-delay: .75s;
+	-moz-animation-delay: .75s;
+	-moz-animation-delay: .75s;
+	-animation-delay: .75s;
+}
+
 /***** F O O T E R *****/
 .footer {
 	border-style: none !important;
