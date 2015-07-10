@@ -187,6 +187,10 @@ body {
 	-animation-delay: .75s;
 }
 
+.about-stuff {
+	color: #000 !important;
+}
+
 /***** F O O T E R *****/
 .footer {
 	border-style: none !important;
