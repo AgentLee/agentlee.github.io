@@ -109,7 +109,7 @@ body {
 }
 
 #content {
-	margin-top: -350px;
+	margin-top: -400px;
 }
 
 .content {
@@ -121,6 +121,10 @@ body {
 #name {
 	margin-top: -50px;
 	color: #fff !important;
+}
+
+.viewPort {
+	margin-top: 30px;
 }
 
 /***** F O O T E R *****/
