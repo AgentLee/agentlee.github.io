@@ -145,6 +145,11 @@ body {
 /***** P O R T F O L I O *****/
 .jumbo-port {
 	height: 200px;
+	background: url(../images/epcot-sm.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .port-h1 {
@@ -159,6 +164,15 @@ body {
 
 
 /***** A B O U T *****/
+.jumbo-about {
+	height: 200px;
+	background: url(../images/popcentury2.png) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 #console {
 	-webkit-animation-delay: .25s;
 	-moz-animation-delay: .25s;
