@@ -191,6 +191,7 @@ body {
 	color: #000 !important;
 }
 
+
 /***** F O O T E R *****/
 .footer {
 	border-style: none !important;
@@ -207,6 +208,19 @@ body {
 }
 
 .navbar-btn:hover {
+	color: #877 !important;
+}
+
+.navbutton {
+	background-color: #fff !important;
+}
+
+.navbar-text a {
+	color: #fff !important;
+}
+
+.navbar-text a:hover {
+	text-decoration: none;
 	color: #877 !important;
 }
 
