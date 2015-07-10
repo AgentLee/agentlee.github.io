@@ -132,6 +132,11 @@ body {
 	color: #fff !important;
 }
 
+.viewPort a:hover {
+	text-decoration: none;
+	color: #fff !important;
+}
+
 /***** F O O T E R *****/
 .footer {
 	border-style: none !important;
