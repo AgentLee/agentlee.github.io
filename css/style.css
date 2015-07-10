@@ -166,7 +166,7 @@ body {
 /***** A B O U T *****/
 .jumbo-about {
 	height: 200px;
-	background: url(../images/popcentury2.png) no-repeat center center; 
+	background: url(../images/popcentury2.png) no-repeat right; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
