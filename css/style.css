@@ -224,6 +224,13 @@ body {
 	color: #877 !important;
 }
 
+
+/***** B L O G S *****/
+#blogPost {
+	margin-left: 65px;
+	margin-right: 65px;
+}
+
 /***** O L D  F O O T E R *****
 .footer {
 	border-style: hidden !important;
