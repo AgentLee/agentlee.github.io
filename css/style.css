@@ -231,6 +231,10 @@ body {
 	margin-right: 65px;
 }
 
+.day {
+	text-align: right;
+}
+
 /***** O L D  F O O T E R *****
 .footer {
 	border-style: hidden !important;
