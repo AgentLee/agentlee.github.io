@@ -1,0 +1,147 @@
+body {
+		padding-top: 40px;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #000;
+    /*background:url(../images/fireworks.png) width:100% center no-repeat; background-attachment: fixed; */
+    /*background-color: #000;*/
+    /*font-family: 'Roboto', 'sans-serif'; */ 
+    /*font-family: 'Source Sans Pro', 'sans-serif';*/
+    /*font-family: 'Lato', 'sans-serif';*/
+    /*font-family: 'Ubunto', 'sans-serif';*/
+	}
+
+.main-container {
+  background-color: #fff;
+}
+
+.navbar-brand {
+  font-family: 'Reem Kufi', 'sans-serif'; 
+	font-size: 300%;
+}
+
+.navbar-nav {
+  font-size: 150%;
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border-style: none;
+  border-color: #82a862;
+}
+.navbar-inverse .navbar-brand {
+  /*color: #565b51;*/
+  color: #000;
+}
+
+.navbar-inverse .navbar-text {
+  color: #000;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #000;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #000;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #000;
+  background-color: #82a862;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #000;
+  background-color: #82a862;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #000;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #281;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #565b51;
+}
+.navbar-inverse .navbar-link {
+  color: #000;
+}
+
+.navbar {
+  padding-top:    15px;
+  padding-bottom: 15px;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #000;
+}
+
+.vertical-center {
+  min-height: 85%;    /* vh might not be supported by all browsers */
+  min-height: 85vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron {
+  background: url(../images/fireworks_opacity.png) center no-repeat;
+  background-size: cover;
+}
+
+.jumbotron-content {
+  color: #000;
+}
+
+.social {
+  margin-top: -5px;
+  font-size: 150%;
+}
+
+.social a {
+  text-decoration: none;
+  color: #000;
+}
+
+.social a:hover {
+  color: #fff;
+}
+
+
+/* portfolio stuff */
+.sub-nav {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.content {
+  text-align: left;
+}
+
+
+
+
+
+
+/* about stuff */
+.main-bucket {
+}
+
+.sub-bucket {
+  padding-top: 30px;
+  width: 100%;
+  background-color: #291;
+  background-size: cover;
+}
+
+#profile {
+  height: 300px;
+}
