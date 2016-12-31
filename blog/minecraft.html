@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog | Jon Lee</title>
+
+<!-- B O O T S T R A P -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	-->
+
+	<link rel = "stylesheet" type = "text/css" href = "../style/style.css">
+	<!--<link rel = "stylesheet" href = "style/animate.css">-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900|Source+Sans+Pro:400,900|Lato:400,900|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Frijole|Reem+Kufi" rel="stylesheet">
+
+	<script src = "scripts/scrollFade.js"></script>
+</head>
+
+<body data-spy = "scroll" data-target = "#my-navbar">
+
+<!-- N A V B A R -->
+<div class = "main-container">
+	<nav class = "navbar navbar-inverse navbar-fixed-top" id = "my-navbar">
+		<div class = "container">
+			<div class = "navbar-header">	
+				<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbar-collapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<a href = "../index.html" class = "navbar-brand">JON LEE</a>
+			</div> <!-- end navbar header -->
+			<div class = "collapse navbar-collapse" id = "navbar-collapse">
+				<!--<a href = "#" class = "btn btn-info navbar-btn navbar-right">Navbar Button</a>-->
+				<ul class = "nav navbar-nav navbar-right">
+					<!--<li><a href = "about.html">about</a></li>-->
+					<li><a href = "../portfolio.html">portfolio</a></li>
+					<li><a href = "JonLee_Resume_S17.pdf" target="blank">resume</a></li>
+					<li class = "active-link"><a href = "../blog.html">blog</a></li>
+				</ul>
+			</div> <!-- end navbar collapse -->
+		</div> <!-- end container -->
+	</nav>
+
+<!-- E N D  N A V B A R -->
+
+<div class = "container">
+	<div class = "row">
+		<div class = "col-md-12">
+			<h1 class = "sub-nav">
+				Mini Minecraft
+			</h1>
+			<hr>
+		</div>
+	</div>	
+
+	<div class = "row">
+		<div class = "col-md-12">
+			<p>
+				<center style = "font-size:18px;">
+				In teams of 3, we were tasked to recreate a lite version of the hit game Minecraft. Each team member had to develop different parts of the game, Perlin Terrain, Efficient Terrain Rendering, etc. Described below are my parts of our Mini-Minecraft final project.
+				</center>
+			</p>
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2>Milestone 1: Terrain Collisions and Physics <small>11/21/16</small></h2>
+		</div>
+	</div>	
+
+	<div class = "row">
+		<div class = "col-md-8">
+			<h3 class = "feature">Block Interaction</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Like in the original Minecraft, our version allows the user to destroy and create blocks. To achieve block deletion, I implemented basic Raymarching. 
+				<br>
+				Utilizing the following equation for finding a point on a ray:
+				<br>
+				<center>
+					<code>point = eye + (t * direction)</code>
+				</center>
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				where the eye is the current position and the direction is fixed to the center of the screen where the crosshair lies. I iterate through each block in the list and compare the point on the ray to it. Each iteration increases the t value by <var>.1</var> to attempt to move closer a block. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Future Improvements
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				My current implementation isn't as efficient as I would like. It currently runs at <code>O(n<sup>2</sup>)</code>. When textures are added and the world expands, iterating through the blocklist causes the game to slow immensely as I saw in Milestone 2.
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Destroying Blocks</h4>
+			<img class = "gif" src = "images/minecraft/DeleteBlock.gif">
+		</div>
+
+		<div class = "col-md-8">
+			<br>
+			<br>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Due to time constraints, I implemented a fairly simple way to add blocks to the world. The specifications were to place the block to the nearest available position. Blocks are added to the blocklist based on the current position and a slight offset.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Future Improvements
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				My current implementation isn't as efficient as I would like. It currently runs at <code>O(n<sup>2</sup>)</code>. When textures are added and the world expands, iterating through the blocklist causes the game to slow immensely as I saw in Milestone 2.
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+		<h4 class = "gif-text">Creating Blocks</h4>
+			<img class = "gif" src = "images/minecraft/AddBlock.gif">
+		</div>		
+	</div>
+
+</div> <!-- end main container -->
+
+<!-- S C R I P T S -->
+	<script src = "https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--<script src = "scripts/scroll.js"></script>-->
+	<!--<script src = "scripts/scrollFade.js"></script>-->
+</body>
+</html>
