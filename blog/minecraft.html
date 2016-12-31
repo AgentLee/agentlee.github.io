@@ -65,15 +65,29 @@
 				</center>
 			</p>
 		</div>
+
+		<div class = "milestone-nav">
+			<center>
+				<button type = "button" class = "btn btn-secondary">
+					<a href = "#mm01">Milestone 1</a>
+				</button>
+				<button type = "button" class = "btn btn-secondary">
+					<a href = "#mm02">Milestone 2</a>
+				</button>
+				<button type = "button" class = "btn btn-secondary">
+					<a href = "mm03">Milestone 3</a>
+				</button>
+			</center>
+		</div>
 	</div>
 
+<!--		MILESTONE 1 		-->
 	<div class = "row">
 		<div class = "col-md-12">
 			<h2>Milestone 1: Terrain Collisions and Physics <small>11/21/16</small></h2>
 		</div>
-	</div>	
 
-	<div class = "row">
+<!--		BLOCK INTERACTION 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Block Interaction</h3>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
@@ -94,6 +108,9 @@
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				My current implementation isn't as efficient as I would like. It currently runs at <code>O(n<sup>2</sup>)</code>. When textures are added and the world expands, iterating through the blocklist causes the game to slow immensely as I saw in Milestone 2.
 			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Another feature I want to add is outlining which block the player wants to destroy. I implemented a similar feature in the half-edge mesh project where the user can select various edges of a mesh.
+			</p>
 		</div>
 
 		<div class = "col-md-4">
@@ -111,15 +128,114 @@
 				Future Improvements
 			</p>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				My current implementation isn't as efficient as I would like. It currently runs at <code>O(n<sup>2</sup>)</code>. When textures are added and the world expands, iterating through the blocklist causes the game to slow immensely as I saw in Milestone 2.
+				I would like to have a more robust way of checking where to add blocks. Right now it doesn't take into account if there already exists a block in the spot the player wants to put a block.
 			</p>
 		</div>
 
 		<div class = "col-md-4">
-		<h4 class = "gif-text">Creating Blocks</h4>
+			<h4 class = "gif-text">Creating Blocks</h4>
 			<img class = "gif" src = "images/minecraft/AddBlock.gif">
-		</div>		
+		</div>	
+
+<!--		TERRAIN COLLISIONS 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Terrain Collisions and Physics</h3>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Gravity was a simple implementation. I just multiplied the player's velocity of the <var>y</var> component by <var>-9.8</var>.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				However collisions were a difficult task.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				In the gif, the player (the blue rectangle) walks along the staggered terrain and then falls when it doesn't detect any ground. It would also fall slightly if there was a discrepency in block heights. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Using the player position, I used an offset of <var>2</var> in the <var>y</var> direction. This gets me the maximum <var>y</var> value and I can use box-box intersection.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				I iterated through the blocklist and compared the player position to the blocks using box-box intersection testing. Unfortunately this didn't work as nicely when we merged together our code and I had an actual terrain to walk on. However, the player does detect blocks that it hits whether you go forward, backward, left, or right. When it does, I bounce the player back to before it collides with the block.
+			</p>
+		</div>	
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Gravity</h4>
+			<img class = "gif" src = "images/minecraft/Gravity.gif">
+		</div>
+
+		<!-- get gif of collision -->
 	</div>
+
+<!--		MILESTONE 2 		-->
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2>Milestone 2: L-System River Generation and Sandbox Camera Mode <small>12/5/16</small></h2>
+		</div>
+
+<!--		L-SYSTEM RIVER 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">River Generation</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				add stuff here
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Sad River</h4>
+			<img class = "gif" src = "images/minecraft/River.png">
+		</div>
+
+<!--		SANDBOX CAMERA 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Sandbox Mode</h3>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				add stuff here
+			</p>
+		</div>	
+
+		<div class = "col-md-4">
+		</div>
+	</div>	
+
+<!--		MILESTONE 3 		-->
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2>Milestone 3: Special Features<small> 12/14/16</small></h2>
+		</div>
+
+<!--		STEERING NPC 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Steering NPC</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				add stuff here
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+		</div>
+
+<!--		SOUNDS 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Sounds</h3>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				add stuff here
+			</p>
+		</div>	
+
+<!--		DANCE CHOREOGRAPHY 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Dance Thriller Spectacular</h3>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				add stuff here
+			</p>
+		</div>	
+
+		<div class = "col-md-4">
+		</div>
+	</div>	
 
 </div> <!-- end main container -->
 
