@@ -87,6 +87,52 @@
 			<h2>Milestone 1: Terrain Collisions and Physics <small>11/21/16</small></h2>
 		</div>
 
+<!--		CAMERA AND PLAYER CONTROL 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Camera and Player Control</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				One of the issues that I found was that it was incredibly difficult to control the camera when the cursor movse off the window. To combat this, I locked the cursor to the center of the screen. To get the center, I divided the camera width and height by 2 and manually set the cursor after orienting the view. Then this caused the cursor to spaz at the center and was really distracting. So I added a built in QT function <code>setOverrideCursor(QCursor(Qt::BlankCursor))</code> to hide it.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				To orient the camera, I implemented the Polar Coordinates Pivot Model. I achieved this by keeping a global rotation variable and subtracted it from the current point by component. The difference represents the angles <var>&Phi;</var> (<var>y</var> rotation) and <var>&theta;</var> (<var>x</var> rotation). 
+			</p>
+			<!--
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				<code>
+					&phi; = curr.y - global.y;
+					<br>
+					clamp(&phi;); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &phi; = (-90, 90)
+					<br>
+					rotateCameraAboutRight(&phi;);
+					<br>
+					<br>
+					&theta; = curr.x - global.x;
+					<br>
+					clamp(&theta;); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &theta; = [0, 360)
+					<br>
+					rotateCameraAboutUp(&theta;);
+					<br>
+					<br>
+					// set global to &theta; and &phi;
+					<br>
+					global.x = &theta;
+					<br>
+					global.y = &phi;
+				</code>
+				-->
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				The standard <code>W,A,S,D</code> keys are used to move the player as well as <code>Q,E</code> to move up and down. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				<code>Left Mouse</code> - Destroy Block
+				<br>
+				<code>Right Mouse</code> - Add Block
+				<br>	
+				Block interaction is discussed in more detail below.
+			</p>
+		</div>
+
 <!--		BLOCK INTERACTION 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Block Interaction</h3>
@@ -166,17 +212,42 @@
 		<!-- get gif of collision -->
 	</div>
 
+	<div class = "row">
+		<div class = "col-md-12">
+			<hr>
+		</div>
+	</div>
+
 <!--		MILESTONE 2 		-->
 	<div class = "row">
 		<div class = "col-md-12">
 			<h2>Milestone 2: L-System River Generation and Sandbox Camera Mode <small>12/5/16</small></h2>
 		</div>
 
+		<div class = "col-md-8">
+			<h3 class = "feature">Milestone 1 Updates</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				- Moving the player with a slower velocity rate 
+				<br>
+				- Added <code>updatePlayer()</code>: use flags when user presses <code>W,A,S,D</code> and update the player based on new velocity
+				<br>
+				- Attempted to fix collisions based on the new Perlin Terrain... :(
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+		</div>
+
+
 <!--		L-SYSTEM RIVER 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">River Generation</h3>
+			<br>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				add stuff here
+				I struggled with this part this week. It wasn't trying to generate an L-System that was hard, but it was trying to work with how the terrain is generated. My idea was to trace out the path of the river (which is what you see in blue in the picture) before carving it out of the terrain.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				
 			</p>
 		</div>
 
@@ -185,12 +256,26 @@
 			<img class = "gif" src = "images/minecraft/River.png">
 		</div>
 
+		<div class = "col-md-8">
+			<br>
+			<br>
+			<br>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				This opened an unfortunate can of worms. When I tried to delete blocks, the block would be removed from the blocklist BUT it would still be rendered on screen. Oddly enough when I tried to delete an entire row of blocks, it would work 90% of the way...but would leave some there. Obviously this caused problems for when players <code>left-click</code> and try to delete blocks or add blocks. 
+			</p>
+		</div>	
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Deletion Fail</h4>
+			<img class = "gif" src = "images/minecraft/DeleteFail.png">
+		</div>
+
 <!--		SANDBOX CAMERA 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Sandbox Mode</h3>
 
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				add stuff here
+				I had implemented a similar mode in Milestone 1. When the player presses <var>F</var>, the camera toggles between 
 			</p>
 		</div>	
 
