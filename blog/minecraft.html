@@ -90,6 +90,7 @@
 <!--		CAMERA AND PLAYER CONTROL 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Camera and Player Control</h3>
+			<br>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				One of the issues that I found was that it was incredibly difficult to control the camera when the cursor movse off the window. To combat this, I locked the cursor to the center of the screen. To get the center, I divided the camera width and height by 2 and manually set the cursor after orienting the view. Then this caused the cursor to spaz at the center and was really distracting. So I added a built in QT function <code>setOverrideCursor(QCursor(Qt::BlankCursor))</code> to hide it.
 			</p>
@@ -125,9 +126,9 @@
 				The standard <code>W,A,S,D</code> keys are used to move the player as well as <code>Q,E</code> to move up and down. 
 			</p>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				<code>Left Mouse</code> - Destroy Block
+				<code>Left Click</code> - Destroy Block
 				<br>
-				<code>Right Mouse</code> - Add Block
+				<code>Right Click</code> - Add Block
 				<br>	
 				Block interaction is discussed in more detail below.
 			</p>
@@ -136,6 +137,7 @@
 <!--		BLOCK INTERACTION 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Block Interaction</h3>
+			<br>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				Like in the original Minecraft, our version allows the user to destroy and create blocks. To achieve block deletion, I implemented basic Raymarching. 
 				<br>
@@ -186,7 +188,7 @@
 <!--		TERRAIN COLLISIONS 		-->
 		<div class = "col-md-8">
 			<h3 class = "feature">Terrain Collisions and Physics</h3>
-
+			<br>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				Gravity was a simple implementation. I just multiplied the player's velocity of the <var>y</var> component by <var>-9.8</var>.
 			</p>
@@ -247,7 +249,22 @@
 				I struggled with this part this week. It wasn't trying to generate an L-System that was hard, but it was trying to work with how the terrain is generated. My idea was to trace out the path of the river (which is what you see in blue in the picture) before carving it out of the terrain.
 			</p>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				
+				For the L-System I used a basic one that was presented in class:
+				<br>
+				<code>
+					Rule: X -> S[-FX]+FX
+					<br>
+					F: draw a branch
+					<br>
+					-/+: turn (-/+) 45 degrees
+					<br>
+					S: return to this point
+				</code>
+				<br>
+				After seeing how slow it was to parse the axiom and then change the blocks, I now understand that L-System parsing is just an abstract concept. &#128517;
+				<br>
+				<br>
+				The idea was to delete all the blocks that are within the blue and then add water blocks to generate a river. 
 			</p>
 		</div>
 
@@ -258,28 +275,29 @@
 
 		<div class = "col-md-8">
 			<br>
-			<br>
-			<br>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				This opened an unfortunate can of worms. When I tried to delete blocks, the block would be removed from the blocklist BUT it would still be rendered on screen. Oddly enough when I tried to delete an entire row of blocks, it would work 90% of the way...but would leave some there. Obviously this caused problems for when players <code>left-click</code> and try to delete blocks or add blocks. 
 			</p>
+
+<!--		SANDBOX CAMERA 		-->
+			<h3 class = "feature">Sandbox Mode</h3>
+			<br>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				I had implemented a similar mode in Milestone 1. I had created a player block, which you can see in the gravity gif, that you can control from third person. One of my friends suggested to do this to help debug collisions, which was a great tip.
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+			 	So to implement the required feature I just made it so the player can toggle between modes. When the player presses <var>F</var>, the camera toggles between first person and a flyby camera. A flag is also used to draw and undraw the player block. The player block is only drawn when the flyby camera is toggled on. Essentially, the camera is just to look around the scene and does not actually move the player so I can further debug different developments. 
+		 	</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				In the gif, the player looks around then presses <var>F</var>. The player moves the camera out and looks at the red block that represents the player.
+		 	</p>
 		</div>	
 
 		<div class = "col-md-4">
 			<h4 class = "gif-text">Deletion Fail</h4>
 			<img class = "gif" src = "images/minecraft/DeleteFail.png">
-		</div>
 
-<!--		SANDBOX CAMERA 		-->
-		<div class = "col-md-8">
-			<h3 class = "feature">Sandbox Mode</h3>
-
-			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				I had implemented a similar mode in Milestone 1. When the player presses <var>F</var>, the camera toggles between 
-			</p>
-		</div>	
-
-		<div class = "col-md-4">
+			<h4 class = "gif-text">Sandbox Camera</h4>
+			<img class = "gif" src = "images/minecraft/Sandbox.gif">
 		</div>
 	</div>	
 
