@@ -173,8 +173,6 @@
 				Due to time constraints, I implemented a fairly simple way to add blocks to the world. The specifications were to place the block to the nearest available position. Blocks are added to the blocklist based on the current position and a slight offset.
 			</p>
 
-			<h3 class = "feature">Future Improvements</h3>
-
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				I would like to have a more robust way of checking where to add blocks. Right now it doesn't take into account if there already exists a block in the spot the player wants to put a block.
 			</p>
@@ -301,9 +299,7 @@
 		</div>
 
 		<div class = "col-md-8">
-			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				Future Improvements
-			</p>
+			<h3 class = "feature">Future Improvements</h3>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				- Fix rendering of blocklist so I can delete/add blocks
 				<br>
@@ -355,7 +351,10 @@
 			<h3 class = "feature">Sounds</h3>
 
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				
+				In the video, you can hear cows mooing and birds chirping. This was rather really simple to implement since Qt has a built in function. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Also, when the user walks, a randomized selection between "Walk Like an Egyptian" and grass sounds are played. I had tried to coordinate the sounds slightly better when walking on grass for each step. 
 			</p>
 		</div>	
 
@@ -364,11 +363,20 @@
 			<h3 class = "feature">Dance Thriller Spectacular</h3>
 
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				add stuff here
+				It was maybe midnight before the final presentations that we came up with this. I forget who said it but someone brought up Michael Jackson and I thought it would be a great idea to "choreograph" a dance sequence for the NPC. When the user presses <code>M</code> all the NPC start to dance. The birds converge to a pyramid if the music is kept on. When the user presses <code>M</code> again, the birds will continue to their randomized goal. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				As a "finale" piece to the presentation, I included "See You Again" where the birds begin to fly away when <code>Z</code> is pressed. 
 			</p>
 		</div>	
 
 		<div class = "col-md-4">
+			<figure>
+				<video width = "100%" controls>
+					<source src = "images/minecraft/Thriller.mp4" type = "video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+			</figure>
 		</div>
 
 		<div class = "col-md-8">
