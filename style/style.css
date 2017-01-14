@@ -205,11 +205,11 @@ img {
   padding-top: 1%;
   background-color: #f5f5f5;
   font-size: 125%;
-}
-
-#footer-blog {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+#footer-blog {
+  position: absolute;   /* had to do this so that footer isn't at the top. need a more dynamic way to do this */
 }
