@@ -53,7 +53,7 @@
 			<h1 class = "sub-nav">
 				Mini Minecraft
 			</h1>
-			<hr>
+			<hr class = "page-div">
 		</div>
 	</div>	
 
@@ -150,9 +150,9 @@
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				where the eye is the current position and the direction is fixed to the center of the screen where the crosshair lies. I iterate through each block in the list and compare the point on the ray to it. Each iteration increases the t value by <var>.1</var> to attempt to move closer a block. 
 			</p>
-			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				Future Improvements
-			</p>
+
+			<h3 class = "feature">Future Improvements</h3>
+
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				My current implementation isn't as efficient as I would like. It currently runs at <code>O(n<sup>2</sup>)</code>. When textures are added and the world expands, iterating through the blocklist causes the game to slow immensely as I saw in Milestone 2.
 			</p>
@@ -172,9 +172,9 @@
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				Due to time constraints, I implemented a fairly simple way to add blocks to the world. The specifications were to place the block to the nearest available position. Blocks are added to the blocklist based on the current position and a slight offset.
 			</p>
-			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				Future Improvements
-			</p>
+
+			<h3 class = "feature">Future Improvements</h3>
+
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
 				I would like to have a more robust way of checking where to add blocks. Right now it doesn't take into account if there already exists a block in the spot the player wants to put a block.
 			</p>
@@ -299,6 +299,19 @@
 			<h4 class = "gif-text">Sandbox Camera</h4>
 			<img class = "gif" src = "images/minecraft/Sandbox.gif">
 		</div>
+
+		<div class = "col-md-8">
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Future Improvements
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				- Fix rendering of blocklist so I can delete/add blocks
+				<br>
+				- Make a more detailed grammar for the L-System for a nicer looking river
+			</p>
+		</div>
+
+		<div class = "col-md-4"></div>
 	</div>	
 
 <!--		MILESTONE 3 		-->
@@ -307,15 +320,34 @@
 			<h2>Milestone 3: Special Features<small> 12/14/16</small></h2>
 		</div>
 
-<!--		STEERING NPC 		-->
+<!-- 		UPDATES 		-->
 		<div class = "col-md-8">
-			<h3 class = "feature">Steering NPC</h3>
+			<h3 class = "feature">Milestone 2 Updates</h3>
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				add stuff here
+				- <code>isGrounded()</code>: Fixed groundedness for the player. I realized that I was using the wrong offset in previous milestones to determine positioning of the player. I also drew the player wrong. The player should be 2 regular sized blocks; in the previous milestone it was slightly larger than 2 blocks.
 			</p>
 		</div>
 
 		<div class = "col-md-4">
+		</div>
+
+<!--		STEERING NPC 		-->
+		<div class = "col-md-8">
+			<h3 class = "feature">Steering NPC</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				I was inspired by the 562 Behaviors assignment to implement steering for different NPC's (cows and birds). I found a very useful <a href = " https://gamedevelopment.tutsplus.com/series/understanding-steering-behaviors--gamedev-12732" target= "blank">tutorial</a> series that helped for 562 as well as this project. I, at least planned to, implement Seek, Arrival, Wander, among others. 
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				I had done a crowd simulator during my undergrad, SteerLite. And for that, I had directed the agents by giving them different goal points that would help them to their final destination. This helped reduce collisions greatly. Because I was pressed for time, I  implemented a similar system for the cows. The two cows moving are given various goals along the terrain. The static cow is meant to follow the player when they move.
+			</p>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				The birds however have a random wandering scheme. When they get to their goal, a new goal is computed within the range of the current world (player doesn't move to expand the world). 
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Wandering Cows</h4>
+			<img class = "gif" src = "images/minecraft/Cows.gif">
 		</div>
 
 <!--		SOUNDS 		-->
@@ -323,7 +355,7 @@
 			<h3 class = "feature">Sounds</h3>
 
 			<p class = "" style="font-size:18px; padding-left: 2.75em;">
-				add stuff here
+				
 			</p>
 		</div>	
 
@@ -337,6 +369,15 @@
 		</div>	
 
 		<div class = "col-md-4">
+		</div>
+
+		<div class = "col-md-8">
+			<h3 class = "feature">Future Improvements</h3>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				- <code>checkCollisions()</code>: I wanted to spend more time on the new special features so I didn't really fix the collisions. I assume that it's the same problem as I had with groundedness so I'll probably come back to this even after the semester.
+				<br>
+				- <code>NPC's</code>: Because collisions were not working 100%, my current implementation is goal directed and doesn't take into account of collisions. I would like to make this more randomized so the NPC's can wander with autogenerated goals. I would also like to have each NPC be aware of its surrounding agents. So that they can avoid each other. I do a naive check for birds where if they have the same goal, a new goal is set. This does not avoid collisions all together but it does help it slightly.
+			</p>
 		</div>
 	</div>	
 
