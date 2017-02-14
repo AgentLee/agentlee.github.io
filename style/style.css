@@ -190,6 +190,15 @@ img {
   font-size: 125%;
 }
 
+.heading {
+  font-size: 125%;
+  text-align: center;
+}
+
+.project-type {
+  font-style: italic;
+}
+
 .footer-nav {
   list-style-type: none;
   margin: 0;
