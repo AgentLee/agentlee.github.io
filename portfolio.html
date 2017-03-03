@@ -73,6 +73,7 @@
 			</div>
 		</div>
 
+
 <!-- breathing room -->
 		<br>
 		<hr>
@@ -80,26 +81,67 @@
 <!-- end breathing room -->
 
 		<div class = "row">
-			<div class = "col-md-3">
-				<figure>
-					<img src = "blog/images/pathtracer/naive/50_cosine.png" style="max-width:100%" class = "gif">
-					<figcaption>Cosine-weighted sampling on Lambertian surfaces. (2500 samples per pixel - 5 bounces)</figcaption>
-				</figure>
-			</div>
-			<div class = "col-md-3">
-				<figure>
-					<img src = "blog/images/pathtracer/naive/50_unif.png" style="max-width:100%" class = "gif">
-					<figcaption>Uniform-weighted sampling on Lambertian surfaces. (2500 samples per pixel - 5 bounces)</figcaption>
-				</figure>
+			<div class = "col-md-6">
+				<div id = "myCarousel" class = "carousel">
+					<ol class = "carousel-indicators">
+						<li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+						<li data-target = "#myCarousel" data-slide-to = "1"></li>
+						<li data-target = "#myCarousel" data-slide-to = "2"></li>
+					</ol>
+
+					<div class = "carousel-inner">
+						<div class = "item active">
+							<center>
+								<img src = "blog/images/pathtracer/naive/50_cosine.png" alt = "Test Scene Direct Lighting">
+								<div class = "carousel-caption"> 
+									<h3 class = "imageCaption">Cornell Box with Direct lighting</h3>
+								</div>
+							</center>
+						</div>
+
+						<div class = "item">
+							<center>
+								<img src = "blog/images/pathtracer/directlighting/cornell_final.png" alt = "Test Scene Direct Lighting">
+								<div class = "carousel-caption"> 
+									<h3 class = "imageCaption">Test Scene with Direct lighting</h3>
+								</div>
+							</center>
+						</div>
+
+						<div class = "item">
+							<center>
+								<img src = "blog/images/pathtracer/naive/specular_4.png" alt = "Test Scene Direct Lighting">
+							</center>
+							
+								<div class = "carousel-caption"> 
+									<h3 class = "imageCaption">Test Scene with Spherical Direct lighting</h3>
+								</div>
+						</div>
+					</div>
+
+					<a class = "carousel-control left" href = "#myCarousel" data-slide = "prev">
+						<b><span class = "icon-prev left"></span></b>
+					</a>
+
+					<a class = "carousel-control right" href = "#myCarousel" data-slide = "next">
+						<b><span class = "icon-next right"></span></b>
+					</a>
+				</div>
 			</div>
 			<div class = "col-md-6 content">
 				<h2>Path Tracer <small>(Spring 2017)</small></h2>
 				<p>
-					Naive Monte Carlo Path Tracer - Advanced Rendering (CIS561)
+					Naive Monte Carlo - Advanced Rendering (CIS561)
 					<br>
-					<br>
-					Numerous amounts of rays are cast in a hemispherical distribution (cosine or uniform) to determine the color of each pixel. The implementation is quite tricky which I will write about in the blog.
-					<br>
+					<ul>
+						<li>Cosine Weighted Sampling</li>
+						<li>Uniform Weighted Sampling</li>
+						<li>Lambertian Surface</li>
+						<li>Oren Nayar Surface</li>
+						<li>Fresnel Dielectrics and Conductors</li>
+						<li>Direct Lighting</li>
+						<li>Specular and Transmission</li>
+					</ul>
 					<br>
 					References:
 					<ul>
@@ -114,6 +156,50 @@
 		<hr>
 		<br>
 <!-- end breathing room -->
+
+<!--
+		<div class = "row">
+			<div class = "col-md-3">
+				<figure>
+					<img src = "blog/images/pathtracer/naive/1pass_cos_updated.png" style="max-width:100%" class = "gif">
+					<figcaption>Cosine-weighted sampling on Lambertian surfaces. (100 samples per pixel - 1 bounce)</figcaption>
+				</figure>
+			</div>
+			<div class = "col-md-3">
+				<figure>
+					<img src = "blog/images/pathtracer/naive/50_cosine.png" style="max-width:100%" class = "gif">
+					<figcaption>Cosine-weighted sampling on Lambertian surfaces. (2500 samples per pixel - 5 bounces)</figcaption>
+				</figure>
+			</div>
+			<div class = "col-md-6 content">
+				<h2>Path Tracer <small>(Spring 2017)</small></h2>
+				<p>
+					Naive Monte Carlo Path Tracer - Advanced Rendering (CIS561)
+					<br>
+					<br>
+					Numerous amounts of rays are cast in a hemispherical distribution (cosine or uniform) to determine the color of each pixel. The implementation is quite tricky which I will write about in the blog.
+					<br>
+					<br>
+					Implemented:
+					<ul>
+						<li>Cosine Weighted Sampling</li>
+						<li>Uniform Weighted Sampling</li>
+						<li>Lambertian Surface</li>
+						<li>Oren Nayar Surface</li>
+					</ul>
+					<br>
+					References:
+					<ul>
+						<li><a href = "http://www.pbrt.org/" target = "blank">Physically Based Rendering: From Theory to Implementation</a></li>
+					</ul>
+				</p>
+			</div>
+		</div>	
+
+		<br>
+		<hr>
+		<br>
+end breathing room -->
 
 		<div class = "row">
 			<div class = "col-md-3">
@@ -278,7 +364,7 @@
 			<div class = "col-md-6 content">
 				<h2>Walk Cycle <small>(Fall 2016)</small></h2>
 				<p>
-					This was one part of the CIS562 (Computer Animation) Particle System Assignment. We weren't allowed to use the built in fireworks systems in Houdini. Instead we were instructed to create the fireworks from scratch.
+					This was one part of the CIS562 (Computer Animation) Motion Capture and Animation assignment. We had programmed an FK and IK system prior to this; the emphasis of the assignment was to see how animators utilize the rig.
 				</p>
 			</div>
 		</div>				
