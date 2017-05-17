@@ -438,11 +438,11 @@ fieldset[disabled] .btn-success.active {
   border: none;
   min-height: 100%;
   padding: 100px 0;
-  text-align: center;
 }
 .portfolio-modal .modal-content h2 {
   margin: 0;
   font-size: 3em;
+  text-align: center;
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
@@ -519,4 +519,20 @@ header{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.carousel{
+    background: grey;
+    margin-top: 20px;
+}
+.carousel .item img{
+    background: #fffff;
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+.bs-example{
+	margin: 20px;
+}
+
+#whiteBG {
+  background: grey;
 }
