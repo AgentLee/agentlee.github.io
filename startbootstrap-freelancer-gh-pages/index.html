@@ -222,7 +222,7 @@
               <h3>Art/Photography</h3>
               <hr>
           </div>
-          <div class="col-sm-4 portfolio-item">
+          <div class="col-sm-6 portfolio-item">
               <a href="#typography" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                       <div class="caption-content">
@@ -236,7 +236,7 @@
                   <img src="img/portfolio/typography/Coverflow.png" class="img-responsive" alt="Safe" width=100%>
               </a>
           </div>
-          <div class="col-sm-4 portfolio-item">
+          <div class="col-sm-6 portfolio-item">
               <a href="#buzz" class="portfolio-link" data-toggle="modal">
                   <div class="caption">
                       <div class="caption-content">
@@ -245,19 +245,6 @@
                       </div>
                   </div>
                   <img src="img/portfolio/Buzz/BuzzCoverflow.png" class="img-responsive" alt="Safe" width=100%>
-              </a>
-          </div>
-          <div class="col-sm-4 portfolio-item">
-              <a href="#photography" class="portfolio-link" data-toggle="modal">
-                  <div class="caption">
-                      <div class="caption-content">
-                          <i class="fa fa-search-plus fa-3x"></i>
-                          <br>
-                          <br>
-                          <h3>Photography</h3>
-                      </div>
-                  </div>
-                  <img src='https://drscdn.500px.org/photo/166501583/m%3D900/72e7c11d3222f31f5f186ed45c4b9775' height=100% width=100% alt='Dream a Dream by Jon Lee on 500px.com'>
               </a>
           </div>
       </div>
@@ -286,9 +273,8 @@
                     <p>
                     I'm a huge fan of the Houston Rockets and a Lucio main in Overwatch.
                     <p>
-                    Here are some videos of my Disney College Program experience:
+                    Here is a video of my Disney College Program experience:
                     <center>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MiYzu3Xp700" frameborder="0" allowfullscreen></iframe>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/5vj80s6MkAc" frameborder="0" allowfullscreen></iframe>
                       </div>
                     </center>
@@ -668,6 +654,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
@@ -675,6 +662,7 @@
                             <h2>Typography Projects</h2>
                             <hr class="star-primary">
 
+                            <!-- Carousel -->
                             <div class="bs-example">
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                     <!-- Carousel indicators -->
@@ -716,6 +704,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- End Carousel -->
 
                             <p>
                               After we had linked up and decided that we were all going to live
@@ -763,8 +752,49 @@
                             <h2>Buzz Lightyear's Space Ranger Spin XP37 Vehicle</h2>
                             <hr class="star-primary">
 
-                            <img src="img/portfolio/Buzz/backprofile.png" class="img-responsive img-centered" alt="">
-
+                            <!-- Carousel -->
+                            <div class="bs-example">
+                                <div id="BuzzCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Carousel indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#BuzzCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#BuzzCarousel" data-slide-to="1"></li>
+                                        <li data-target="#BuzzCarousel" data-slide-to="2"></li>
+                                        <li data-target="#BuzzCarousel" data-slide-to="3"></li>
+                                        <li data-target="#BuzzCarousel" data-slide-to="4"></li>
+                                        <li data-target="#BuzzCarousel" data-slide-to="5"></li>
+                                    </ol>
+                                    <!-- Wrapper for carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="item active" id = "whiteBG">
+                                          <img src="img/portfolio/Buzz/backprofile.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                        <div class="item">
+                                          <img src="img/portfolio/Buzz/Dash.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                        <div class="item" id = "whiteBG">
+                                          <img src="img/portfolio/Buzz/Front.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                        <div class="item">
+                                          <img src="img/portfolio/Buzz/Laser.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                        <div class="item">
+                                          <img src="img/portfolio/Buzz/Shoulder.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                        <div class="item">
+                                          <img src="img/portfolio/Buzz/Zurg.png" class="img-responsive img-centered" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Carousel controls -->
+                                    <a class="carousel-control left" href="#BuzzCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="carousel-control right" href="#BuzzCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Carousel -->
 
                             <p>
                               This was my first project in 3D Modeling at Penn. It was also the first thing
@@ -784,36 +814,6 @@
                             <ul class="list-inline item-details">
                                 <li>Date:
                                     <strong>September 2016</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Photography -->
-    <div class="portfolio-modal modal fade" id="photography" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Dream a dream</h2>
-                            <hr class="star-primary">
-                            <img src='https://drscdn.500px.org/photo/166501583/m%3D900/72e7c11d3222f31f5f186ed45c4b9775' height=100% width=100% alt='Dream a Dream by Jon Lee on 500px.com'>
-
-                            <ul class="list-inline item-details">
-                                <li>Date:
-                                    <strong>July 2016</strong>
                                 </li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
