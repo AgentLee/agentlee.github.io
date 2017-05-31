@@ -42,7 +42,7 @@ var initGL = function()
   var cube8     = new Cube();
   var cube9     = new Cube();
 
-  var wireCube  = new WireframeCube();
+  // var wireCube  = new WireframeCube();
 
   cube1.create();
   cube2.create();
