@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rubik's Cube</title>
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+    <!-- Scripts -->
+    <script src = "gl.js"></script>
+    <script src = "gl-matrix.js"></script>
+    <script src = "geometry/cube.js"></script>
+  </head>
+  <body onload = "initGL();">
+
+    <div>
+      <canvas id = "mygl">
+        Your browser does not support HTML5
+      </canvas>
+    </div>
+
+
+    <!-- Shaders -->
+    <script src = "glsl/vert.js"></script>
+    <script src = "glsl/frag.js"></script>
+  </body>
+</html>
