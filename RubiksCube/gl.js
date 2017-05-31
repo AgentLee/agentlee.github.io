@@ -29,41 +29,41 @@ var initGL = function()
     return;
   }
 
-  var rubiksCube = new RubiksCube();
+  // var rubiksCube = new RubiksCube();
 
   // Create buffers and attributes
-  // var cube1     = new Cube();
-  // var cube2     = new Cube();
-  // var cube3     = new Cube();
-  // var cube4     = new Cube();
-  // var cube5     = new Cube();
-  // var cube6     = new Cube();
-  // var cube7     = new Cube();
-  // var cube8     = new Cube();
-  // var cube9     = new Cube();
+  var cube1     = new Cube();
+  var cube2     = new Cube();
+  var cube3     = new Cube();
+  var cube4     = new Cube();
+  var cube5     = new Cube();
+  var cube6     = new Cube();
+  var cube7     = new Cube();
+  var cube8     = new Cube();
+  var cube9     = new Cube();
 
   var wireCube  = new WireframeCube();
 
-  // cube1.create();
-  // cube2.create();
-  // cube3.create();
-  // cube4.create();
-  // cube5.create();
-  // cube6.create();
-  // cube7.create();
-  // cube8.create();
-  // cube9.create();
+  cube1.create();
+  cube2.create();
+  cube3.create();
+  cube4.create();
+  cube5.create();
+  cube6.create();
+  cube7.create();
+  cube8.create();
+  cube9.create();
   // wireCube.create();
 
-  // var cube1Unifs    = cube1.createUnifs();
-  // var cube2Unifs    = cube2.createUnifs();
-  // var cube3Unifs    = cube3.createUnifs();
-  // var cube4Unifs    = cube4.createUnifs();
-  // var cube5Unifs    = cube5.createUnifs();
-  // var cube6Unifs    = cube6.createUnifs();
-  // var cube7Unifs    = cube7.createUnifs();
-  // var cube8Unifs    = cube8.createUnifs();
-  // var cube9Unifs    = cube9.createUnifs();
+  var cube1Unifs    = cube1.createUnifs();
+  var cube2Unifs    = cube2.createUnifs();
+  var cube3Unifs    = cube3.createUnifs();
+  var cube4Unifs    = cube4.createUnifs();
+  var cube5Unifs    = cube5.createUnifs();
+  var cube6Unifs    = cube6.createUnifs();
+  var cube7Unifs    = cube7.createUnifs();
+  var cube8Unifs    = cube8.createUnifs();
+  var cube9Unifs    = cube9.createUnifs();
   // var wireCubeUnifs = wireCube.createUnifs();
 
   gl.useProgram(shaderProgram);
@@ -180,15 +180,15 @@ var initGL = function()
   // Translation
   //-----------------------------
   // TODO
-  // var t1 = [ -1.10,   0.0,   0.0];
-  // var t2 = [  1.10,   0.0,   0.0];
-  // var t3 = [ -1.10,   2.10,  0.0];
-  // var t4 = [  1.10,   2.10,  0.0];
-  // var t5 = [  1.10,  -2.10,  0.0];
-  // var t6 = [ -1.10,  -2.10,  0.0];
-  // var t7 = [ -3.30,   0.0,   0.0];
-  // var t8 = [ -3.30,   2.10,  0.0];
-  // var t9 = [ -3.30,  -2.10,  0.0];
+  var t1 = [ -1.10,   0.0,   0.0];
+  var t2 = [  1.10,   0.0,   0.0];
+  var t3 = [ -1.10,   2.10,  0.0];
+  var t4 = [  1.10,   2.10,  0.0];
+  var t5 = [  1.10,  -2.10,  0.0];
+  var t6 = [ -1.10,  -2.10,  0.0];
+  var t7 = [ -3.30,   0.0,   0.0];
+  var t8 = [ -3.30,   2.10,  0.0];
+  var t9 = [ -3.30,  -2.10,  0.0];
 
   // var t1 = [-0.0, -0.0, 0.0];
   // var t2 = [-0.5, -0.5, 0.0];
@@ -269,40 +269,40 @@ var initGL = function()
     setBackgroundColor([0.75, 0.85, 0.8])
     enableCulling();
 
-    // cube1.setUnifs(cube1Unifs, t1);
-    // cube1.draw(cube1.indices, 'triangles');
+    cube1.setUnifs(cube1Unifs, t1);
+    cube1.draw(cube1.indices, 'triangles');
 
     // mat4.identity(modelMatrix);
 
-    // cube2.setUnifs(cube2Unifs, t2);
-    // cube2.draw(cube2.indices, 'triangles');
-    //
-    // cube3.setUnifs(cube3Unifs, t3);
-    // cube3.draw(cube3.indices, 'triangles');
-    //
-    // cube4.setUnifs(cube4Unifs, t4);
-    // cube4.draw(cube4.indices, 'triangles');
-    //
-    // cube5.setUnifs(cube5Unifs, t5);
-    // cube5.draw(cube5.indices, 'triangles');
-    //
-    // cube6.setUnifs(cube6Unifs, t6);
-    // cube6.draw(cube6.indices, 'triangles');
-    //
-    // cube7.setUnifs(cube7Unifs, t7);
-    // cube7.draw(cube7.indices, 'triangles');
-    //
-    // cube8.setUnifs(cube8Unifs, t8);
-    // cube8.draw(cube8.indices, 'triangles');
-    //
-    // cube9.setUnifs(cube9Unifs, t9);
-    // cube9.draw(cube9.indices, 'triangles');
+    cube2.setUnifs(cube2Unifs, t2);
+    cube2.draw(cube2.indices, 'triangles');
+
+    cube3.setUnifs(cube3Unifs, t3);
+    cube3.draw(cube3.indices, 'triangles');
+
+    cube4.setUnifs(cube4Unifs, t4);
+    cube4.draw(cube4.indices, 'triangles');
+
+    cube5.setUnifs(cube5Unifs, t5);
+    cube5.draw(cube5.indices, 'triangles');
+
+    cube6.setUnifs(cube6Unifs, t6);
+    cube6.draw(cube6.indices, 'triangles');
+
+    cube7.setUnifs(cube7Unifs, t7);
+    cube7.draw(cube7.indices, 'triangles');
+
+    cube8.setUnifs(cube8Unifs, t8);
+    cube8.draw(cube8.indices, 'triangles');
+
+    cube9.setUnifs(cube9Unifs, t9);
+    cube9.draw(cube9.indices, 'triangles');
 
     // TODO
-    for(var i = 0; i < 9; i++) {
-      rubiksCube.layer1[i].setUnifs(rubiksCube.layer1Unifs[i], rubiksCube.layer1T[i]);
-      rubiksCube.layer1[i].draw(rubiksCube.layer1[i], 'triangles');
-    }
+    // for(var i = 0; i < 9; i++) {
+    //   rubiksCube.layer1[i].setUnifs(rubiksCube.layer1Unifs[i], rubiksCube.layer1T[i]);
+    //   rubiksCube.layer1[i].draw(rubiksCube.layer1[i], 'triangles');
+    // }
 
     // wireCube.setUnifs(wireCubeUnifs, [0,0,0]);
     // wireCube.draw(wireCube.indices, 'lines');
