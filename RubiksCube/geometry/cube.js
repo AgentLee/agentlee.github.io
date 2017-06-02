@@ -6,6 +6,8 @@ class Cube extends Geometry
     // Call to get buffIdx, buffPos, buffCol
     super();
 
+    this.name;
+
     this.indices =
     [
       0,  1,  2,      0,  2,  3,    // front
@@ -95,62 +97,91 @@ class Cube extends Geometry
       1.0, .57, .17
     ];
 
+    this.colorID = [];
+
+    this.unifs = [];
+
+    // Set to false initially
+    this.selected = false;
+
+    //-----------------------------
+    // Create buffers and attributes
+    //-----------------------------
     this.create = function()
     {
-      //-----------------------------
-      // Create buffers
-      //-----------------------------
+      // Index VBO
+      // Create the buffer
       this.buffIdx = gl.createBuffer();
+      // Tell GPU that we're working on this buffer
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.buffIdx);
+      // Load the buffer with data
       gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(this.indices), gl.STATIC_DRAW);
 
+      // Create the buffer
       this.buffPos = gl.createBuffer();
+      // Tell GPU that we're working on this buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, this.buffPos);
+      // Load the buffer with data
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.vertices), gl.STATIC_DRAW);
 
+      // Create the buffer
       this.buffCol = gl.createBuffer();
+      // Tell GPU that we're working on this buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, this.buffCol);
+      // Load the buffer with data
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.colors), gl.STATIC_DRAW);
 
-      //-----------------------------
-      // Create attributes
-      //-----------------------------
       this.createAttrs();
     }
 
+    //-----------------------------
+    // Create attributes
+    //-----------------------------
     this.createAttrs = function()
     {
-      var attrPos = gl.getAttribLocation(shaderProgram, 'aPos');
-      var attrCol = gl.getAttribLocation(shaderProgram, 'aCol');
+      // Get the attributes from the vertex shader
+      var attrPos         = gl.getAttribLocation(shaderProgram, 'aPos');
+      var attrCol         = gl.getAttribLocation(shaderProgram, 'aCol');
+      var attrColID       = gl.getAttribLocation(shaderProgram, 'aColID');
 
+      // Position VBO
+      // Tell GPU that we're working on this buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, this.buffPos);
+      // Assign the buffer to the attribute
       gl.vertexAttribPointer(attrPos, 3, gl.FLOAT, false, 0, 0);
+      // Allows access to the buffer in the shader
       gl.enableVertexAttribArray(attrPos);
 
+      // Color VBO
+      // Tell GPU that we're working on this buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, this.buffCol);
+      // Assign the buffer to the attribute
       gl.vertexAttribPointer(attrCol, 3, gl.FLOAT, false, 0, 0);
+      // Allows access to the buffer in the shader
       gl.enableVertexAttribArray(attrCol);
     }
 
     this.createUnifs = function()
     {
-      var unifs =
+      this.unifs =
       {
-        unifProj:   gl.getUniformLocation(shaderProgram, 'uProj'),
-        unifView:   gl.getUniformLocation(shaderProgram, 'uView'),
-        unifModel:  gl.getUniformLocation(shaderProgram, 'uModel'),
-        unifTrans:  gl.getUniformLocation(shaderProgram, 'uTrans'),
+        unifProj:     gl.getUniformLocation(shaderProgram, 'uProj'),
+        unifView:     gl.getUniformLocation(shaderProgram, 'uView'),
+        unifModel:    gl.getUniformLocation(shaderProgram, 'uModel'),
+        unifTrans:    gl.getUniformLocation(shaderProgram, 'uTrans'),
+        unifClicked:  gl.getUniformLocation(shaderProgram, 'uClicked'),
+        unifColID:    gl.getUniformLocation(shaderProgram, 'uColID'),
       };
-
-      return unifs;
     }
 
-    this.setUnifs = function(unifs, t)
+    this.setUnifs = function(unifs, t, clicked)
     {
       gl.uniformMatrix4fv(unifs.unifProj, false, projMatrix);
       gl.uniformMatrix4fv(unifs.unifView, false, viewMatrix);
       gl.uniformMatrix4fv(unifs.unifModel, false, modelMatrix);
       gl.uniform4f(unifs.unifTrans, t[0], t[1], t[2], 0.0);
+      gl.uniform1i(unifs.unifClicked, clicked);
+      gl.uniform3f(unifs.unifColID, this.colorID[0], this.colorID[1], this.colorID[2]);
     }
   }
 }

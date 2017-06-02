@@ -4,70 +4,82 @@ class RubiksCube extends Cube
   {
     super();
 
-    this.layer1 = [];
-    this.layer1Unifs = [];
+    this.cubies = [];
 
-    this.layer1T =
+    this.t =
     [
-      -1.10,   0.0,   0.0,
-       1.10,   0.0,   0.0,
-      -1.10,   2.10,  0.0,
-       1.10,   2.10,  0.0,
-       1.10,  -2.10,  0.0,
-      -1.10,  -2.10,  0.0,
-      -3.30,   0.0,   0.0,
-      -3.30,   2.10,  0.0,
-      -3.30,  -2.10,  0.0
+      // Middle
+      [ -2.05,   0.0,   0.0],     // Left
+      [   0.0,   0.0,   0.0],     // Middle
+      [  2.05,   0.0,   0.0],     // Right
+
+      // Back
+      [ -2.05,   0.0,  -4.10],     // Left
+      [   0.0,   0.0,  -4.10],     // Middle
+      [  2.05,   0.0,  -4.10],     // Right
+
+      // Front
+      [ -2.05,   0.0,  -2.05],     // Left
+      [   0.0,   0.0,  -2.05],     // Middle
+      [  2.05,   0.0,  -2.05],     // Right
     ];
 
-    this.createLayer = function()
+    // @param n --> number of cubes to be generated
+    this.create = function(n)
     {
-      for(var i = 0; i < 9; i++) {
-        this.layer1[i] = new Cube();
-        this.layer1[i].create();
-        this.layer1Unifs[i] = this.layer1[i].createUnifs();
+      for(var i = 0; i < n; i++) {
+        // Create a new cube
+        this.cubies[i] = new Cube();
+        // Create its buffers:
+        // buffPos, buffCol, buffIdx
+        this.cubies[i].create();
+        // Create its uniform variables:
+        // unifView, unifProj, unifModel, unifTrans, unifClicked
+        this.cubies[i].createUnifs();
+        // Label the cube
+        this.cubies[i].name = "Cube " + (i + 1);
+        // Give the cube a unique color
+        this.cubies[i].colorID = getColorID(i);
+        // console.log(this.cubies[i].colorID);
       }
     }
 
-    // // Create buffers and attributes
-    // var cube1     = new Cube();
-    // var cube2     = new Cube();
-    // var cube3     = new Cube();
-    // var cube4     = new Cube();
-    // var cube5     = new Cube();
-    // var cube6     = new Cube();
-    // var cube7     = new Cube();
-    // var cube8     = new Cube();
-    // var cube9     = new Cube();
-    //
-    // cube1.create();
-    // cube2.create();
-    // cube3.create();
-    // cube4.create();
-    // cube5.create();
-    // cube6.create();
-    // cube7.create();
-    // cube8.create();
-    // cube9.create();
-    //
-    // var cube1Unifs    = cube1.createUnifs();
-    // var cube2Unifs    = cube2.createUnifs();
-    // var cube3Unifs    = cube3.createUnifs();
-    // var cube4Unifs    = cube4.createUnifs();
-    // var cube5Unifs    = cube5.createUnifs();
-    // var cube6Unifs    = cube6.createUnifs();
-    // var cube7Unifs    = cube7.createUnifs();
-    // var cube8Unifs    = cube8.createUnifs();
-    // var cube9Unifs    = cube9.createUnifs();
-    //
-    // var t1 = [ -1.10,   0.0,   0.0];
-    // var t2 = [  1.10,   0.0,   0.0];
-    // var t3 = [ -1.10,   2.10,  0.0];
-    // var t4 = [  1.10,   2.10,  0.0];
-    // var t5 = [  1.10,  -2.10,  0.0];
-    // var t6 = [ -1.10,  -2.10,  0.0];
-    // var t7 = [ -3.30,   0.0,   0.0];
-    // var t8 = [ -3.30,   2.10,  0.0];
-    // var t9 = [ -3.30,  -2.10,  0.0];
+    this.moveWholeCube = function()
+    {
+      for(var i = 0; i < this.cubies.length; i++) {
+        if(this.cubies.selected == true) {
+          return false;
+        }
+      }
+
+      // console.log("No cubie was selected");
+      return true;
+    }
   }
+}
+
+// TODO
+function getColorID(pos)
+{
+ var color = [];
+
+  switch(pos)
+  {
+    case 0:
+      color = [255.0, 0.0, 0.0];
+      break;
+    case 1:
+      color = GREEN;
+      break;
+    case 2:
+      color = [0, 0, 255];
+      break;
+    default:
+      break;
+  }
+
+  return color;
+
+  // Not sure why this doesn't work
+  // return [255 - pos, 255 - pos, 255 - pos];
 }

@@ -19,10 +19,13 @@ class Geometry
         case 'lines':
           gl.drawElements(gl.LINES, this.indices.length, gl.UNSIGNED_SHORT, 0);
           break;
-          
+
         default:
           break;
       }
+
+      // Clear the buffer for good measure
+      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, null);
     }
   }
 }

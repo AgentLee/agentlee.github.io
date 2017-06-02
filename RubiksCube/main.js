@@ -19,6 +19,9 @@ var modelMatrix;
 var viewMatrix;
 var projMatrix;
 
+// Testing single rotation
+var selectedCubeIndex = -1;
+
 var main = function()
 {
 	console.log('Loading...');
