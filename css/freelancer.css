@@ -514,19 +514,24 @@ div#maincontent {
   outline: none;
 }
 
-header{
+/**************************/
+/*      Home Page         */
+/**************************/
+#homeHeader {
   background-image: url(../img/banner.png);
   background-repeat: no-repeat;
-  /*background-position: center;*/
   background-size: cover;
 }
 
+/**************************/
+/* Carousel for portfolio */
+/**************************/
 .carousel{
     background: grey;
     margin-top: 20px;
 }
 .carousel .item img{
-    background: #fffff;
+    background: #fff;
     margin: 0 auto; /* Align slide image horizontally center */
 }
 .bs-example{
@@ -536,3 +541,57 @@ header{
 #whiteBG {
   background: grey;
 }
+
+/**************************/
+/*         MCPT           */
+/**************************/
+#projectHeader {
+  background-color: #5A6269;
+  color: #fff;
+}
+
+.projects
+{
+  margin-top: 6%;
+}
+
+#MCPT 
+{
+  background-color: #fff;
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#MCPT #title 
+{
+  /* text-align: right; */
+  color: #fff;
+  text-shadow: 0px 0px 30px rgba(150, 150, 150, 1);
+}
+
+#MCPT h1 
+{
+  font-size: 100px;
+}
+
+#MCPT h1 small
+{
+  font-size: 15px;
+  color: #fff;
+  text-shadow: 4px 4px 30px rgba(150, 150, 150, 1);
+  text-transform: lowercase;
+}
+
+#MCPT-features
+{
+  margin-top: -5%;
+}
+
+.featureDesc
+{
+  font-size: 15px;
+}
+
+
+
