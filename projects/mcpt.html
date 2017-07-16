@@ -40,7 +40,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Jon Lee <small style = "font-size:25%;">alpha version</small></a>
+                <a class="navbar-brand" href="../index.html#page-top">Jon Lee <small style = "font-size:25%;">alpha version</small></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,13 +50,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="../index.html#portfolio">Portfolio</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="../index.html#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#connect">Contact</a>
+                        <a href="../index.html#connect">Contact</a>
                     </li>
                     <li>
                         <a href="https://jonleedev.blogspot.com/" target = "blank">Blog</a>
@@ -70,10 +70,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-
-    <!-- <div style="background-image: url(../images/test-background.gif); height: 200px; width: 400px; border: 1px solid black;">Example of a DIV element with a background image:</div>
-    <div style="background-image: url(../images/test-background.gif); height: 200px; width: 400px; border: 1px solid black;"> </div> -->
 
     <!-- Header -->
     <section class = "projects" id = "MCPT">
@@ -90,7 +86,16 @@
     <section class = "projects" id = "MCPT-features">
         <div class = "container">
             <div class = "row">
-                <div class = "col-md-4">
+                <div class = "col-md-12">
+                    Not that the Cornell Box is not exciting, I am in the process of creating more interesting renders.
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-3">
                     <h4>Integrators</h4>
                     <ul>
                         <li>Direct Lighting</li>
@@ -99,15 +104,25 @@
                         <li>Photon Mapping (todo)</li>
                     </ul>
                 </div>
-                <div class = "col-md-4">
-                    <img src = "../img/portfolio/MCPT/integrators/direct.png">
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/direct2.png">
                     <center>Direct Lighting<br>100spp + 5 bounces</center>                 
                 </div>
-                <div class = "col-md-4">
-                    <img src = "../img/portfolio/MCPT/integrators/full.png">   
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/full2.png">   
                     <center>Full Lighting<br>100spp + 5 bounces</center>                 
                 </div>
+
+                <div class = "col-md-3">
+                    <center>
+                        <img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/volumetric.png">   
+                        <br>Full Lighting with Participating Media<br>400spp + 5 bounces
+                    </center>                 
+                </div>
             </div>
+
+            <br>
+            <br>
 
             <div class = "row">
                 <div class = "col-md-8">
@@ -123,43 +138,13 @@
                         <li>Subsurface Scattering (todo)</li>
                     </ul>
                 </div>
-                <div class = "col-md-4">
-                    <!-- Carousel -->
-                    <div class="bs-example">
-                        <div id="implGeo" class="carousel slide" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#implGeo" data-slide-to="0" class="active"></li>
-                                <li data-target="#implGeo" data-slide-to="1"></li>
-                                <li data-target="#implGeo" data-slide-to="2"></li>
-                            </ol>
-                            <!-- Wrapper for carousel items -->
-                            <div class="carousel-inner">
-                                <div class="item active" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/union.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="../img/portfolio/MCPT/csg/intersection.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/difference.png" class="img-responsive img-centered" alt="">
-                                </div>
-                            </div>
-                            <!-- Carousel controls -->
-                            <a class="carousel-control left" href="#implGeo" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="carousel-control right" href="#implGeo" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- End Carousel -->
-                </div>
             </div>
 
+            <br>
+            <br>
+
             <div class = "row">
-                <div class = "col-md-8">
+                <div class = "col-md-3">
                     <h4>Constructive Solid Geometry</h4>
                     <p class = "featureDesc">
                         Handles the three set operations, intersection, union, and subtraction.
@@ -167,85 +152,39 @@
                         You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/taking-constructive-geometry.html" target = "blank">here</a>.
                     </p>
                 </div>
-                <div class = "col-md-4">
-                    <!-- Carousel -->
-                    <div class="bs-example">
-                        <div id="implGeo" class="carousel slide" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#implGeo" data-slide-to="0" class="active"></li>
-                                <li data-target="#implGeo" data-slide-to="1"></li>
-                                <li data-target="#implGeo" data-slide-to="2"></li>
-                            </ol>
-                            <!-- Wrapper for carousel items -->
-                            <div class="carousel-inner">
-                                <div class="item active" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/union.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="../img/portfolio/MCPT/csg/intersection.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/difference.png" class="img-responsive img-centered" alt="">
-                                </div>
-                            </div>
-                            <!-- Carousel controls -->
-                            <a class="carousel-control left" href="#implGeo" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="carousel-control right" href="#implGeo" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- End Carousel -->
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
+                </div>
+
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
+                </div>
+                
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
                 </div>
             </div>
 
+            <br>
+            <br>
+
             <div class = "row">
-                <div class = "col-md-8">
+                <div class = "col-md-4">
                     <h4>Complex Implicit Geometry</h4>
-                    <ul>
-                        <li></li>
-                    </ul>
                 </div>
                 <div class = "col-md-4">
-                    <!-- Carousel -->
-                    <div class="bs-example">
-                        <div id="implGeo" class="carousel slide" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#implGeo" data-slide-to="0" class="active"></li>
-                                <li data-target="#implGeo" data-slide-to="1"></li>
-                                <li data-target="#implGeo" data-slide-to="2"></li>
-                            </ol>
-                            <!-- Wrapper for carousel items -->
-                            <div class="carousel-inner">
-                                <div class="item active" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/union.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="../img/portfolio/MCPT/csg/intersection.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/difference.png" class="img-responsive img-centered" alt="">
-                                </div>
-                            </div>
-                            <!-- Carousel controls -->
-                            <a class="carousel-control left" href="#implGeo" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="carousel-control right" href="#implGeo" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- End Carousel -->
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit3.png"> 
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit2.png"> 
                 </div>
             </div>
 
+            <br>
+            <br>
+
             <div class = "row">
-                <div class = "col-md-8">
+                <div class = "col-md-3">
                     <h4>Lights</h4>
                     <ul>
                         <li>Diffuse Area Lights</li>
@@ -253,60 +192,42 @@
                         <li>Spotlights</li>
                     </ul>
                 </div>
-                <div class = "col-md-4">
-                    <!-- Carousel -->
-                    <div class="bs-example">
-                        <div id="lightsCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#lightsCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#lightsCarousel" data-slide-to="1"></li>
-                                <li data-target="#lightsCarousel" data-slide-to="2"></li>
-                            </ol>
-                            <!-- Wrapper for carousel items -->
-                            <div class="carousel-inner">
-                                <div class="item active" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/union.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="../img/portfolio/MCPT/csg/intersection.png" class="img-responsive img-centered" alt="">
-                                </div>
-                                <div class="item" id = "whiteBG">
-                                    <img src="../img/portfolio/MCPT/csg/difference.png" class="img-responsive img-centered" alt="">
-                                </div>
-                            </div>
-                            <!-- Carousel controls -->
-                            <a class="carousel-control left" href="#lightsCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="carousel-control right" href="#lightsCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- End Carousel -->
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
                 </div>
             </div>
+
+            <br>
+            <br>
 
             <div class = "row">
                 <div class = "col-md-8">
                     <h4>Acceleration Structures</h4>
                     <ul>
                         <li>Bounding Volume Hierarchy (BVH)
-                            <br>
-                            <p>
-                                BVH built in 68ms, Rendered in 1428ms
-                                <br>
-                                No BVH, rendered in 345568ms
-                            </p>
+                            <ul>
+                                <li>BVH Tree built in <b>68ms</b></li>
+                                <li>Rendered with BVH Tree in <b>1428ms</b> (1.4 seconds)</li>
+                                <li>Rendered without BVH Tree in <b>345568ms</b> (5.75 minutes)</li>
+                            </ul>
                         </li>
                         <li>kd-Tree (todo)</li>
                     </ul>
                 </div>
                 <div class = "col-md-4">
-                    <img src = "../img/portfolio/MCPT/wahoo.png">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/wahoo.png">
+                    <center>Direct Lighting<br>1spp</center>
                 </div>
             </div>
+
+            <br>
+            <br>
 
            <div class = "row">
                 <div class = "col-md-4">
@@ -316,14 +237,15 @@
                     </p>
                 </div>
                 <div class = "col-md-4">
-                    <img src = "../img/portfolio/MCPT/variance/highvar.png">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/highvar.png">
                     <center>10,000spp + 5 bounces</center>
                 </div>
                 <div class = "col-md-4">
-                    <img src = "../img/portfolio/MCPT/variance/lowvar.png">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/lowvar.png">
                     <center>1024spp + 5 bounces</center>
                 </div>
             </div>
+        </div>
     </section>
     
 

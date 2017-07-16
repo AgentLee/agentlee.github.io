@@ -587,7 +587,7 @@ div#maincontent {
 
 #MCPT-features
 {
-  margin-top: -5%;
+  margin-top: -6%;
 }
 
 .featureDesc
@@ -595,5 +595,10 @@ div#maincontent {
   font-size: 15px;
 }
 
+.MCPT_renders
+{
+  max-height: 100%;
+  max-width: 100%;
+}
 
 
