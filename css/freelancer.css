@@ -552,7 +552,9 @@ div#maincontent {
 
 .projects
 {
-  margin-top: 6%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #MCPT 
@@ -565,7 +567,7 @@ div#maincontent {
 
 #MCPT #title 
 {
-  /* text-align: right; */
+   text-align: left; 
   color: #fff;
   text-shadow: 0px 0px 30px rgba(150, 150, 150, 1);
 }
