@@ -87,8 +87,10 @@
         <div class = "container">
             <div class = "row">
                 <div class = "col-md-12">
+                    ***Page is still under construction***
+                    <br>
                     Not that the Cornell Box is not exciting, I am in the process of creating more interesting renders.
-                    Click <a href = "">here</a> for more renders.
+                    Click <a href = "../index.html#portfolio">here</a> for more renders.
                 </div>
             </div>
 
@@ -98,11 +100,26 @@
             <div class = "row">
                 <div class = "col-md-3">
                     <h4>Integrators</h4>
+                    R3 supports three different types of integrators to solve for the Light Transport Equation.
                     <ul>
-                        <li>Direct Lighting</li>
-                        <li>Full Lighting</li>
-                        <li>Full Lighting with Participating Media</li>
-                        <li>Photon Mapping (todo)</li>
+                        <li>
+                            Direct Lighting <small>(Light Importance Sampling)</small>
+                        </li>
+                        <li>
+                            Full Lighting <small>(MIS - Light Importance Sampling and BRDF Importance Sampling</small>
+                        </li>
+                        <li>
+                            Full Lighting with Participating Media
+                            <br>
+                            <p class = "featureDesc">
+                                As an extension to the Full Lighting Integrator,
+                                R3 can handle scenes with homogenous volumes. 
+                                <br>
+                                Ray marching was the primary technique used to solve
+                                for the volume in the scene. I detailed more about 
+                                my implementation on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.
+                            </p>
+                        </li>
                     </ul>
                 </div>
                 <div class = "col-md-3">
@@ -119,6 +136,12 @@
                         <img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/volumetric.png">   
                         <br>Full Lighting with Participating Media<br>400spp + 5 bounces
                     </center>                 
+                </div>
+                <div class = "col-md-3">
+                    <!-- DELIBERATELY EMPTY -->
+                </div>
+                <div class = "col-md-9">
+                    <center><img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/volumetric.png"></center>
                 </div>
             </div>
 
@@ -172,6 +195,16 @@
             <div class = "row">
                 <div class = "col-md-4">
                     <h4>Complex Implicit Geometry</h4>
+                    <p class = "featureDesc">
+                        <a href = "http://mathworld.wolfram.com/topics/AlgebraicSurfaces.html" target = "blank">WolframAlpha</a>
+                         provides a lot of different equations that produce solid geometries. 
+                        <br>
+                        <br>
+                        Ray marching was used to find the intersections of the solids. Given a point on the ray,
+                        we can plug in the (x, y, z) values into the equation for the solid. If the equation 
+                        evaluates to 0, or whatever was specified for the shape, the intersection test returns 
+                        true and the point gets rendered.
+                    </p>
                 </div>
                 <div class = "col-md-4">
                     <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit3.png"> 
@@ -218,7 +251,7 @@
                                 <li>Rendered without BVH Tree in <b>345568ms</b> (5.75 minutes)</li>
                             </ul>
                         </li>
-                        <li>kd-Tree (todo)</li>
+                        <li>kd-Tree (in process)</li>
                     </ul>
                 </div>
                 <div class = "col-md-4">
@@ -232,7 +265,7 @@
 
            <div class = "row">
                 <div class = "col-md-4">
-                    <h4>Variance Reduction</h4>
+                    <h4>Variance Reduction <small>via SuperSampling</small></h4>
                     <p class = "featureDesc">
                         You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">here</a>.
                     </p>
