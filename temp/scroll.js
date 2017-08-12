@@ -1,32 +1,23 @@
-// Nav bar scroll
 (function($) 
 {          
     $(document).ready(function()
     {             
-        $('#socialNav').hide();
         $('#jonlee').hide();
         $('#mainNav').show();
 
+        // Nav bar scroll
         // TODO: Use just one nav   
         // BUG: It like jitters after scrolling down.    
         $(window).scroll(function()
         {        
-            var scrollTop = $(this).scrollTop();
-
-            // console.log(3 * $(window).height() / 4);
-            // console.log(.75 * $(window).height());
-
-            var height = .75 * $(window).height();
+            var scrollTop   = $(this).scrollTop();
+            var height      = .75 * $(window).height();
 
             if(scrollTop > height) {
                 $('#jonlee').fadeIn(500);
-                // $('#socialNav').fadeIn(500);
-                // $('#landingNav').fadeOut(250);
             } 
             else {
                 $('#jonlee').fadeOut(200);
-                // $('#socialNav').fadeOut(500);
-                // $('#landingNav').fadeIn(500);
             }
 
             // Changes textdecoration based on position on page
@@ -56,6 +47,28 @@
             else {
                 $('#landingNav').fadeIn(200);                
             }
+        });
+
+        // Smooth Scroll Links
+        $('a[href^="#"]').on('click', 
+        function(e) 
+        {
+            e.preventDefault();
+
+            var target  = this.hash;
+            var $target = $(target);
+
+            // Scroll and show hash
+            $('html, body')
+            .animate(
+            {
+                'scrollTop' : $target.offset().top 
+            }, 
+                1000, 'swing',
+            function()
+            {
+                window.location.hash = target;
+            });
         });
     });
 })(jQuery);

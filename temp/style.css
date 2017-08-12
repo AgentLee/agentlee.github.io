@@ -36,7 +36,7 @@ header
     color: white;
 }
 
-#quote
+#social
 {
     position: fixed;
     bottom: 0;
@@ -52,7 +52,7 @@ header
     color: white;
 }
 
-#landingNav ul
+#socialNav ul
 {
     list-style-type: none;
     margin: 0;
@@ -61,13 +61,13 @@ header
     float: right;
 }
 
-#landingNav li 
+#socialNav li 
 {
     float: left;
     font-size: 25px;
 }
 
-#landingNav li a
+#socialNav li a
 {
     display: block;
     color: white;
@@ -76,7 +76,7 @@ header
     text-decoration: none;
 }
 
-#landingNav li a:hover
+#socialNav li a:hover
 {
     background-color: transparent;
     text-decoration: none;
@@ -212,42 +212,6 @@ footer
 }
 
 #footerNav li a:hover
-{
-    /* background-color: grey; */
-    text-decoration: none;
-    color: black !important;
-}
-
-#socialNav
-{
-    position: fixed;
-    bottom: 0;   
-}
-
-#socialNav ul
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-     /* float: center;    */
-}
-
-#socialNav li:not(#email)
-{
-    float: left;
-    font-size: 25px;
-}
-
-#socialNav li a:not(#email)
-{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 8px 16px;
-}
-
-#socialNav li a:hover
 {
     /* background-color: grey; */
     text-decoration: none;
