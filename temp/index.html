@@ -6,32 +6,34 @@
         <link rel="stylesheet" href="style.css">
 
         <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Kreon" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Saira+Condensed|Saira+Semi+Condensed" rel="stylesheet">
     </head>
 
     <body>
-        <nav>
+        <!-- Navigation -->
+        <nav id = "mainNav">
             <div class = "container">
                 <div class = "row">
                     <div class = "col-md 6">
                         <ul style = "float:left">
-                            <li><a href = "#">Jon Lee</a></li>
+                            <li id = "jonlee"><a href = "#">Jon Lee</a></li>
                         </ul>
                     </div>
 
                     <div class = "col-md 6">
                         <ul>
-                            <li><a href = "#">About</a></li>
-                            <li><a href = "#">Portfolio</a></li>
-                            <li><a href = "#">Contact</a></li>
+                            <li id = "about-item"><a href = "#">About</a>     </li>
+                            <li id = "portfolio-item"><a href = "#">Portfolio</a> </li>
+                            <li id = "contact-item"><a href = "#">Contact</a>   </li>
+                            <li><a href = "#">Blog</a></li>
+                            <li><a href = "#">Resume</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-            
-            
         </nav>
 
+        <!-- Landing Page -->
         <header>
             <h1 id = "home">Jon Lee</h1>
             <h2><small class = "subtext">Software Engineer | Graphics Programmer</small></h2>
@@ -41,12 +43,23 @@
                     <!-- <small class = "subtext">Thinking outside the (Cornell) box.</small> -->
                     <!-- <br> -->
                     <center>
-                        <button type = "button"><span id = "arrow" class = "glyphicon glyphicon-chevron-down"></span></button>
+                        <!-- <button type = "button"><span id = "arrow" class = "glyphicon glyphicon-chevron-down"></span></button> -->
+                        <!-- <h2><small class = "subtext">Software Engineer | Graphics Programmer</small></h2> -->
+                         <nav id = "landingNav">
+                            <ul>
+                                <li class = "social" id = "github"><a href = "#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                <li class = "social" id = "linkedin"><a href = "#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                <li class = "social" id = "youtube"><a href = "#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li class = "social" id = "vimeo"><a href = "#"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+                                <li class = "social" id = "500px"><a href = "#"><i class="fa fa-500px" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </nav> 
                     </center>
                 </h1>
             </div>
         </header>
 
+        <!-- About -->
         <div class = "content" id = "about">
             <div class = "container">
                 <div class = "row">
@@ -58,6 +71,11 @@
                         </p>
 
                         <p>
+                            My interests include rendering algorithms and full stack web development.
+                            I am also interested in creating motion graphics and special effects.
+                        </p>
+
+                        <p>
                             In 2016, I participated in the Disney College Program at
                             Walt Disney World. 
                             I was a cast member at Casey's Corner and Tomorrowland Terrace
@@ -72,45 +90,50 @@
             </div>
         </div>
 
+        <!-- Portfolio -->
         <div class = "content" id = "portfolio">
             <div class = "container">
                 <div class = "row">
-                    <div class = "col-md-9">
-                        <h1>Hi, I'm Jon.</h1>
-                        <p>
-                            I'm currently a grad student at the University of Pennsylvania
-                            studying Computer Graphics and Game Technology.
-                        </p>
-
-                        <p>
-                            In 2016, I participated in the Disney College Program at
-                            Walt Disney World. 
-                            I was a cast member at Casey's Corner and Tomorrowland Terrace
-                            at the Magic Kingdom.
-                        </p>
-                    </div>
-
-                    <div class = "col-md-3">
-                        <img src = "images/profile.jpg" class = "img-circle" id = "profile-img">
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
-        <footer>
+        <!-- Contact -->
+        <div class = "content" id = "contact">
             <div class = "container">
                 <div class = "row">
-                    <div class = "col-md-3">
-                        Jon Lee 2017
-                    </div>
-                    <div class = "col-md-9">
-                    </div>
+                    
                 </div>
             </div>
+        </div>
+
+        <!-- Footer (Self explanatory) -->
+        <footer>
+            <nav id = "footerNav">
+                <div class = "container">
+                    <div class = "row">
+                        <div class = "col-md-3">
+                            Jon Lee (2017)
+                            <br>
+                            JonathanHKLee8@gmail.com
+                        </div>
+                        <div class = "col-md-9">
+                            <ul style = "float:right;">
+                                <li class = "social"><a href = "#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                <li class = "social"><a href = "#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                <li class = "social"><a href = "#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li class = "social"><a href = "#"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </nav> 
         </footer>
 
         <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src = "scroll.js"></script> 
+        <script src="https://use.fontawesome.com/89fd9e4cbb.js"></script>
     </body>
 </html>
