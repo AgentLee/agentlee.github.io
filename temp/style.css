@@ -38,8 +38,10 @@ header
 
 #social
 {
-    position: fixed;
+    position: fixed; 
     bottom: 0;
+    /* Need this so it can stay at the bottom of the page while scrolling */
+    z-index: 1;
 }
 
 .subtext
@@ -51,6 +53,8 @@ header
 {
     color: white;
 }
+
+
 
 #socialNav ul
 {
@@ -83,6 +87,11 @@ header
     color: black; 
 }
 
+#github a:hover
+{
+    color: black !important;
+}
+
 #linkedin a:hover
 {
     color: #006EB1 !important;
@@ -96,6 +105,11 @@ header
 #vimeo a:hover
 {
     color: #00ADEF !important;
+}
+
+#px500 a:hover
+{
+    color: black !important;
 }
 
 .content
@@ -113,7 +127,7 @@ header
 #profile-img
 {
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
 }
 
 .activeNav
@@ -127,9 +141,22 @@ button
     border: none;
 }
 
-#portfolio
+.content-portfolio
 {
     background-color: lightgreen;
+    overflow: hidden;
+}
+
+.content-portfolio:before,
+.content-portfolio:after
+{
+    content: "";
+    display: table;
+}
+
+.content-portfolio:after
+{
+    clear: both;
 }
 
 #mainNav
@@ -215,5 +242,10 @@ footer
 {
     /* background-color: grey; */
     text-decoration: none;
-    color: black !important;
+
+}
+.portfolio-img
+{
+    background-color: grey;
+    border-collapse: red;
 }
