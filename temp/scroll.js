@@ -4,6 +4,9 @@
     {             
         $('#jonlee').hide();
         $('#mainNav').show();
+        $('.connect').hide();
+        $('#emailMe').hide();
+        $('#agentlee').hide();
 
         // Current version isn't mobile friendly yet.
         // Just redirect to old version of site.
@@ -41,9 +44,6 @@
             else {
                 $('#jonlee').fadeOut(200);
             }
-
-
-            $('.connect').hide();
             
             // Changes textdecoration based on position on page
             // TODO: Make the underline dynamic and animated.
@@ -88,10 +88,30 @@
         function()
         {
             $(this).addClass('animated jello');
+
+            if($(this).attr('id') == 'email') {
+                $('#emailMe').fadeIn(200);
+            }
+
+            if($(this).attr('id') == 'github' ||
+               $(this).attr('id') == 'px500') {
+                $('#agentlee').fadeIn(200);
+            }
         }, 
         function() 
         {
             $(this).removeClass('animated jello');
+
+            if($(this).attr('id') == 'email') {
+                // $('.emailMe').fadeOut(200);
+                $('#emailMe').hide();
+            }
+
+            if($(this).attr('id') == 'github' ||
+               $(this).attr('id') == 'px500') {
+                // $('.gitMe').fadeOut(200);
+                $('#agentlee').hide();
+            }
         });
 
         // Smooth Scroll Links

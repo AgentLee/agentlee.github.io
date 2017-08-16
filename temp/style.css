@@ -44,6 +44,34 @@ header
     z-index: 1;
 }
 
+.connect
+{
+    color: white;
+}
+
+.connect span
+{
+    font-size: 20px;
+}
+
+.arrow
+{
+    height: 1.3%;
+}
+
+#revArrow
+{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.connectMe
+{
+    color: white;
+}
+
 .subtext
 {
     color: #7F727A;
