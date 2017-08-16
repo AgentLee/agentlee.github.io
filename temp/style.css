@@ -17,9 +17,9 @@ body
 header
 {
     /* background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907); */
-     background-image: url(images/stanford.png); 
+    background-image: url(images/stanford.png); 
     /* background: #4B9C55; */
-    height: 100vh;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     /* margin-bottom: 50px; */
@@ -30,12 +30,23 @@ header
     align-items: center;
 }
 
+/********************/
+/* Header           */
+/********************/
 #home
 {
     font-size: 75px;
     color: white;
 }
 
+.subtext
+{
+    color: #7F727A;
+}
+
+/********************/
+/* Landing Page     */
+/********************/
 #social
 {
     position: fixed; 
@@ -72,18 +83,14 @@ header
     color: white;
 }
 
-.subtext
-{
-    color: #7F727A;
-}
-
 #arrow
 {
     color: white;
 }
 
-
-
+/*********************/
+/* Social Navigation */
+/*********************/
 #socialNav ul
 {
     list-style-type: none;
@@ -115,6 +122,11 @@ header
     color: black; 
 }
 
+#email a:hover
+{
+    color: darkred !important;
+}
+
 #github a:hover
 {
     color: black !important;
@@ -140,53 +152,9 @@ header
     color: black !important;
 }
 
-.content
-{
-    background: grey;
-    height: 100vh;
-    /* margin-bottom: 50px; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#profile-img
-{
-    max-width: 100%;
-    /* max-height: 100%; */
-}
-
-.activeNav
-{
-    text-decoration: underline;
-}
-
-button
-{
-    background-color: transparent;
-    border: none;
-}
-
-.content-portfolio
-{
-    background-color: lightgreen;
-    overflow: hidden;
-}
-
-.content-portfolio:before,
-.content-portfolio:after
-{
-    content: "";
-    display: table;
-}
-
-.content-portfolio:after
-{
-    clear: both;
-}
-
+/********************/
+/* Navigation       */
+/********************/
 #mainNav
 {
     color: black;
@@ -228,12 +196,83 @@ button
 {
     background-color: transparent;
     text-decoration: none;
-    color: #4A7253;
+    color: #242E35;
 }
 
+.activeNav
+{
+    text-decoration: underline;
+}
+
+
+/********************/
+/* Content Sections */
+/********************/
+.content
+{
+    background: grey;
+}
+
+/* About */
+.content-about
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9EAEB3;
+}
+
+#profile-img
+{
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+/* Portfolio */
+.content-portfolio
+{
+    min-height: 100vh;
+    /* background-color: #4A7B6F; */
+    background-color: #4A7253; 
+    overflow: hidden;
+    padding: 10vh 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-portfolio:before,
+.content-portfolio:after
+{
+    content: "";
+    display: table;
+}
+
+.content-portfolio:after
+{
+    clear: both;
+}
+
+.portfolio-img
+{
+    background-color: grey;
+    border-collapse: red;
+}
+
+.projectTitle
+{
+    text-align: center;
+}
+
+/********************/
+/* Footer           */
+/********************/
 footer
 {
-    background-color: darkgoldenrod;
+    background-color: grey;
 
     clear: both;
     position: relative;
@@ -271,9 +310,4 @@ footer
     /* background-color: grey; */
     text-decoration: none;
 
-}
-.portfolio-img
-{
-    background-color: grey;
-    border-collapse: red;
 }

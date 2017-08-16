@@ -2,7 +2,14 @@
 {          
     $(document).ready(function()
     {             
-        $('#jonlee').hide();
+        var scrollTop   = $(this).scrollTop();
+        if(scrollTop >= $('.content-about').position().top - 10) {
+            $('#jonlee').show();
+        }
+        else {
+            $('#jonlee').hide();            
+        }
+
         $('#mainNav').show();
         $('.connect').hide();
         $('#emailMe').hide();
@@ -61,27 +68,37 @@
                 $('#about-item').removeClass('activeNav');
                 $('#contact-item').removeClass('activeNav');
             }
-            if(scrollTop >= $('.content-contact').position().top - 10) {
-                $('#contact-item').addClass('activeNav');
-                $('#about-item').removeClass('activeNav');
-                $('#portfolio-item').removeClass('activeNav');
-            }
-            if(scrollTop >= $('.content-contact').position().top - 200) {
-                $('#socialNav').fadeOut(200);                
-            } 
-            else {
-                $('#socialNav').fadeIn(200);                
-            }
+            
+            // if(scrollTop >= $('.content-portfolio').position().top - 350) {
+            //     $('#socialNav').fadeOut(200);                
+            // }
+            // else {
+            //     $('#socialNav').fadeIn(200);                
+            // }      
+
+            // if(scrollTop >= $('.content-contact').position().top - 10) {
+            //     $('#contact-item').addClass('activeNav');
+            //     $('#about-item').removeClass('activeNav');
+            //     $('#portfolio-item').removeClass('activeNav');
+            // }
+            // if(scrollTop >= $('.content-contact').position().top - 10) {
+            //     $('#socialNav').fadeOut(200);                
+            // } 
+            // else {
+            //     $('#socialNav').fadeIn(200);                
+            // }
         });
 
         $('#social').hover(
         function()
         {
-            $('.connect').fadeIn(200);
+            $('.connect').slideDown();
+            // $('.connect').fadeIn(200);
         },
         function() 
         {
-            $('.connect').fadeOut(200);
+            $('.connect').slideUp();
+            // $('.connect').fadeOut(200);
         });
 
         $('.socialIcons').hover(
@@ -90,12 +107,14 @@
             $(this).addClass('animated jello');
 
             if($(this).attr('id') == 'email') {
-                $('#emailMe').fadeIn(200);
+                // $('#emailMe').fadeIn(200);
+                $('#emailMe').slideDown();
             }
 
             if($(this).attr('id') == 'github' ||
                $(this).attr('id') == 'px500') {
-                $('#agentlee').fadeIn(200);
+                // $('#agentlee').fadeIn(200);
+                $('#agentlee').slideDown();
             }
         }, 
         function() 
@@ -104,13 +123,15 @@
 
             if($(this).attr('id') == 'email') {
                 // $('.emailMe').fadeOut(200);
-                $('#emailMe').hide();
+                // $('#emailMe').hide();
+                $('#emailMe').slideUp();
             }
 
             if($(this).attr('id') == 'github' ||
                $(this).attr('id') == 'px500') {
                 // $('.gitMe').fadeOut(200);
-                $('#agentlee').hide();
+                // $('#agentlee').hide();
+                $('#agentlee').slideUp();
             }
         });
 
@@ -178,15 +199,15 @@
         {
             if(isHidden) {
                 $(".more").slideDown();
-                $(".content-portfolio").css("height", "100%");
+                // $(".content-portfolio").css("height", "100%");
                 // Need to debug this on resize
-                $(".content-portfolio").css("padding", "200px 0px");
+                // $(".content-portfolio").css("padding", "200px 0px");
                 $(this).text('Show Less');
             }
             else {
                 $(".more").slideUp();
-                $(".content-portfolio").css("height", "100vh");
-                $(".content-portfolio").css("padding", "0px 0px");
+                // $(".content-portfolio").css("height", "100vh");
+                // $(".content-portfolio").css("padding", "0px 0px");
                 $(this).text('Show More');
             }
 
