@@ -276,12 +276,6 @@ header
     clear: both;
 }
 
-.portfolio-img
-{
-    background-color: grey;
-    border-collapse: red;
-}
-
 .recentProjects:before
 {
     display: inline-block;
@@ -295,9 +289,47 @@ header
     margin-left: 25%
 }
 
+#artwork
+{
+    padding-top: 5%;
+}
+
+#typography
+{
+    background-color: black;
+}
+
+.typography
+{
+    background-color: white;
+    /* max-height: 25% !important; */
+    margin-top: 10% !important;
+}
+
+#flynn
+{
+     max-width: 50%; 
+}
+
+.projectDesc
+{
+    margin-top: 3%;
+}
+
+.buzz
+{
+    margin-top: 1%;
+}
+
+
 .projectTitle
 {
-    text-align: center;
+    /* text-align: center; */
+}
+
+.showMore
+{
+    margin-top: 1%;
 }
 
 /********************/

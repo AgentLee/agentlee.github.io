@@ -15,7 +15,8 @@
 
         $('#mainNav').show();
         // Hide a bunch of cool jQuery items so they can be triggered later on.
-        $(".more").hide();                  // Show more section in portfolio
+        $(".moreTypography").hide();        // Show more section in portfolio
+        $(".moreBuzz").hide();        
         $('.connect').hide();               // Social media navigation bar
         $('#connect-emailMe').hide();
         $('#connect-github').hide();
@@ -23,6 +24,7 @@
         $('#connect-youtube').hide();
         $('#connect-vimeo').hide();
         $('#connect-500px').hide();
+        $('.clickBlog').hide();
 
         // Current version isn't mobile friendly yet.
         // Just redirect to old version of site.
@@ -215,26 +217,66 @@
             }, 'slow');
         });
         
+        $(".projectTitle").hover(
+        function()
+        {
+            $('#link').css('opacity', '0.0');
+            $('.clickBlog').fadeIn(200);
+        },
+        function()
+        {
+            $('#link').css('opacity', '1.0');
+            $('.clickBlog').fadeOut(200);
+        });
+
         // ----------------------------
         // Portfolio show more option 
         // ----------------------------
-        var isHidden = true;
-        $(".showMore").click(
+        var typographyHidden = true;
+        $(".showMoreTypography").click(
         function() 
         {
             // Shows the content
-            if(isHidden) {
-                $(".more").slideDown();
-                $(this).text('Show Less');
+            if(typographyHidden) {
+                // If this is shown then collapse it
+                if(!buzzHidden) {
+                    $(".moreBuzz").slideUp();
+                    buzzHidden = !buzzHidden;
+                }
+
+                $(".moreTypography").slideDown();
             }
             // Brings content up
             else {
-                $(".more").slideUp();
-                $(this).text('Show More');
+                $(".moreTypography").slideUp();
             }
 
             // Swap bool values
-            isHidden = !isHidden;
+            typographyHidden = !typographyHidden;
+        });
+
+        var buzzHidden = true;
+        $(".showMoreBuzz").click(
+        function() 
+        {
+
+            // Shows the content
+            if(buzzHidden) {
+                // If this is shown then collapse it
+                if(!typographyHidden) {
+                    $(".moreTypography").slideUp();
+                    typographyHidden = !typographyHidden;
+                }
+
+                $(".moreBuzz").slideDown();
+            }
+            // Brings content up
+            else {
+                $(".moreBuzz").slideUp();
+            }
+
+            // Swap bool values
+            buzzHidden = !buzzHidden;
         });
     });
 })(jQuery);
