@@ -241,14 +241,17 @@
                 // If this is shown then collapse it
                 if(!buzzHidden) {
                     $(".moreBuzz").slideUp();
+                    $('.showMoreBuzz').text("Show More");
                     buzzHidden = !buzzHidden;
                 }
 
                 $(".moreTypography").slideDown();
+                $('.showMoreTypography').text("Show Less");
             }
             // Brings content up
             else {
                 $(".moreTypography").slideUp();
+                $('.showMoreTypography').text("Show More");
             }
 
             // Swap bool values
@@ -265,14 +268,17 @@
                 // If this is shown then collapse it
                 if(!typographyHidden) {
                     $(".moreTypography").slideUp();
+                    $('.showMoreTypography').text("Show More");
                     typographyHidden = !typographyHidden;
                 }
 
                 $(".moreBuzz").slideDown();
+                $('.showMoreBuzz').text("Show Less");
             }
             // Brings content up
             else {
                 $(".moreBuzz").slideUp();
+                $('.showMoreBuzz').text("Show More");
             }
 
             // Swap bool values

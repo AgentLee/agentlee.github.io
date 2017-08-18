@@ -321,15 +321,26 @@ header
     margin-top: 1%;
 }
 
-
-.projectTitle
-{
-    /* text-align: center; */
-}
-
 .showMore
 {
     margin-top: 1%;
+}
+
+.showMoreBuzz, .showMoreTypography
+{
+    background-color: transparent;
+    color: white;
+}
+.showMoreBuzz:hover, .showMoreTypography:hover
+{
+    background-color: transparent;
+    color: white;
+}
+
+.showMoreBuzz:visited, .showMoreTypography:visited
+{
+    background-color: transparent;
+    color: white;
 }
 
 /********************/
