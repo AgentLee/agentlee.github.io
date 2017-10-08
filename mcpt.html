@@ -1,351 +1,134 @@
 <html>
     <head>
-        <title>Jon Lee</title>
+        <title>Jon Lee | Software & Graphics Engineer</title>
+        
 
-        <link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <link rel="stylesheet" href = "style.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/portfolio.css">
+        <link rel="stylesheet" href="style/mcpt.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Kreon" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Saira+Condensed|Saira+Semi+Condensed" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Script -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Custom -->
+        <script src = "scripts/script.js"></script>
+        <script src = "https://use.fontawesome.com/89fd9e4cbb.js"></script>
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet">
     </head>
 
     <body>
-        <div class = "top"></div>
-        <!-- Navigation -->
-        <nav id = "mainNav">
-            <div class = "container">
-                <div class = "row">
-                    <div class = "col-md 6">
-                        <ul style = "float:left">
-                            <li id = "jonlee"><a href = "#">Jon Lee</a></li>
-                        </ul>
-                    </div>
-
-                    <div class = "col-md 6">
-                        <ul>
-                            <li class = "navItem navAbout" id = "about-item"><a href = "#">About</a>     </li>
-                            <li class = "navItem" id = "portfolio-item"><a href = "#">Portfolio</a> </li>
-                            <!-- <li class = "navItem" id = "contact-item"><a href = "#">Contact</a>   </li> -->
-                            <li><a href = "https://jonleedev.blogspot.com/" target = "blank">Blog</a></li>
-                            <li><a href = "JonLee_F17.pdf" target = "blank">Resume</a></li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">Jon Lee</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="#about">About</a></li>
+                        <li class = "activeLink"><a href="portfolio.html" id = "projectlink">Projects</a></li>
+                        <li><a href="#">Demo Reel</a></li>
+                        <li><a href="#">Resume</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
-        <!-- Landing Page -->
-        <header>
-            <h1 id = "home">Jon Lee</h1>
-            <h2><small class = "subtext">Software Engineer | Graphics Programmer</small></h2>
-        
-            <div id = "social">
-                <center>
-                    <div class = "row">
-                        <div class = "col-md-12">
-                            <div class = "connect">
-                                <img src = "img/arrow.png" class = "arrow" id = "revArrow">
-                                &nbsp;
-                                <span>Connect with Me!</span>
-                                &nbsp;
-                                <img src = "img/arrow.png" class = "arrow"> 
-                            </div>
-                            <div class = "connectMe" id = "connect-emailMe">
-                                <span>JonathanHKLee8@gmail.com</span>                                
-                            </div>
-                            <div class = "connectMe" id = "connect-github">
-                                <span>Github</span>                                
-                            </div>
-                            <div class = "connectMe" id = "connect-linkedin">
-                                <span>LinkedIn</span>                                
-                            </div>
-                            <div class = "connectMe" id = "connect-youtube">
-                                <span>YouTube</span>                                
-                            </div>
-                            <div class = "connectMe" id = "connect-vimeo">
-                                <span>Demo Reel</span>                                
-                            </div>
-                            <div class = "connectMe" id = "connect-500px">
-                                <span>500px</span>                                
-                            </div>
-                        </div>
-                    </div>
-                    <nav id = "socialNav">
-                        <ul>
-                            <li class = "socialIcons" id = "email"><a href = "mailto:jonathanhklee8@gmail.com"><i class="fa fa-inbox" aria-hidden="true"></i></a></li>
-                            <li class = "socialIcons" id = "github"><a href = "http://github.com/agentlee" target = "blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                            <li class = "socialIcons" id = "linkedin"><a href = "https://www.linkedin.com/in/jonathan-lee-821777b0/" target = "blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                            <li class = "socialIcons" id = "youtube"><a href = "https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                            <li class = "socialIcons" id = "vimeo"><a href = "https://vimeo.com/189623959" target = "blank"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
-                            <li class = "socialIcons" id = "px500"><a href = "https://500px.com/agentlee" target = "blank"><i class="fa fa-500px" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </nav> 
-                </center>
+        <div class = "container-fluid content" id = "portfolio">
+            <div class = "col-lg-12 col-md-12 col-sm-12">
+                <h1>Monte Carlo Path Tracer <small>C++</small></h1>
+                <hr>
             </div>
-        </header>
 
-        <!-- About -->
-        <div class = "content content-about" id = "about-item">
-            <div class = "container">
-                <div class = "row">
-                    <div class = "col-md-9">
-                        <h1>Hi, I'm Jon.</h1>
-                        <p>
-                            I'm currently a grad student at the University of Pennsylvania
-                            in the Computer Graphics and Game Technology program.
-                        </p>
+            <div class = "gallery">
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/stanford.png">
+                </div>
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/dragons.png">
+                </div>
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/implicit.png">
+                </div>
+            </div>
+                    
+            <div class = "analysis">
+                <div class = "col-lg-12">
+                    <h2>Integrators</h2>                                
+                    <hr>
+                </div>
 
-                        <p>
-                            My CG interests include rendering algorithms, motion graphics, and special effects.
-                            I am also interested in full stack web development. I am currently 
-                            exploring Node.js and developing within the MEAN technology stack.
-                        </p>
+                <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 portfolio-gallery">
+                    <iframe frameborder="0" class="juxtapose" width="100%" height="400" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=14f6e3fc-ac79-11e7-b263-0edaf8f81e27"></iframe>
+                </div>
+                <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
+                    <p>
+                        <br>
+                        <br>
+                    </p>
+                </div>
 
-                        <h2>Fun Facts</h2>
-                        <ul>
-                            <li>
-                                In 2016, I participated in the Disney College Program at
-                                Walt Disney World. 
-                            </li>
-                            <li>I got Galactic Hero 50 times on Buzz Lightyear's Space Ranger Spin.</li>
-                            <li>
-                                I am a fan of basketball and the Houston Rockets.
-                            </li>
-                            <li>
-                                I almost always bring my camera wherever I go so I can capture moments. 
-                                Like during my Disney College Program.
-                                <br>
-                                <br>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/5vj80s6MkAc" frameborder="0" allowfullscreen></iframe>
-                            </li>
-                        </ul>
-                    </div>
+                <div class = "col-lg-12">
+                    <h2>Variance Reduction <small><a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">Blog Post</a></small></h2>                                
+                    <hr>
+                </div>
 
-                    <div class = "col-md-3 profile">
-                        <img src = "img/Profile.jpg" class = "img-circle" id = "profile-img">
-                    </div>
+                <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 portfolio-gallery">
+                    <iframe frameborder="0" class="juxtapose" width="100%" height="400" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=14f6e3fc-ac79-11e7-b263-0edaf8f81e27"></iframe>
+                </div>
+                <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
+                    <p>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+
+                <div class = "col-lg-12">
+                    <h2>Volumetric Integration <small><a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">Blog Post</a></small></h2>                                
+                    <hr>
+                </div>
+                
+                <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 portfolio-gallery">
+                    <iframe frameborder="0" class="juxtapose" width="100%" height="400px" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></iframe>
+                </div>
+                <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula lacus, scelerisque vitae lacinia sed, tempus quis justo. Pellentesque tempor id nulla non pharetra. Vivamus vehicula nisi in quam sagittis placerat. Phasellus sem lacus, hendrerit a lorem id, gravida accumsan ipsum. Quisque dapibus velit vitae libero feugiat, sit amet ultricies felis sodales. Integer a cursus dui, sit amet vestibulum arcu. Fusce pretium commodo blandit. Morbi vitae ex elit.
+                        
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse porttitor est id augue scelerisque fringilla. Mauris rhoncus placerat hendrerit. Pellentesque faucibus, nisl ac pretium ultrices, enim felis molestie nisl, eu ultrices nulla felis eu dui. In tincidunt quam et massa finibus tristique. Curabitur nisi sapien, viverra eu nulla id, sodales sollicitudin est. Praesent nisl diam, porttitor vitae ex sit amet, tempus varius velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi porta, nisi venenatis efficitur gravida, mi enim congue sapien, et porta massa magna quis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas quis risus nisl.
+                        <br>
+                        <br>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- Portfolio -->
-        <div class = "content content-portfolio" id = "portfolio-item">
-            <div class = "container">
-                <section class = "projects" id = "mcpt">
-                        <div class = "row portfolio-row">
-                            <div class = "col-md-6">
-                                <h2 class = "projectTitle">GPU Path Tracer <small>CUDA</small></h2>
-                            </div>
-                            <div class = "col-md-6">
-                                <h3 style = "float:right;" id = "github"><a href = "https://github.com/AgentLee/Project3-CUDA-Path-Tracer" target = "blank"><i class="fa fa-github" aria-hidden="true"></i></a></h3>
-                            </div>
-                            <div class = "col-md-12">
-                                <hr style = "margin-top: -0.5%">
-                            </div>
-                        </div>
-                        <div class = "row portfolio-row">
-                            <div class = "col-md-4">
-                                    <figure>
-                                        <img src = "img/portfolio/GPU_PT/materials100000samp.png" id = "profile-img">                            
-                                    </figure>
-                            </div>
-                            <div class = "col-md-4">
-                                <figure>
-                                        <img src = "img/portfolio/GPU_PT/subsurface1.png" id = "profile-img">                            
-                                </figure>
-                            </div>
-                            <div class = "col-md-4">
-                                <figure>
-                                        <img src = "img/portfolio/GPU_PT/dof.png" id = "profile-img">                            
-                                </figure>
-                            </div>
-                        </div>
-                    </section>
-
-                <section class = "projects" id = "mcpt">
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-6">
-                            <h2 class = "projectTitle">CPU Monte Carlo Path Tracer <small>C++</small></h2>
-                        </div>
-                        <div class = "col-md-6">
-                            <h3 style = "float:right;">
-                                <small><a href = "./projects/mcpt.html" target = "blank">Blog Post</a></small>
-                                &nbsp;
-                                <a id = "github" href = "https://github.com/AgentLee/Project3-CUDA-Path-Tracer" target = "blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                            </h3>
-                        </div>
-                        <div class = "col-md-12">
-                            <hr style = "margin-top: -0.5%">
-                        </div>
-                    </div>
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-4">
-                            <figure>
-                                <figcaption>High variance vs. Low variance</figcaption>
-                                <iframe frameborder="0" class="juxtapose" width="100%" height="400" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c6698832-83c1-11e7-b5f8-0edaf8f81e27"></iframe>
-                            </figure>
-                        </div>
-                        <div class = "col-md-4">
-                            <figure>
-                                <figcaption>Full Lighting vs. Full Lighting with Participating Media</figcaption>
-                                <iframe frameborder="0" class="juxtapose" width="100%" height="400" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></iframe>
-                            </figure>
-                        </div>
-                        <div class = "col-md-4">
-                            <figure>
-                                <figcaption>Dueling Dragons</figcaption>
-                                <img src = "img/portfolio/MCPT/dragon_32_5.png" id = "profile-img">                            
-                            </figure>
-                        </div>
-                    </div>
-                </section>
-
-                <section class = "projects" id = "gamesApps">
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-12">
-                            <h2 class = "projectTitle">Games and Applications</h2>
-                            <hr style = "margin-top: -0.5%">
-                        </div>
-                    </div>
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">
-                                Mini-Minecraft
-                                <span style = "float: right;">
-                                    <h4><small>Blog Post</small></h4>
-                                </span>
-                            </h3>
-                            <img src = "img/portfolio/Cows.gif" id = "profile-img">
-                        </div>
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">
-                                Mini-Maya
-                                <span style = "float: right;">
-                                    <h4><small>Blog Post</small></h4>
-                                </span>
-                            </h3>
-                            <img src = "img/portfolio/Joints.gif" id = "profile-img">
-                        </div>
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">
-                                SteerLite Crowd Simulator
-                                <span style = "float: right;">
-                                    <h4><small><a href = "http://cg-f15-26-rutgers.github.io/assignments/a5.html" target = "blank">Blog Post</a></small></h4>
-                                </span>
-                            </h3>
-                            <img src = "img/portfolio/steerlite.gif" id = "profile-img">
-                        </div>
-                    </div>
-                </section>
-
-                <section class = "projects" id = "artwork">
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-12">
-                            <h2 class = "projectTitle">Artwork</h2>
-                            <hr style = "margin-top: -0.5%">
-                        </div>
-                    </div>
-                    <div class = "row portfolio-row">
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">
-                                Typography
-                            </h3>
-                            <img src = "img/portfolio/typography/Coverflow.png" id = "profile-img">
-                            <br>
-                            <button style = "margin-top:1%" class = "btn showMoreTypography">Show More</button>
-                        </div>
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">3D Modeling</h2>
-                            <img src = "img/portfolio/Buzz/BuzzCoverflow.png" id = "profile-img">
-                            <br>
-                            <button style = "margin-top:1%" class = "btn showMoreBuzz">Show More</button>
-                        </div>
-                        <div class = "col-md-4">
-                            <h3 class = "projectTitle">Film</h2>
-                            <iframe width="100%"   src="https://www.youtube.com/embed/zslfnvbApaQ" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </section>
-
-                <section class = "projects moreTypography" id = "typography">
-                    <div class = "col-md-12 projectDesc">
-                        <h4>Typography Projects</h4>
-                        <p>
-                            I had five roommates during my Disney College Program. As a roommate gift, 
-                            I decided to create typography designs of their favorite characters. Each
-                            character was created using a minamilist design and quotes/lyrics from 
-                            their respective movies.
-                        </p>
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-ariel.png" class = "typography" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-mike.png" class = "typography"  id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-stitch.png" class = "typography"  id = "profile-img">
-                    </div>
-
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-oswald.png" class = "typography typography-bottom" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-darth.png" class = "typography typography-bottom"  id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/typography/thumb-flynn.png" class = "typography typography-bottom"  id = "profile-img">
-                    </div>
-                </section>
-
-                
-                <section class = "projects moreBuzz" id = "buzz">
-                    <div class = "col-md-12" id = "buzzdesc">
-                        <h4>Buzz Lightyear's Space Ranger Spin Ride Vehicle</h4>
-                        <p>
-                            This was one of the projects for my 3D Modeling class. After completing my
-                            Disney College Program and having been on Buzz Lightyear's Space Ranger Spin,
-                            I was inspired to redesign the ride vehicle. I looked to one of my old Buzz 
-                            toys which had a grey/silver/purple color scheme and used that as the base colors.
-                            Creating the curve for the vehicle was probably the hardest part.
-                        </p>
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/Front.png" class = "buzz" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/backprofile.png" class = "buzz" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/Shoulder.png" class = "buzz" id = "profile-img">
-                    </div>
-
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/Dash.png" class = "buzz" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/Laser.png" class = "buzz" id = "profile-img">
-                    </div>
-                    <div class = "col-md-4">
-                        <img src = "img/portfolio/Buzz/Zurg.png" class = "buzz" id = "profile-img">
-                    </div>
-                </section>
-                </div>
-            </div>
-        </div> 
-
-        <script src = "https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></script>
-        <script src = "http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src = "https://use.fontawesome.com/89fd9e4cbb.js"></script>
-        <script src = "script.js"></script> 
+        <script src = "https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></script>            
     </body>
 
-    <footer class = "footer">
-        <div class = "container" style = "opacity: 0.5;">
-            <span><a href = "#">Jon Lee</a></span>
-            <span id = "year">&copy; 2017</span>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class = "row">
+                <div class = "col-md-12" id = "footer-social">
+                    <ul>
+                        <li><a href="#" class="fa fa-github social" aria-hidden="true"></a></li>
+                        <li><a href="#" class="fa fa-linkedin social" aria-hidden="true"></a></li>
+                        <li><a href="#" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
+                        <li><a href="#" class="fa fa-500px social" id = "lastSocial" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 </html>

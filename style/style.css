@@ -1,0 +1,174 @@
+html, body
+{
+    /* font-family: 'Varela Round', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+}
+
+body 
+{
+    margin: 0 0 60px;
+    /* padding-top: 65px; */
+}
+
+nav
+{
+    background-color: transparent !important;
+    background-color: #5E5E5E !important;
+    background: rgba(0,0,1, .75) !important;
+    border: 0 !important;    
+    height: 65px !important; 
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar-brand
+{
+    color: white !important;
+    margin-left: 145px !important;
+    margin-top: 6px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.navbar-brand:hover
+{
+    text-decoration: underline;
+}
+
+.navbar-right
+{
+    margin-right: 145px !important;
+    margin-top: 6px;
+}
+
+@media (max-width: 800px)
+{
+    .navbar-brand
+    {
+        margin-left: 0px !important;            
+    }
+
+    .navbar-right
+    {
+        margin-right: 0px !important;
+    }
+}
+
+.activeLink
+{
+    text-decoration: underline;
+}
+
+.content
+{
+    background-color: #40565E;
+}
+
+#title 
+{
+    text-align: center;
+    /* border-style: solid; */
+    /* border-width: 5px; */
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    /* background: rgba(94, 94, 94, .75); */
+    /* background-color: #5E5E5E; */
+    /* opacity: .75; */
+}
+
+#title h1 
+{
+    font-size: 100px;
+    color: white;
+}
+
+#title h2 small
+{
+    color: white !important;
+}
+
+#landing 
+{
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/banner.png");
+    /* background-image: url("hae.JPG"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#about
+{
+    height: 100%;
+    width: 100%;
+    background-color: #40565E;
+}
+
+#learnMore
+{
+    border-width: 5px;
+    border-color:black;
+    border-style: solid;
+
+    font-size: 25px;
+}
+
+
+
+.footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+}
+
+.footer ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li 
+{
+    display: inline;
+    color: #0E1112 !important;
+}
+
+.footer ul li a 
+{
+    color: #5E5E5E !important;
+}
+
+.footer ul li a:hover
+{
+    text-decoration: none;
+    color: white !important;
+}
+
+#footer-social
+{
+    background: rgba(0,0,1, .85);
+}
+
+.social 
+{
+    font-size: 20px !important;
+    padding-right: 50px;
+}
+
+#lastSocial
+{
+    padding-right: 0px;
+}
+
+
