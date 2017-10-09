@@ -27,4 +27,14 @@ function()
     //         return false;
     //     }
     // );
+
+    $('#demoreel').click(
+        function(e)
+        {
+            e.preventDefault();
+
+            // window.location.href = "https://vimeo.com/189623959";
+            return false;
+        }
+    );
 }); 
