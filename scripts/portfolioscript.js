@@ -1,7 +1,7 @@
 $(document).ready(
 function() 
 {
-    $('.anim').addClass('animated fadeInLeft');
+    // $('.anim').addClass('animated fadeInLeft');
 
     var width = $(window).width();
 

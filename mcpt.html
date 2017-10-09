@@ -35,11 +35,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
-                        <li><a href="#about">About</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li class = "activeLink"><a href="portfolio.html" id = "projectlink">Projects</a></li>
-                        <li><a href="#">Artwork</a></li>
+                        <li><a href="artwork.html">Artwork</a></li>
                         <li><a href="https://vimeo.com/189623959" target = "blank">Demo Reel</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a href="resume.pdf" target = "blank">Resume</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,13 +53,22 @@
 
             <div class = "gallery">
                 <div class = "col-lg-4 portfolio-img">
-                    <img src = "images/mcpt/stanford.png">
+                    <img src = "images/mcpt/ChooseYourStarter.png">
                 </div>
                 <div class = "col-lg-4 portfolio-img">
                     <img src = "images/mcpt/dragons.png">
                 </div>
                 <div class = "col-lg-4 portfolio-img">
                     <img src = "images/mcpt/implicit.png">
+                </div>
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/stanford.png">
+                </div>
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/goldendragon_32_8.png">
+                </div>
+                <div class = "col-lg-4 portfolio-img">
+                    <img src = "images/mcpt/glassdragon_32_8.png">
                 </div>
             </div>
                     
@@ -84,42 +93,25 @@
                     <div class = "col-md-4">
                         <figure>
                             <img src = "images/mcpt/integrators/full.png">
-                            <figcaption>Full Lighting</figcaption>                                
+                            <figcaption>Full Lighting with MIS</figcaption>                                
                         </figure>
                     </div>
                 </div>
-                <div class = "col-md-12">
+                <!-- <div class = "col-md-12">
                     <h3>Naive BSDF Integration</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut urna vel enim feugiat elementum sit 
-                        amet vel orci. Phasellus convallis dictum dui vitae laoreet. Donec elit mauris, bibendum ac velit nec,
-                        finibus faucibus ipsum. Mauris finibus mollis tortor at laoreet. Maecenas tristique ante ut dolor 
-                        sollicitudin commodo. Nullam varius ipsum a ipsum maximus pulvinar. Pellentesque in elit ac erat 
-                        faucibus ornare. Fusce rhoncus, enim id dignissim faucibus, massa nisi laoreet ipsum, sed volutpat nibh nulla 
-                        non nulla. Quisque ultricies nunc at massa convallis, sit amet rhoncus est consequat. Cras fermentum semper 
-                        malesuada.
+                        Samples a random direction when a ray hits an object.
                     </p>
                     <h3>Direct Lighting Integration</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut urna vel enim feugiat elementum sit 
-                        amet vel orci. Phasellus convallis dictum dui vitae laoreet. Donec elit mauris, bibendum ac velit nec,
-                        finibus faucibus ipsum. Mauris finibus mollis tortor at laoreet. Maecenas tristique ante ut dolor 
-                        sollicitudin commodo. Nullam varius ipsum a ipsum maximus pulvinar. Pellentesque in elit ac erat 
-                        faucibus ornare. Fusce rhoncus, enim id dignissim faucibus, massa nisi laoreet ipsum, sed volutpat nibh nulla 
-                        non nulla. Quisque ultricies nunc at massa convallis, sit amet rhoncus est consequat. Cras fermentum semper 
-                        malesuada.
+                        When a ray hits an object, a second ray (shadow feeler) is shot towards the light. This ray determines whether
+                        or not the object is occluded or not. 
                     </p>
                     <h3>Full Lighting Integration</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut urna vel enim feugiat elementum sit 
-                        amet vel orci. Phasellus convallis dictum dui vitae laoreet. Donec elit mauris, bibendum ac velit nec,
-                        finibus faucibus ipsum. Mauris finibus mollis tortor at laoreet. Maecenas tristique ante ut dolor 
-                        sollicitudin commodo. Nullam varius ipsum a ipsum maximus pulvinar. Pellentesque in elit ac erat 
-                        faucibus ornare. Fusce rhoncus, enim id dignissim faucibus, massa nisi laoreet ipsum, sed volutpat nibh nulla 
-                        non nulla. Quisque ultricies nunc at massa convallis, sit amet rhoncus est consequat. Cras fermentum semper 
-                        malesuada.
+                        Uses Multiple Importance Sampling for the light and the BSDF. 
                     </p>
-                </div>
+                </div> -->
 
                 <div class = "col-lg-12">
                     <h2>Variance Reduction <small><a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">Blog Post</a></small></h2>                                
@@ -130,13 +122,17 @@
                 </div>
                 <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut urna vel enim feugiat elementum sit 
-                        amet vel orci. Phasellus convallis dictum dui vitae laoreet. Donec elit mauris, bibendum ac velit nec,
-                        finibus faucibus ipsum. Mauris finibus mollis tortor at laoreet. Maecenas tristique ante ut dolor 
-                        sollicitudin commodo. Nullam varius ipsum a ipsum maximus pulvinar. Pellentesque in elit ac erat 
-                        faucibus ornare. Fusce rhoncus, enim id dignissim faucibus, massa nisi laoreet ipsum, sed volutpat nibh nulla 
-                        non nulla. Quisque ultricies nunc at massa convallis, sit amet rhoncus est consequat. Cras fermentum semper 
-                        malesuada.
+                        To reduce noise and variance, I calculate the variance for each pixel. If the pixel reaches below 
+                        a certain threshold, the variance is pretty much negligable and the pixel gets colored; when the 
+                        variance is above the threshold, the pixel gets recalculated.
+                        <br>
+                        <br>
+                        One thing that I noticed from doing this, I can do, overall, less samples per pixel which lead
+                        to a cleaner render and converges faster. Without this super-sampling method, I would have to
+                        do more samples and the resulting render would still have fireflies.
+                        <br>
+                        <br>
+                        I go more in depth on how I achieved this on my <a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">blog</a>.
                     </p>
                 </div>
 
@@ -164,6 +160,7 @@
                             <figcaption>Spotlight</figcaption>                                
                         </figure>
                     </div>
+                    
                 </div>
                 <!-- End Lights -->
 
@@ -175,24 +172,26 @@
                 <div class = "gallery">
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
-                            <figcaption>Diffuse Area Light</figcaption>                                
+                            <img src = "images/mcpt/csg/union.png">
+                            <figcaption>Union</figcaption>                                
                         </figure>
                     </div>
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
-                            <figcaption>Point Light</figcaption>                                
+                            <img src = "images/mcpt/csg/difference.png">
+                            <figcaption>Difference</figcaption>                                
                         </figure>
                     </div>
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
-                            <figcaption>Spotlight</figcaption>                                
+                            <img src = "images/mcpt/csg/intersection.png">
+                            <figcaption>Intersection</figcaption>                                
                         </figure>
                     </div>
                 </div>
                 <!-- End CSG -->
+
+                
 
                 <!-- Implicit Geometry -->
                 <div class = "col-lg-12">
@@ -232,14 +231,29 @@
                 </div>
                 <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ligula lacus, scelerisque vitae lacinia sed, tempus quis justo. Pellentesque tempor id nulla non pharetra. Vivamus vehicula nisi in quam sagittis placerat. Phasellus sem lacus, hendrerit a lorem id, gravida accumsan ipsum. Quisque dapibus velit vitae libero feugiat, sit amet ultricies felis sodales. Integer a cursus dui, sit amet vestibulum arcu. Fusce pretium commodo blandit. Morbi vitae ex elit.
-                        
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse porttitor est id augue scelerisque fringilla. Mauris rhoncus placerat hendrerit. Pellentesque faucibus, nisl ac pretium ultrices, enim felis molestie nisl, eu ultrices nulla felis eu dui. In tincidunt quam et massa finibus tristique. Curabitur nisi sapien, viverra eu nulla id, sodales sollicitudin est. Praesent nisl diam, porttitor vitae ex sit amet, tempus varius velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi porta, nisi venenatis efficitur gravida, mi enim congue sapien, et porta massa magna quis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas quis risus nisl.
-                        <br>
-                        <br>
+                       This was built upon my Full Lighting Integrator. The entire algorithm to render participating media (volume) 
+                       requires an extensive amount of ray marching. Basically you ray march from the camera to an object and determine
+                       the transmittance. Afterwards, you ray march a second time from the object to the light and determine the in scattering.
+                       <br>
+                       <br>
+                       Once the ray marches are done, the integrator does MIS and global illumination.
+                       <br>
+                       <br>
+                       A timeline and explanation of my implementation is available on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.  
                     </p>
                 </div>
                 <!-- End Volumetric Rendering -->
+
+                <div class = "col-lg-12">
+                    <h2>Future Work</h2>                                
+                    <hr>
+                    <ul>
+                        <li>kd-Tree</li>
+                        <li>Subsurface Scattering</li>
+                        <li>Photon Mapping</li>
+                        <li>Heterogenous Media</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -251,10 +265,10 @@
             <div class = "row">
                 <div class = "col-md-12" id = "footer-social">
                     <ul>
-                        <li><a href="#" class="fa fa-github social" aria-hidden="true"></a></li>
-                        <li><a href="#" class="fa fa-linkedin social" aria-hidden="true"></a></li>
-                        <li><a href="#" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
-                        <li><a href="#" class="fa fa-500px social" id = "lastSocial" aria-hidden="true"></a></li>
+                        <li><a href="http://github.com/agentlee" target = "blank" class="fa fa-github social" aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonleexyz/" target = "blank" class="fa fa-linkedin social" aria-hidden="true"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
+                        <li><a href="https://500px.com/agentlee" target = "blank" class="fa fa-500px social" id = "lastSocial" aria-hidden="true"></a></li>
                     </ul>
                 </div>
             </div>

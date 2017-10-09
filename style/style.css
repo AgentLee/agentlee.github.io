@@ -176,3 +176,14 @@ figcaption
 }
 
 
+
+.contact a
+{
+    color: #404041;
+}
+
+.contact a:hover
+{
+    color: white;
+    text-decoration: none;
+}
