@@ -31,13 +31,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.html">Jon Lee</a>
+                    <a class="navbar-brand" href="jonlee.xyz">Jon Lee</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
-                        <li><a href="about.html">About</a></li>
-                        <li class = "activeLink"><a href="portfolio.html" id = "projectlink">Projects</a></li>
-                        <li><a href="artwork.html">Artwork</a></li>
+                        <li><a href="about">About</a></li>
+                        <li class = "activeLink"><a href="portfolio" id = "projectlink">Projects</a></li>
+                        <li><a href="artwork">Artwork</a></li>
                         <li><a href="https://vimeo.com/189623959" target = "blank">Demo Reel</a></li>
                         <li><a href="resume.pdf" target = "blank">Resume</a></li>
                     </ul>
