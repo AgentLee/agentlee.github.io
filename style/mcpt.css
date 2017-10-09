@@ -4,6 +4,7 @@ body
     content: "";
     display: table;
     clear: both;      
+    width: 100%;
 }
 
 #portfolio
@@ -43,4 +44,13 @@ body
 {
     text-decoration: none;
     color: white;
+}
+
+.juxtapose
+{
+    padding-bottom: 0 !important;
+}
+
+.mcpt
+{
 }

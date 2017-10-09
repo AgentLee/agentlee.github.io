@@ -116,6 +116,10 @@ nav
     font-size: 25px;
 }
 
+figcaption
+{
+    text-align: center;
+}
 
 
 .footer 
