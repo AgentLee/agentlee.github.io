@@ -47,37 +47,91 @@
         </nav>
 
         <div class = "anim">
-        <div class = "container-fluid content" id = "portfolio">
-            <div class = "col-md-12">
+        <div class = "container content" id = "portfolio">
+            <div class = "col-lg-12">
                 <h1>Projects</h1>
                 <hr>
             </div>
 
-            <div class = "buckets">
-                <div class = "row">
-                    <div class = "col-lg-6 portfolio-bucket">
-                        <h2>GPU Path Tracer</h2>
-                        <a href = "gpupt.html"><img src = "images/gpupt/sample.png"></a>
-                    </div>
-                    <div class = "col-lg-6 portfolio-bucket">
-                        <h2>CPU Monte Carlo Path Tracer</h2>
-                        <a href = "mcpt.html"><img src = "images/mcpt/stanford.png"></a>
-                    </div>
+            <div class="row">
+                <h2 style = "font-size: 150%;">Monte Carlo Path Tracer</h2>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/mcpt/dragons.png"></a>
+                    </center>
                 </div>
-               
-                <div class = "row" style = "padding-bottom: 25px;">
-                    <div class = "col-lg-4 portfolio-bucket" style = "height: 100%;" id = "boids">
-                        <h2>GPU Flocking Boids</h2>
-                        <a href = "boids.html"><img src = "images/boids.gif"></a>
-                    </div>
-                    <div class = "col-lg-4 portfolio-bucket" style = "height: 100%; padding-bottom:10px;" id = "boids">
-                        <h2>Half-Edge Mesh Editor</h2>
-                        <a href = "minimaya.html"><img src = "images/Joints.gif"></a>
-                    </div>
-                    <div class = "col-lg-4 portfolio-bucket" style = "height: 100%; padding-bottom:10px;" id = "boids">
-                        <h2>SteerLite Crowd Simulator</h2>
-                        <a href = "steerlite.html"><img src = "images/steerlite.gif"></a>
-                    </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/mcpt/lucy_20_8.png"></a>
+                    </center>
+                </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/mcpt/implicit.png"></a>
+                    </center>
+                </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/mcpt/csg/csg_sphere_diff.png"></a>
+                    </center>
+                </div>
+
+                <div class = "col-lg-12">
+                    <a style = "float: right; margin-top: -1.5%;" href = "">Learn More</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2 style = "font-size: 150%;">GPU Projects</h2>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Boids</h3>
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/boids.gif"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Path Tracer</h3>
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/gpupt/materials100000samp.png"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Rasterizer</h3>
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/rasterizer/milktruck.png"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Forward+ and Deferred Shading</h3>
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/forwardplus_deferred/500lightsblinn.gif"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "">Learn More</a>                    
+                </div>
+            </div>
+
+            <div class="row" style = "padding-bottom: 2%;">
+                <h2 style = "font-size: 150%;">Applications</h2>
+                <div class = "col-lg-4" style = "margin-top: -1.25%;">
+                    <h3 style = "font-size: 115%;">RU-Studying Web App</h3>
+                    <center>
+                        <a href = "minimaya.html"><img width = "85%"  src = "images/rooms.png"></a>   
+                    </center>
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.25%;">
+                    <h3 style = "font-size: 115%;">Half-Edge Mesh Editor</h3>
+                    <center>
+                        <a href = "minimaya.html"><img width = "85%"  src = "images/Joints.gif"></a>   
+                    </center>
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.25%;">
+                    <h3 style = "font-size: 115%;">SteerLite Crowd Simulator</h3>
+                    <center>
+                        <a href = "steerlite.html"><img width = "85%" src = "images/steerlite.gif"></a>
+                    </center>
                 </div>
             </div>
         </div>
