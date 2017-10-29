@@ -148,18 +148,16 @@
                             <figcaption>Diffuse Area Light</figcaption>                                
                         </figure>
                     </div>
+                    
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
-                            <figcaption>Point Light</figcaption>                                
-                        </figure>
-                    </div>
-                    <div class = "col-md-4">
-                        <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
+                            <img src = "images/mcpt/implicit.png">
                             <figcaption>Spotlight</figcaption>                                
                         </figure>
                     </div>
+
+                    <div class = "col-md-4">
+                        </div>
                     
                 </div>
                 <!-- End Lights -->
@@ -168,6 +166,16 @@
                 <div class = "col-lg-12">
                     <h2>Constructive Solid Geometry <small><a href = "https://jonleedev.blogspot.com/2017/06/taking-constructive-geometry.html" target = "blank">Blog Post</a></small></h2></h2>                                
                     <hr>
+                </div>
+                <div class = "row" style = "padding-bottom: 2%;">
+                    <div class = "col-md-4">
+                        <img src = "images/mcpt/csg/csg_sphere_diff.png">
+                    </div>
+                    <div class = "col-md-8" style = "padding-left: 5%">
+                        <p>
+                            jaksjdfl;kdsjf;klasjdf
+                        </p>
+                    </div>
                 </div>
                 <div class = "gallery">
                     <div class = "col-md-4">
@@ -201,19 +209,19 @@
                 <div class = "gallery">
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
+                            <img src = "images/mcpt/implicit/goursatdirect5.png">
                             <figcaption>Diffuse Area Light</figcaption>                                
                         </figure>
                     </div>
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
+                            <img src = "images/mcpt/implicit/goursatdirect4.png">
                             <figcaption>Point Light</figcaption>                                
                         </figure>
                     </div>
                     <div class = "col-md-4">
                         <figure>
-                            <img src = "images/mcpt/integrators/direct.png">
+                            <img src = "images/mcpt/implicit/goursatdirect3.png">
                             <figcaption>Spotlight</figcaption>                                
                         </figure>
                     </div>
@@ -226,21 +234,41 @@
                     <hr>
                 </div>
                 
-                <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 portfolio-gallery">
-                    <iframe frameborder="0" class="juxtapose" width="100%" height="400px" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></iframe>
+                <div class = "row">
+                    <div class = "col-lg-4 col-md-12 col-sm-12 col-xs-12 portfolio-gallery">
+                        <iframe frameborder="0" class="juxtapose" width="100%" height="400" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=aa58e886-ba49-11e7-b263-0edaf8f81e27"></iframe>
+                    </div>
+                    <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
+                        <p>
+                           This was built upon my Full Lighting Integrator. The entire algorithm to render participating media (volume) 
+                           requires an extensive amount of ray marching. Basically you ray march from the camera to an object and determine
+                           the transmittance. Afterwards, you ray march a second time from the object to the light and determine the in scattering.
+                           <br>
+                           <br>
+                           Once the ray marches are done, the integrator does MIS and global illumination.
+                           <br>
+                           <br>
+                           A timeline and explanation of my implementation is available on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.  
+                        </p>
+                    </div>
                 </div>
-                <div class = "col-lg-8 col-md-12 col-sm-12 col-xs-12 desc">
-                    <p>
-                       This was built upon my Full Lighting Integrator. The entire algorithm to render participating media (volume) 
-                       requires an extensive amount of ray marching. Basically you ray march from the camera to an object and determine
-                       the transmittance. Afterwards, you ray march a second time from the object to the light and determine the in scattering.
-                       <br>
-                       <br>
-                       Once the ray marches are done, the integrator does MIS and global illumination.
-                       <br>
-                       <br>
-                       A timeline and explanation of my implementation is available on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.  
-                    </p>
+
+                <div class = "gallery">
+                    <div class = "col-md-4">
+                        <figure>
+                            <img src = "images/mcpt/lucy_20_8.png">
+                        </figure>
+                    </div>
+                    <div class = "col-md-4">
+                        <figure>
+                            <img src = "images/mcpt/glassbox_vol4_100spp.png">
+                        </figure>
+                    </div>
+                    <div class = "col-md-4">
+                        <figure>
+                            <img src = "images/mcpt/cornellbox_vol.png">
+                        </figure>
+                    </div>
                 </div>
                 <!-- End Volumetric Rendering -->
 
