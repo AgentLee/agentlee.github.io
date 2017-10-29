@@ -3,7 +3,8 @@ body
     overflow-y: auto;  
     content: "";
     display: table;
-    clear: both;      
+    clear: both;    
+    width: 100%;  
 }
 
 #portfolio

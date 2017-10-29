@@ -118,3 +118,18 @@ body
 {
     /* padding-top: 50px; */
 }
+
+h2, h3
+{
+    /* color: white; */
+}
+
+a 
+{
+    color: white;
+}
+
+a:hover
+{
+    color: white;
+}
