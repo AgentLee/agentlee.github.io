@@ -1,21 +1,20 @@
 <html>
     <head>
-        <title>Boids | Jon Lee</title>
-        
+        <title>Jon Lee | Software & Graphics Engineer</title>
+
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- CSS -->
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/portfolio.css">
-        <link rel="stylesheet" href="style/gpupt.css">
-
+        <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        
         <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Bootstrap Script -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
         <!-- Custom -->
-        <script src = "scripts/portfolioscript.js"></script>
+        <script src = "scripts/script.js"></script>
         <script src = "https://use.fontawesome.com/89fd9e4cbb.js"></script>
         
         <!-- Fonts -->
@@ -36,8 +35,9 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
                         <li><a href="about.html">About</a></li>
-                        <li class = "activeLink"><a href="portfolio.html" id = "projectlink">Projects</a></li>
+                        <li><a href="portfolio.html" id = "projectlink">Projects</a></li>
                         <li><a href="artwork.html">Artwork</a></li>
+                        <!-- <li><a href="https://vimeo.com/189623959" target = "blank">Demo Reel</a></li> -->
                         <li><a href="demoreel">Demo Reel</a></li>
                         <li><a href="resume.pdf" target = "blank">Resume</a></li>
                     </ul>
@@ -45,43 +45,27 @@
             </div>
         </nav>
 
-        <div class = "container-fluid content" id = "portfolio">
-            <div class = "col-md-12">
-                <h1>GPU Flocking Boids <small>CUDA</small></h1>
-                <hr>
-            </div>
-
-            <div class = "gallery">
-                <div class = "col-lg-4 portfolio-img">
-                    <figure>
-                        <img src = "images/boids.gif">                            
-                        <figcaption>10,000 Boids</figcaption>
-                    </figure>
+        <div class = "container-fluid content" id = "landing">
+            <div class = "row">
+                <div class = "col-md-4">
                 </div>
-                <div class = "col-lg-4 portfolio-img">
-                    <figure>
-                        <img src = "images/100000boids.gif">
-                        <figcaption>100,000 Boids</figcaption>                            
-                    </figure>
+                <div class = "col-md-4" id = "title">
+                    <h1 id = "jonlee">Jon Lee</h1>
+                    <h2 id = "eng"><small>Software & Graphics Engineer</small></h2>
                 </div>
-                <div class = "col-lg-4 portfolio-img">
-                    <figure>
-                        <img src = "images/500000boids.gif">
-                        <figcaption>500,000 Boids</figcaption>                            
-                    </figure>
-                </div>
-                <div class = "col-lg-12" style = "padding-top: 25px;">
-                    <p>
-                        An in-depth performance analysis is available 
-                        on my <a href = "https://github.com/AgentLee/Project1-CUDA-Flocking" target = "blank">Github Repo</a>.
-                        <br>
-                        Many of the features in this project are based on my <a href = "mcpt.html">CPU Path Tracer</a>. 
-                        However, I was able to explore subsurface scattering for this project (purple cube in the above render).
-                    </p>
+                <div class = "col-md-4">
                 </div>
             </div>
         </div>
-        <script src = "https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8afdc98e-83c1-11e7-b5f8-0edaf8f81e27"></script>                    
+
+        <!-- <div class = "container-fluid content" id = "about">
+            <div class = "row">
+                <div class = "col-lg-1">
+                    <img style = "padding-top:100px;" height="50%"src = "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13876637_10210378136156368_7687151933148806534_n.jpg?oh=d3f79d7b6d90b41a380ee3859fce26c4&oe=5A7F86F1">                        
+                </div>
+                
+            </div>
+        </div> -->
     </body>
 
     <footer class="footer">
@@ -91,9 +75,9 @@
                     <ul>
                         <li><a href="http://github.com/agentlee" target = "blank" class="fa fa-github social" aria-hidden="true"></a></li>
                         <li><a href="https://www.linkedin.com/in/jonleexyz/" target = "blank" class="fa fa-linkedin social" aria-hidden="true"></a></li>
-                        <!-- <li><a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="fa fa-youtube-play social" aria-hidden="true"></a></li> -->
+                        <li><a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
                         <li><a href="https://500px.com/agentlee" target = "blank" class="fa fa-500px social" aria-hidden="true"></a></li>
-                        <!-- <li><a href="https://instagram.com/agentlee927" target = "blank" class="fa fa-instagram social" id = "lastSocial" aria-hidden="true"></a></li> -->
+                        <li><a href="https://instagram.com/agentlee927" target = "blank" class="fa fa-instagram social" id = "lastSocial" aria-hidden="true"></a></li>
                     </ul>
                 </div>
             </div>
