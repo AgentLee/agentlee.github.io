@@ -56,12 +56,12 @@ body
 }
 
 .contact a {
-    color: #D8FCFF;
-    text-decoration: underline;
+    color: #D8FCFF !important;
+    text-decoration: underline !important;
 }
 
 .contact a:hover
 {
-    color: white;
+    color: white !important;
 }
 
