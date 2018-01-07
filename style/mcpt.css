@@ -54,3 +54,14 @@ body
 .mcpt
 {
 }
+
+.contact a {
+    color: #D8FCFF;
+    text-decoration: underline;
+}
+
+.contact a:hover
+{
+    color: white;
+}
+
