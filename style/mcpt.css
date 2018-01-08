@@ -65,3 +65,19 @@ body
     color: white !important;
 }
 
+.row h2, h3
+{
+    color: #D8FCFF !important;
+}
+
+.fadeLine
+{
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+#portfolio h2, small
+{
+    color: #D8FCFF !important;    
+}
