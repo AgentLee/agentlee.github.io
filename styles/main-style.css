@@ -158,6 +158,36 @@ ul.main-nav li
     text-align: left;
 }
 
+#email
+{
+    color: #333333;
+    text-decoration: underline;
+}
+
+#px500:hover
+{
+    background-color: #0095E9;
+    color: white;
+}
+
+#linkedin:hover
+{
+    background-color: #007bb5;
+    color: white;
+}
+
+#youtube:hover
+{
+    background-color: #bb0000;
+    color: white;
+}
+
+#vimeo:hover
+{
+    background-color: #45bbff;
+    color:white;
+}
+
 /* Mobile */
 @media(max-width: 700px)
 {
