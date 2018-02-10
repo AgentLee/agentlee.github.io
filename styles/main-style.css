@@ -104,12 +104,11 @@ html, body
     margin-right: 50px;
     float: right;
     font-size: 15px;
-    color: #7C8489;
 }
 
 .main-nav a
 {
-    color: #7C8489;
+    color: #000;
 }
 
 
