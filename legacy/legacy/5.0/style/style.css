@@ -1,0 +1,225 @@
+body {
+		padding-top: 40px;
+    font-family: 'Reem Kufi', sans-serif;
+    background-color: #000;
+    /*font-family: 'Roboto', 'sans-serif'; */ 
+    /*font-family: 'Source Sans Pro', 'sans-serif';*/
+    /*font-family: 'Lato', 'sans-serif';*/
+    /*font-family: 'Ubunto', 'sans-serif';*/
+	}
+
+.main-container {
+  background-color: #fff;
+}
+
+.navbar-brand {
+  font-family: 'Reem Kufi', 'sans-serif'; 
+	font-size: 300%;
+}
+
+.jumbotron {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9db80+0,96c56f+100;Green+3D+%232 */
+  background: #a9db80; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #a9db80 0%, #96c56f 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #a9db80 0%,#96c56f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #a9db80 0%,#96c56f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', endColorstr='#96c56f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.jumbotron h1 {
+  color: #000;
+}
+
+.jumbotron p {
+  color: #565B51;
+}
+
+.navbar-nav {
+	font-size: 150%;
+}
+
+.social-bar {
+  height: 45px;
+}
+
+#bio {
+  padding-bottom: 25px;
+}
+
+.social { 
+	height: 75px;
+	/*padding-bottom: 20px;*/
+}
+
+.pixels-photo {
+	height: 50px;
+}
+
+.bio blockquote {
+  text-shadow: 0px 0px 40px #000;
+}
+
+#rutgers {
+  display: block;
+  position: relative;
+}
+
+#rutgers::after {
+  content: "";
+  background: url('../images/RU.jpg');
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#dcp {
+  display: block;
+  position: relative;
+}
+
+#dcp::after {
+  content: "";
+  background: url('../images/wdw.png');
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#penn {
+  display: block;
+  position: relative;
+}
+
+#penn::after {
+  content: "";
+  background: url('../images/penn.png');
+  background-size: 225px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: .25;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+iframe {
+  border: 3px black solid;
+}
+
+#git{
+  height: 35px;
+  margin-bottom: -50px;
+  background-color: #fff;
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #82a862;
+}
+.navbar-inverse .navbar-brand {
+  /*color: #565b51;*/
+  color: #000;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #475b35;
+}
+.navbar-inverse .navbar-text {
+  color: #565b51;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #565b51;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #475b35;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #475b35;
+  background-color: #82a862;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #475b35;
+  background-color: #82a862;
+}
+.navbar-inverse .navbar-toggle {
+  border-color: #82a862;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #82a862;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #565b51;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #565b51;
+}
+.navbar-inverse .navbar-link {
+  color: #565b51;
+}
+.navbar-inverse .navbar-link:hover {
+  color: #475b35;
+}
+
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #565b51;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #475b35;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #475b35;
+    background-color: #82a862;
+  }
+}
+
+.scrollToTop {
+  width:100px; 
+  height:130px;
+  padding:10px; 
+  text-align:center; 
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  top:75px;
+  right:40px;
+  display:none;
+  background: url('../images/git.png') no-repeat 0px 20px;
+}
+
+.scrollToTop:hover {
+  text-decoration: none;
+}
+
+.end {
+  border-top-style: inset;
+}

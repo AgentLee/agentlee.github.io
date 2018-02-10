@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Jon Lee | Software & Graphics Engineer</title>
+
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "../styles/main-style.css">
+        <link rel="stylesheet" href = "../styles/portfolio.css">
+        <link rel="stylesheet" href = "../styles/heatstroke.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Main Scripts -->
+        <script src="scripts/detectmobile.js"></script>
+		<script src="scripts/main.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../index.html">
+                        Jon Lee
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="../projects.html" class="active">Projects</a></li>
+                        <li><a href="../artwork.html">Artwork</a></li>
+                        <li><a href="../demoreel.html">Demo Reel</a></li>
+                        <li><a href="../resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <span>
+                    <h1>Hand of God <small>Unreal Engine</small><a class="header-repo" href="https://github.com/Aman-Sachan-asach/Hand_of_God" target="blank">Repo</a></h1>
+                </span>
+            </div>
+            <div class="row gallery" id="first">
+                <div class="col-md-6 mcpt-img">
+                    <!-- <img src="http://via.placeholder.com/550x550" alt=""> -->
+                    <iframe width="550" height="300" src="https://www.youtube.com/embed/8zP61F2Iodg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <h3>Trailer</h3>
+                    <iframe width="550" height="300" src="https://www.youtube.com/embed/UKGqr8qPlbg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p>
+                        Hand of God is a VR Cooperative Endless Runner. 
+                        <br>
+                        <br>
+                        The runner uses a controller to run along the terrain to collect resources
+                        and fend off enemies. The god player plays in VR and uses the VR controllers to 
+                        create floor tiles to bridge gaps between terrain pieces. The god player is 
+                        also able to block enemies from attacking the runner and can catch the runner
+                        if they fall or miss a jump. The goal is to survive and run as long as possible.
+                        <br>
+                        <br>
+                        I implemented the procedural terrain system. One of the challenges of this 
+                        was spawning floor tiles in a confined area so the VR player would move as 
+                        little as possible and so that the tiles don't spawn on top of each other.
+                        <br>
+                        <br>
+                        This was completed in CIS568: Game Design Fall 2017 with 
+                        <a href="http://www.amansachan.com" target="blank">Aman Sachan</a> and
+                        <a href="https://github.com/mgstauffer" target="blank"> Michael Stauffer</a>.
+                    </p>
+                    <!-- <div class="mcpt-img-select">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                    </div>
+                    <div class="mcpt-img-select">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                        <img src="http://via.placeholder.com/100x100" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container sneakpeek">
+            <div class="row">
+                <div class="col-md-6 col-sm-12" id="contact">
+                    <span>Jon Lee ©2018</span>
+                    <br>
+                    <span>JonathanHKLee8@gmail.com</span>
+                </div>
+                <div class="col-md-6 col-sm-12 social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

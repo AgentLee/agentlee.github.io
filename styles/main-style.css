@@ -1,0 +1,208 @@
+html, body
+{
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Chivo', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 
+ *  Navigation
+ */
+.navbar
+{
+    height: 75px;
+    background-color: transparent;
+    background: transparent;
+    background-color: #333333;    
+    border-color: transparent;
+}
+
+.navbar-nav
+{
+    font-size: 20px;
+    margin-top: 12.5px;
+    margin-right: 100px;
+    /* background-color: #939DA3;     */
+}
+
+.navbar-nav a
+{
+    color: #7C8489 !important;    
+}
+
+.navbar-nav a:hover
+{
+    color: white !important;    
+}
+
+.navbar-nav a.active
+{
+    text-decoration: underline;
+}
+
+.navbar-brand
+{
+    font-size: 40px;
+    margin-top: 12px;
+    margin-left: 75px !important;
+    color: white !important;
+}
+
+/* 
+ *  Main
+ */
+.main
+{
+    width: 100%;
+    height: 90%;
+    /* height: 450px; */
+    background-color: #d6d6d6;
+}
+
+.main-inner
+{  
+    height: 300px;
+    margin-top: 150px; 
+}
+
+#canvas
+{  
+    height: 500px;
+    margin: 0;
+    margin-top: 100px; 
+    margin-left: -100px;
+    /* background-color: blue; */
+}
+
+.intro
+{
+    margin-top: 20px;
+    margin-left: 70px;
+    height: 100%;
+}
+
+#im
+{
+    font-size: 95px;
+    margin-top: -25px;
+}
+
+#jonlee
+{
+    font-size: 130px;
+    margin-top: -30px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-nav
+{
+    /* margin-left: 70px; */
+    margin-top: 10px;
+    margin-right: 50px;
+    float: right;
+    font-size: 15px;
+}
+
+
+ul.main-nav li
+{
+    display: inline !important;
+}
+
+#swe
+{
+    margin-top: -20px;
+}
+
+.sneakpeek
+{
+    width: 100%;
+    height: 10%;
+    background-color: #939DA3;
+    text-align: center;
+}
+
+.social
+{
+    margin-top: 15px;
+    text-align: right;
+}
+
+.btn-circle 
+{
+    width: 50;
+    height: 50px;
+    text-align: center;
+    padding: 12.5px 0;
+    font-size: 25px;
+    line-height: 1.42;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: #7C8489;
+    color: white;
+}
+
+.btn:hover
+{
+    background-color: #DDDDC7;
+    border-color: transparent;
+}
+
+#contact
+{
+    margin-top: 15px;
+    /* margin-left: 30px; */
+    text-align: left;
+}
+
+/* Mobile */
+@media(max-width: 700px)
+{
+    .navbar
+    {
+        margin-right: 0;
+    }
+
+    .navbar-brand
+    {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .main
+    {
+        width: 100%;
+        height: 100%;
+        background-color: #d6d6d6;
+    }
+
+    #canvas
+    {
+        height: 100%;
+    }
+
+    .intro
+    {
+        margin: 0;
+    }
+
+    .social
+    {
+        margin-top: 50px;
+    }
+
+    .sneakpeek
+    {
+        width: 100%;
+        height: 35%;
+        background-color: aqua;
+    }
+
+    .decor
+    {
+        background-image: none;
+    }
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jon Lee</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body >
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="../index.html#page-top">Jon Lee <small style = "font-size:25%;">alpha version</small></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="../index.html#connect">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://jonleedev.blogspot.com/" target = "blank">Blog</a>
+                    </li>
+                    <li class = "page-scroll">
+                        <a target = "blank" href = "../JonLee_Resume_S17.pdf">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <section class = "projects" id = "MCPT">
+        <div class = "container">
+            <!-- Title -->
+            <div class = "row">
+                <div class = "col-md-12" id = "title">
+                    <h1>R3<small>  A Monte Carlo Path Tracer</small></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "projects" id = "MCPT-features">
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-md-12">
+                    ***Page is still under construction***
+                    <br>
+                    Not that the Cornell Box is not exciting, I am in the process of creating more interesting renders.
+                    Click <a href = "../index.html#portfolio">here</a> for more renders.
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-3">
+                    <h4>Integrators</h4>
+                    R3 supports three different types of integrators to solve for the Light Transport Equation.
+                    <ul>
+                        <li>
+                            Direct Lighting <small>(Light Importance Sampling)</small>
+                        </li>
+                        <li>
+                            Full Lighting <small>(MIS - Light Importance Sampling and BRDF Importance Sampling</small>
+                        </li>
+                        <li>
+                            Full Lighting with Participating Media
+                            <br>
+                            <p class = "featureDesc">
+                                As an extension to the Full Lighting Integrator,
+                                R3 can handle scenes with homogenous volumes. 
+                                <br>
+                                Ray marching was the primary technique used to solve
+                                for the volume in the scene. I detailed more about 
+                                my implementation on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/direct2.png">
+                    <center>Direct Lighting<br>100spp + 5 bounces</center>                 
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/full2.png">   
+                    <center>Full Lighting<br>100spp + 5 bounces</center>                 
+                </div>
+
+                <div class = "col-md-3">
+                    <center>
+                        <img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/volumetric.png">   
+                        <br>Full Lighting with Participating Media<br>400spp + 5 bounces
+                    </center>                 
+                </div>
+                <div class = "col-md-3">
+                    <!-- DELIBERATELY EMPTY -->
+                </div>
+                <div class = "col-md-9">
+                    <center><img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/veach.png"></center>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-8">
+                    <h4>Materials</h4>
+                    <ul>
+                        <li>Lambertian Surfaces</li>
+                        <li>Microfacet BRDF/BTDF</li>
+                        <li>Plastic Materials</li>
+                        <li>Transmissive Materials</li>
+                        <li>Specular BRDF/BTDF</li>
+                        <li>Oren-Nayar</li>
+                        <li>Fresnel Dielectrics</li>
+                        <li>Subsurface Scattering (todo)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-3">
+                    <h4>Constructive Solid Geometry</h4>
+                    <p class = "featureDesc">
+                        Handles the three set operations, intersection, union, and subtraction.
+                        <br>
+                        You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/taking-constructive-geometry.html" target = "blank">here</a>.
+                    </p>
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
+                </div>
+
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
+                </div>
+                
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-4">
+                    <h4>Complex Implicit Geometry</h4>
+                    <p class = "featureDesc">
+                        <a href = "http://mathworld.wolfram.com/topics/AlgebraicSurfaces.html" target = "blank">WolframAlpha</a>
+                         provides a lot of different equations that produce solid geometries. 
+                        <br>
+                        <br>
+                        Ray marching was used to find the intersections of the solids. Given a point on the ray,
+                        we can plug in the (x, y, z) values into the equation for the solid. If the equation 
+                        evaluates to 0, or whatever was specified for the shape, the intersection test returns 
+                        true and the point gets rendered.
+                    </p>
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit3.png"> 
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit2.png"> 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-3">
+                    <h4>Lights</h4>
+                    <ul>
+                        <li>Diffuse Area Lights</li>
+                        <li>Point Lights</li>
+                        <li>Spotlights</li>
+                    </ul>
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
+                </div>
+                <div class = "col-md-3">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class = "row">
+                <div class = "col-md-8">
+                    <h4>Acceleration Structures</h4>
+                    <ul>
+                        <li>Bounding Volume Hierarchy (BVH)
+                            <ul>
+                                <li>BVH Tree built in <b>68ms</b></li>
+                                <li>Rendered with BVH Tree in <b>1428ms</b> (1.4 seconds)</li>
+                                <li>Rendered without BVH Tree in <b>345568ms</b> (5.75 minutes)</li>
+                            </ul>
+                        </li>
+                        <li>kd-Tree (in process)</li>
+                    </ul>
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/wahoo.png">
+                    <center>Direct Lighting<br>1spp</center>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+           <div class = "row">
+                <div class = "col-md-4">
+                    <h4>Variance Reduction <small>via SuperSampling</small></h4>
+                    <p class = "featureDesc">
+                        You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">here</a>.
+                    </p>
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/highvar.png">
+                    <center>10,000spp + 5 bounces</center>
+                </div>
+                <div class = "col-md-4">
+                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/lowvar.png">
+                    <center>1024spp + 5 bounces</center>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Footer -->
+    <footer class="text-center" id="connect">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Connect with Me</h3>
+                        <ul class="list-inline">
+                            <li>
+                              <a href="https://www.linkedin.com/in/jonathan-lee-821777b0/" target = "blank" class="btn-social btn-outline"><span class="sr-only">LinkedIn</span><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                              <a href="http://github.com/agentlee" target = "blank" class="btn-social btn-outline"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                            <li>
+                              <a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="btn-social btn-outline"><span class="sr-only">YouTube</span><i class="fa fa-fw fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://vimeo.com/189623959" target = "blank" class="btn-social btn-outline"><span class="sr-only">Vimeo</span><i class="fa fa-fw fa-vimeo"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://500px.com/agentlee" target = "blank" class="btn-social btn-outline"><span class="sr-only">500px</span><i class="fa fa-fw fa-500px"></i></a>
+                            </li>
+                        </ul>
+                        <span class="sr-only"></span><i class="fa fa-fw fa-inbox"></i> JonathanHKLee8@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        &copy; Jon Lee 2017
+                        <br>
+                        Template based on  <a href = "https://startbootstrap.com/template-overviews/freelancer/" target = "blank">Freelancer</a> from <a href = "startboostrap.com" target = "blank">Start Bootstrap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- End Footer -->
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+<!-- Scipts -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../js/freelancer.min.js"></script>
+
+<!-- End Scipts -->
+
+</body>
+
+</html>

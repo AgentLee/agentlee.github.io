@@ -1,0 +1,345 @@
+html
+{
+    position: relative;
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    /* font-family: 'Hammersmith One', sans-serif;  */
+    /* font-family: 'Kreon', serif;  */
+    font-family: 'Saira Semi Condensed', sans-serif; 
+    /* font-family: 'Just Another Hand', cursive; */
+    /* font-family: 'Saira Condensed', sans-serif; */
+}
+
+header
+{
+    /* background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907); */
+    background-image: url(images/stanford.png); 
+    /* background: #4B9C55; */
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: 50px; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/********************/
+/* Header           */
+/********************/
+#home
+{
+    font-size: 75px;
+    color: white;
+}
+
+.subtext
+{
+    color: #7F727A;
+}
+
+/********************/
+/* Landing Page     */
+/********************/
+#social
+{
+    position: fixed; 
+    bottom: 0;
+    /* Need this so it can stay at the bottom of the page while scrolling */
+    z-index: 1;
+}
+
+.connect
+{
+    color: white;
+}
+
+.connect span
+{
+    font-size: 20px;
+}
+
+.arrow
+{
+    height: 1.3%;
+}
+
+#revArrow
+{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.connectMe
+{
+    color: white;
+}
+
+#arrow
+{
+    color: white;
+}
+
+/*********************/
+/* Social Navigation */
+/*********************/
+#socialNav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* float: right; */
+}
+
+#socialNav li 
+{
+    float: left;
+    font-size: 25px;
+}
+
+#socialNav li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#socialNav li a:hover
+{
+    background-color: transparent;
+    text-decoration: none;
+    color: black; 
+}
+
+#email a:hover
+{
+    color: darkred !important;
+}
+
+#github a:hover
+{
+    color: black !important;
+}
+
+#linkedin a:hover
+{
+    color: #006EB1 !important;
+}
+
+#youtube a:hover
+{
+    color: #CD201F !important;
+}
+
+#vimeo a:hover
+{
+    color: #00ADEF !important;
+}
+
+#px500 a:hover
+{
+    color: black !important;
+}
+
+/********************/
+/* Navigation       */
+/********************/
+#mainNav
+{
+    color: black;
+    position:fixed;
+	top:0px;
+	width:100%; 
+	height:75px; 
+	background-color:transparent;
+	color: #FFFFFF;
+	z-index:9999;
+    display: none;
+}
+
+#mainNav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+}
+
+#mainNav li 
+{
+    float: left;
+    font-size: 25px;
+}
+
+#mainNav li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#mainNav li a:hover
+{
+    background-color: transparent;
+    text-decoration: none;
+    color: #242E35;
+}
+
+.activeNav
+{
+    text-decoration: underline;
+}
+
+
+/********************/
+/* Content Sections */
+/********************/
+.content
+{
+    background: grey;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
+    background: #b5bdc8; /* Old browsers */
+    background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+}
+
+/* About */
+.content-about
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #9EAEB3; */
+
+    /* background-image: url(images/cornellbox.png);  */
+    /* background: #4B9C55; */
+    /* background-size: auto;  */
+    /* background-position: center; */
+}
+
+#profile-img
+{
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+/* Portfolio */
+.content-portfolio
+{
+    min-height: 100vh;
+    /* background-color: #4A7B6F; */
+    /* background-color: #4A7253;  */
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8e0de+0,aebfbc+22,99afab+33,8ea6a2+50,829d98+67,4e5c5a+82,0e0e0e+100;Grey+3D */
+    background: #d8e0de; /* Old browsers */
+    background: -moz-linear-gradient(top, #d8e0de 0%, #aebfbc 22%, #99afab 33%, #8ea6a2 50%, #829d98 67%, #4e5c5a 82%, #0e0e0e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=0 );  /*IE6-9 */
+
+    overflow: hidden;
+    padding: 10vh 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-portfolio:before,
+.content-portfolio:after
+{
+    content: "";
+    display: table;
+}
+
+.content-portfolio:after
+{
+    clear: both;
+}
+
+.portfolio-img
+{
+    background-color: grey;
+    border-collapse: red;
+}
+
+.recentProjects:before
+{
+    display: inline-block;
+    content: "";
+    height: 6px;
+    background: white;
+    position: absolute;
+    width: 73%;
+    top: 50%;
+    margin-top: 2px;
+    margin-left: 25%
+}
+
+.projectTitle
+{
+    text-align: center;
+}
+
+/********************/
+/* Footer           */
+/********************/
+footer
+{
+    /* background-color: grey; */
+    background-color: transparent;
+    clear: both;
+    position: relative;
+    z-index: 0;
+    /* height: 3em; */
+    margin-top: -3em;
+}
+
+footer span
+{
+    font-size: 20px;
+    font-style: bold;
+    margin-top: -15em;
+}
+
+#year
+{
+    float:right;
+    margin-top: 0em;
+}
+
+footer
+{
+    color: white;
+}
+
+footer a
+{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover
+{
+    color: green;
+    text-decoration: none;
+}

@@ -1,361 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Jon Lee | Software & Graphics Engineer</title>
 
-<head>
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "../styles/main-style.css">
+        <link rel="stylesheet" href = "../styles/portfolio.css">
+        <link rel="stylesheet" href = "../styles/mcpt.css">
+        <link rel="stylesheet" href = "../styles/heatstroke.css">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+        <!-- Main Scripts -->
+        <script src="../scripts/detectmobile.js"></script>
+		<script src="../scripts/main.js"></script>
+		<script src="../scripts/mcpt.js"></script>
+    </head>
 
-    <title>Jon Lee</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="../css/freelancer.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body >
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="../index.html#page-top">Jon Lee <small style = "font-size:25%;">alpha version</small></a>
+    <body onload="randomImage();">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../index.html">
+                        Jon Lee
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="../projects.html" class="active">Projects</a></li>
+                        <li><a href="../artwork.html">Artwork</a></li>
+                        <li><a href="../demoreel.html">Demo Reel</a></li>
+                        <li><a href="../resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="../index.html#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="../index.html#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="../index.html#connect">Contact</a>
-                    </li>
-                    <li>
-                        <a href="https://jonleedev.blogspot.com/" target = "blank">Blog</a>
-                    </li>
-                    <li class = "page-scroll">
-                        <a target = "blank" href = "../JonLee_Resume_S17.pdf">Resume</a>
-                    </li>
-                </ul>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <span>
+                    <h1>Monte Carlo Path Tracer <small>C++, Qt</small>
+                </span>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+            <div class="row gallery" id="first">
+                <div class="col-md-6 mcpt-img">
+                    <a href="../images/mcpt/variance/lowvar.png" data-toggle="lightbox" id="mcpt-raw-img">
+                        <img src="" alt="" id="mcpt-img" width="400px" height="400px">
+                    </a>
 
-    <!-- Header -->
-    <section class = "projects" id = "MCPT">
-        <div class = "container">
-            <!-- Title -->
-            <div class = "row">
-                <div class = "col-md-12" id = "title">
-                    <h1>R3<small>  A Monte Carlo Path Tracer</small></h1>
+                    <div id="mcpt-desc-txt" style="padding-top: 0px;">
+                        <h2></h2>
+                        <p class="heatstroke-img-desc"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p>
+                        Path Tracing is a rendering technique to generate images from
+                        3D scenes as realistically as possible. Path tracing utilizes
+                        an estimation method called Monte Carlo estimation to approximate
+                        the light energy for a point from an arbitrary amount of samples.
+                        This will allow the light contribution to converge towards a solution
+                        that solves the Light Transport Equation. 
+                        <br>
+                        <br>
+                        My path tracer supports multiple importance sampling, global illumination,
+                        volumetric rendering, and BVH acceleration.
+                        <br>
+                        <br>
+                    </p>
+
+                    <div class="mcpt-img-select">
+                        <a href="#" onclick="changeImage(0); return false;"><img src="../images/mcpt/thumbs/cornell.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(1); return false;"><img src="../images/mcpt/thumbs/dragon-lambert.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(2); return false;"><img src="../images/mcpt/thumbs/dragon-gold.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(3); return false;"><img src="../images/mcpt/thumbs/dragon-glass.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(4); return false;"><img src="../images/mcpt/thumbs/lucy.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(5); return false;"><img src="../images/mcpt/thumbs/dragons.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(6); return false;"><img src="../images/mcpt/thumbs/pokeball.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(7); return false;"><img src="../images/mcpt/thumbs/csg.png" alt="" width="100px"></a>
+                        <a href="#" onclick="changeImage(8); return false;"><img src="../images/mcpt/thumbs/implicit.png" alt="" width="100px"></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class = "projects" id = "MCPT-features">
-        <div class = "container">
-            <div class = "row">
-                <div class = "col-md-12">
-                    ***Page is still under construction***
+        <!-- Variance Reduction -->
+        <!-- <div class="container">
+            <div class="row gallery">
+                <div class="col-md-12">
+                    <h2>Variance Reduction</h2>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-6">
+                    <img src="http://via.placeholder.com/400x400" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p style="text-align: left;">
+                        In path tracing, each pixel gets sampled an arbitrary amount of times. 
+                        Usually, the more samples, the less noisy the render. The incoherent dots
+                        that appear are called fireflies (variance/noise). Rendering a simple scene, such
+                        as the Cornell Box with two lights at an unnecessary 100x100 samples per pixel,
+                        still led to fireflies and took at least a day to render. 
+                        <br>
+                        <br>
+                        I was able to implement an algorithm that not only removes fireflies, but also
+                        cuts down the render time.
+                        <br>
+                        <br>
+                        Each pixel has its variance calculated and if that variance reaches some threshold,
+                        it gets resampled. Not all pixels get resampled, which allows for a <i>lower</i> sample
+                        rate. But in the worst case, this is an <code>O(n^2)</code> algorithm.                          
+                        <br>
+                        <br>
+                        I go more in depth on how I achieved this in my <a href="http://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target="blank">blog</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row gallery">
+                <div class="col-md-12">
+                    <h2>Accerlation Structure</h2>
+                </div>
+            </div>
+            <div class="row gallery">
+                <div class="col-md-6">
+                    <img src="http://via.placeholder.com/400x400" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p style="text-align: left;">
+                        In path tracing, each pixel gets sampled an arbitrary amount of times. 
+                        Usually, the more samples, the less noisy the render. The incoherent dots
+                        that appear are called fireflies (variance/noise). Rendering a simple scene, such
+                        as the Cornell Box with two lights at an unnecessary 100x100 samples per pixel,
+                        still led to fireflies and took at least a day to render. 
+                        <br>
+                        <br>
+                        I was able to implement an algorithm that not only removes fireflies, but also
+                        cuts down the render time.
+                        <br>
+                        <br>
+                        Each pixel has its variance calculated and if that variance reaches some threshold,
+                        it gets resampled.                         
+                        <br>
+                        <br>
+                        I go in depth on how I achieved this in my <a href="http://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target="blank">blog</a>
+                    </p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Footer -->
+        <div class="contain">
+            <div class="row sneakpeek">
+                <div class="col-md-6 test" id="contact">
+                    <span>Jon Lee ©2018</span>
                     <br>
-                    Not that the Cornell Box is not exciting, I am in the process of creating more interesting renders.
-                    Click <a href = "../index.html#portfolio">here</a> for more renders.
+                    <span>JonathanHKLee8@gmail.com</span>
                 </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-3">
-                    <h4>Integrators</h4>
-                    R3 supports three different types of integrators to solve for the Light Transport Equation.
-                    <ul>
-                        <li>
-                            Direct Lighting <small>(Light Importance Sampling)</small>
-                        </li>
-                        <li>
-                            Full Lighting <small>(MIS - Light Importance Sampling and BRDF Importance Sampling</small>
-                        </li>
-                        <li>
-                            Full Lighting with Participating Media
-                            <br>
-                            <p class = "featureDesc">
-                                As an extension to the Full Lighting Integrator,
-                                R3 can handle scenes with homogenous volumes. 
-                                <br>
-                                Ray marching was the primary technique used to solve
-                                for the volume in the scene. I detailed more about 
-                                my implementation on my <a href = "https://jonleedev.blogspot.com/2017/07/a-journey-through-participating-media.html" target = "blank">blog</a>.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/direct2.png">
-                    <center>Direct Lighting<br>100spp + 5 bounces</center>                 
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/integrators/full2.png">   
-                    <center>Full Lighting<br>100spp + 5 bounces</center>                 
-                </div>
-
-                <div class = "col-md-3">
-                    <center>
-                        <img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/volumetric.png">   
-                        <br>Full Lighting with Participating Media<br>400spp + 5 bounces
-                    </center>                 
-                </div>
-                <div class = "col-md-3">
-                    <!-- DELIBERATELY EMPTY -->
-                </div>
-                <div class = "col-md-9">
-                    <center><img class = "MCPT_renders" id = "vol" src = "../img/portfolio/MCPT/integrators/veach.png"></center>
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-8">
-                    <h4>Materials</h4>
-                    <ul>
-                        <li>Lambertian Surfaces</li>
-                        <li>Microfacet BRDF/BTDF</li>
-                        <li>Plastic Materials</li>
-                        <li>Transmissive Materials</li>
-                        <li>Specular BRDF/BTDF</li>
-                        <li>Oren-Nayar</li>
-                        <li>Fresnel Dielectrics</li>
-                        <li>Subsurface Scattering (todo)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-3">
-                    <h4>Constructive Solid Geometry</h4>
-                    <p class = "featureDesc">
-                        Handles the three set operations, intersection, union, and subtraction.
-                        <br>
-                        You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/taking-constructive-geometry.html" target = "blank">here</a>.
-                    </p>
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
-                </div>
-
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
-                </div>
-                
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-4">
-                    <h4>Complex Implicit Geometry</h4>
-                    <p class = "featureDesc">
-                        <a href = "http://mathworld.wolfram.com/topics/AlgebraicSurfaces.html" target = "blank">WolframAlpha</a>
-                         provides a lot of different equations that produce solid geometries. 
-                        <br>
-                        <br>
-                        Ray marching was used to find the intersections of the solids. Given a point on the ray,
-                        we can plug in the (x, y, z) values into the equation for the solid. If the equation 
-                        evaluates to 0, or whatever was specified for the shape, the intersection test returns 
-                        true and the point gets rendered.
-                    </p>
-                </div>
-                <div class = "col-md-4">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit3.png"> 
-                </div>
-                <div class = "col-md-4">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/implicit2.png"> 
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-3">
-                    <h4>Lights</h4>
-                    <ul>
-                        <li>Diffuse Area Lights</li>
-                        <li>Point Lights</li>
-                        <li>Spotlights</li>
-                    </ul>
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/union.png"> 
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/intersection.png"> 
-                </div>
-                <div class = "col-md-3">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/csg/difference.png"> 
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class = "row">
-                <div class = "col-md-8">
-                    <h4>Acceleration Structures</h4>
-                    <ul>
-                        <li>Bounding Volume Hierarchy (BVH)
-                            <ul>
-                                <li>BVH Tree built in <b>68ms</b></li>
-                                <li>Rendered with BVH Tree in <b>1428ms</b> (1.4 seconds)</li>
-                                <li>Rendered without BVH Tree in <b>345568ms</b> (5.75 minutes)</li>
-                            </ul>
-                        </li>
-                        <li>kd-Tree (in process)</li>
-                    </ul>
-                </div>
-                <div class = "col-md-4">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/wahoo.png">
-                    <center>Direct Lighting<br>1spp</center>
-                </div>
-            </div>
-
-            <br>
-            <br>
-
-           <div class = "row">
-                <div class = "col-md-4">
-                    <h4>Variance Reduction <small>via SuperSampling</small></h4>
-                    <p class = "featureDesc">
-                        You can read more about my implementation <a href = "https://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target = "blank">here</a>.
-                    </p>
-                </div>
-                <div class = "col-md-4">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/highvar.png">
-                    <center>10,000spp + 5 bounces</center>
-                </div>
-                <div class = "col-md-4">
-                    <img class = "MCPT_renders" src = "../img/portfolio/MCPT/variance/lowvar.png">
-                    <center>1024spp + 5 bounces</center>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-<!-- Footer -->
-    <footer class="text-center" id="connect">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Connect with Me</h3>
-                        <ul class="list-inline">
-                            <li>
-                              <a href="https://www.linkedin.com/in/jonathan-lee-821777b0/" target = "blank" class="btn-social btn-outline"><span class="sr-only">LinkedIn</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                              <a href="http://github.com/agentlee" target = "blank" class="btn-social btn-outline"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="btn-social btn-outline"><span class="sr-only">YouTube</span><i class="fa fa-fw fa-youtube"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://vimeo.com/189623959" target = "blank" class="btn-social btn-outline"><span class="sr-only">Vimeo</span><i class="fa fa-fw fa-vimeo"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://500px.com/agentlee" target = "blank" class="btn-social btn-outline"><span class="sr-only">500px</span><i class="fa fa-fw fa-500px"></i></a>
-                            </li>
-                        </ul>
-                        <span class="sr-only"></span><i class="fa fa-fw fa-inbox"></i> JonathanHKLee8@gmail.com
-                    </div>
+                <div class="col-md-6 test social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        &copy; Jon Lee 2017
-                        <br>
-                        Template based on  <a href = "https://startbootstrap.com/template-overviews/freelancer/" target = "blank">Freelancer</a> from <a href = "startboostrap.com" target = "blank">Start Bootstrap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-<!-- End Footer -->
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-<!-- Scipts -->
-
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="../js/jqBootstrapValidation.js"></script>
-    <script src="../js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="../js/freelancer.min.js"></script>
-
-<!-- End Scipts -->
-
-</body>
-
+        <!-- Lightbox -->
+        <script>
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        </script>
+    </body>
 </html>

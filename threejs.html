@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - loaders - OBJ loader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: black;
+				color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+			#info {
+				color: #fff;
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+			}
+			#info a, .button { color: #f00; font-weight: bold; text-decoration: underline; cursor: pointer }
+		</style>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	</head>
+
+	<body>
+		<!-- https://www.learnthreejs.com/load-3d-model-using-three-js-obj-loader/ -->
+		<script src="scripts/threejs/three.min.js"></script>
+		<script src="scripts/threejs/OrbitControls.js"></script>
+		<script src="scripts/threejs/OBJLoader.js"></script>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 left">
+					<style>
+						.row
+						{
+							background-color: green;
+						}
+						.left
+						{
+							height: 400px;
+						}
+					</style>
+					<h1>SUCCESS!</h1>
+				</div>
+				<div class="col-md-4 right" id = "canvas">
+					<style>
+						.right
+						{
+							height: 400px;
+							background-color: transparent;
+						}
+					</style>
+					<script>
+						var scene 	= new THREE.Scene();
+						var camera 	= new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+			
+						var canvas = document.getElementById('canvas');
+						var renderer = new THREE.WebGLRenderer({alpha: true});
+						renderer.setSize(document.getElementById('canvas').clientWidth, 400);
+						canvas.appendChild(renderer.domElement);
+			
+						camera.position.z = 15;
+			
+						var controls = new THREE.OrbitControls(camera, renderer.domElement);
+						controls.enableDamping = true;
+						controls.dampingFactor = 0.25;
+						controls.enableZoom = true;
+			
+						controls.update();
+			
+						var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+						keyLight.position.set(-100, 0, 100);
+			
+						var fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+						fillLight.position.set(100, 0, 100);
+			
+						var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+						backLight.position.set(100, 0, -100).normalize();
+			
+						scene.add(keyLight);
+						scene.add(fillLight);
+						scene.add(backLight);
+			
+						var objLoader = new THREE.OBJLoader();
+						objLoader.load('bunny.obj', function(object) {
+							scene.add(object);
+							// object.position.y -= 60;
+						});
+			
+						var animate = function()
+						{
+							requestAnimationFrame(animate);
+							renderer.render(scene, camera);
+						};
+			
+						animate();
+					</script>
+				</div>
+			</div>
+		</div>
+
+		
+	</body>
+</html>

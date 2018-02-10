@@ -1,0 +1,255 @@
+<html>
+    <head>
+        <title>Portfolio | Jon Lee</title>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/portfolio.css">
+        <link rel="stylesheet" href="style/mcpt.css">
+        <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">        
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Script -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Custom -->
+        <script src = "scripts/portfolioscript.js"></script>
+        <script src = "https://use.fontawesome.com/89fd9e4cbb.js"></script>
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">Jon Lee</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="about.html">About</a></li>
+                        <li class = "activeLink"><a href="portfolio.html" id = "projectlink">Projects</a></li>
+                        <li><a href="artwork.html">Artwork</a></li>
+                        <li><a href="demoreel">Demo Reel</a></li>
+                        <li><a href="resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class = "anim">
+        <div class = "container content" id = "portfolio">
+            <div class = "col-lg-12">
+                <h1>Projects</h1>
+                <hr>
+            </div>
+
+            <div class="row">
+                <h2 style = "font-size: 150%;">Monte Carlo Path Tracer <small><a href = "mcpt.html">Learn More</a></small></h2>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "mcpt.html"><img width = "100%" src = "images/mcpt/dragons.png"></a>
+                    </center>
+                </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "mcpt.html"><img width = "100%" src = "images/mcpt/lucy_20_8.png"></a>
+                    </center>
+                </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "mcpt.html"><img width = "100%" src = "images/mcpt/implicit.png"></a>
+                    </center>
+                </div>
+                <div class = "col-lg-3" style = "padding-bottom: 2%">
+                    <center>
+                        <a href = "mcpt.html"><img width = "100%" src = "images/mcpt/csg/csg_sphere_diff.png"></a>
+                    </center>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2 style = "font-size: 150%;">GPU Projects</h2>
+                <hr class = "fadeLine">
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Boids</h3>
+                    <center>
+                        <a href = "boids.html"><img width = "100%" src = "images/boids.gif"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "boids.html">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Path Tracer</h3>
+                    <center>
+                        <a href = "gpupt.html"><img width = "100%" src = "images/gpupt/materials100000samp.png"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "gpupt.html">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Rasterizer</h3>
+                    <center>
+                        <a href = "https://github.com/AgentLee/Project4-CUDA-Rasterizer"><img width = "100%" src = "images/rasterizer/milktruck.png"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "https://github.com/AgentLee/Project4-CUDA-Rasterizer" target = "blank">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Clustered Forward+ and Deferred Renderer</h3>
+                    <center>
+                        <a href = "https://github.com/AgentLee/ClusteredRenderer" target = "blank"><img width = "100%" src = "images/forwardplus_deferred/500lightsblinn.gif"></a>
+                        <a style = "float: center; margin-top: 1%;" href = "http://jonlee.xyz/ClusteredRenderer">Live Demo</a> | <a style = "float: center; margin-top: 1%;" href = "https://github.com/agentlee/Clustered-Deferred-and-Forward-Plus-Shading">Learn More</a>                   
+                </center>
+                </div>
+            </div>
+
+            <div class="row" id = "gpu2">
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Vulkan Grass Rendering</h3>
+                    <center>
+                        <a href = "https://github.com/AgentLee/Real-Time-Grass-Renderer"><img width = "100%" src = "images/grass.gif"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "https://github.com/AgentLee/Real-Time-Grass-Renderer" target = "blank">Learn More</a>                    
+                </div>
+                <div class = "col-lg-3" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Heatstroke: Volumetric Renderer</h3>
+                    <center>
+                        </a>
+                    </center>
+                    <a href = "https://rms13.github.io/WebGL2-Volumetric-Renderer/"><img width = "100%" src = "images/heatstroke.PNG"></a>
+                    <a style = "float: center; margin-top: 1%;" href = "https://rms13.github.io/WebGL2-Volumetric-Renderer/">Live Demo</a> | <a style = "float: center; margin-top: 1%;" href = "https://github.com/rms13/WebGL2-Volumetric-Renderer" target = "blank">Learn More</a>                   
+                </div>
+            </div>
+
+            <div class="row">
+                <h2 style = "font-size: 150%;">Game Design Projects</h2>
+                <hr class = "fadeLine">
+                <div class = "col-lg-4" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Hand of God (VR)</h3>
+                    <center>
+                        <a href = "handofgod.html"><img width = "100%" src = "images/handofgod.gif"></a>
+                    </center>
+                    <a style = "float: right; margin-top: 1%;" href = "handofgod.html">Learn More</a>                    
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">Stay Woke (VR)</h3>
+                    <center>
+                        <a href = "staywoke.html"><img width = "100%" src = "images/staywoke.png"></a>
+                        <a style = "float: right; margin-top: 1%;" href = "staywoke.html">Learn More</a>                    
+                    </center>
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.25%; padding-bottom: 2%">
+                    <h3 style = "font-size: 115%;">AR Paintball (iOS)</h3>
+                    <center>
+                        <a href = "https://github.com/AgentLee/AR-Paintball/blob/master/README.md" target = "blank"><img width = "100%" src = "images/arpaintball.png"></a>
+                        <a style = "float: right; margin-top: 1%;" href = "https://github.com/AgentLee/AR-Paintball/blob/master/README.md" target = "blank">Learn More</a>                    
+                    </center>
+                </div>
+            </div>
+
+            <div class="row" style = "padding-bottom: 2%;">
+                <h2 style = "font-size: 150%;">Applications</h2>
+                <hr class = "fadeLine">
+                <div class = "col-lg-4" style = "margin-top: -1.05%;">
+                    <h3 style = "font-size: 115%;">RU-Studying Web App</h3>
+                    <center>
+                        <a href = "https://ru-studying.herokuapp.com" target = "blank"><img width = "85%"  src = "images/rooms.png"></a>   
+                    </center>
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.05%;">
+                    <h3 style = "font-size: 115%;">Half-Edge Mesh Editor</h3>
+                    <center>
+                        <a href = "minimaya.html"><img width = "85%"  src = "images/Joints.gif"></a>   
+                    </ccenter>
+                </div>
+                <div class = "col-lg-4" style = "margin-top: -1.05%;">
+                    <h3 style = "font-size: 115%;">SteerLite Crowd Simulator</h3>
+                    <center>
+                        <a href = "steerlite.html"><img width = "85%" src = "images/steerlite.gif"></a>
+                    </center>
+                </div>
+            </div>
+
+            <div class = "row col-lg-12">
+                <h2 style = "font-size: 150%;">3D Modeling</h2>
+                <hr class = "fadeLine">                    
+            </div>
+            <div class = "row gallery">
+                <div class = "col-md-4">
+                    <figure>
+                        <img src = "images/Buzz/Dash.png" style = "padding-bottom: 25px;">
+                    </figure>
+                </div>
+                <div class = "col-md-4">
+                    <figure>
+                        <img src = "images/Buzz/Laser.png">
+                    </figure>
+                </div>
+                <div class = "col-md-4">
+                    <figure>
+                        <img src = "images/Buzz/Front.png">
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class = "container">
+            <div class = "col-md-12">
+                <h1>Projects</h1>
+                <hr>
+            </div>
+
+            <div class = "col-md-4 portfolio-bucket">
+                <h2>GPU Path Tracer</h2>
+                <a href = "gpupt.html"><img src = "images/gpupt/sample.png"></a>
+            </div>
+            <div class = "col-md-4 portfolio-bucket">
+                <h2>Monte Carlo Path Tracer</h2>
+                <a href = "mcpt.html"><img src = "images/mcpt/stanford.png"></a>
+            </div>
+            <div class = "col-md-4 portfolio-bucket" id = "boids">
+                <h2>GPU Boids</h2>
+                <img src = "boids.gif">
+            </div>
+
+            <div class = "col-md-4 portfolio-bucket">
+                <h2>GPU Path Tracer</h2>
+                <img src = "images/gpupt/sample.png">
+            </div>
+            <div class = "col-md-4 portfolio-bucket">
+                <h2>GPU Path Tracer</h2>
+                <img src = "images/gpupt/sample.png">
+            </div>
+            <div class = "col-md-4 portfolio-bucket">
+                <h2>GPU Path Tracer</h2>
+                <img src = "images/gpupt/sample.png">
+            </div>
+        </div> -->
+
+        </div>
+    </body>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class = "row">
+                <div class = "col-md-12" id = "footer-social">
+                    <ul>
+                        <li><a href="http://github.com/agentlee" target = "blank" class="fa fa-github social" aria-hidden="true"></a></li>
+                        <li><a href="https://www.linkedin.com/in/jonleexyz/" target = "blank" class="fa fa-linkedin social" aria-hidden="true"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
+                        <li><a href="https://500px.com/agentlee" target = "blank" class="fa fa-500px social" aria-hidden="true"></a></li>
+                        <!-- <li><a href="https://instagram.com/agentlee927" target = "blank" class="fa fa-instagram social" id = "lastSocial" aria-hidden="true"></a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

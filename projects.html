@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>Jon Lee | Software & Graphics Engineer</title>
+
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "./styles/main-style.css">
+        <link rel="stylesheet" href = "./styles/portfolio.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="scripts/threejs/three.min.js"></script>
+		<script src="scripts/threejs/OrbitControls.js"></script>
+		<script src="scripts/threejs/OBJLoader.js"></script>
+        <!-- Main Scripts -->
+        <script src="scripts/detectmobile.js"></script>
+		<script src="scripts/main.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        Jon Lee
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="artwork.html">Artwork</a></li>
+                        <li><a href="demoreel.html">Demo Reel</a></li>
+                        <li><a href="resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <!-- <h1>Projects</h1> -->
+            </div>
+            <div class="row gallery" id="first">
+                <div class="col-md-4 bucket">
+                    <h2>Path Tracer</h2>
+                    <img src="./images/thumb-dragons.png" alt="">
+                    <div class="row bucket-link">
+                        <div class="col-md-6 bucket-link-lang">
+                            C++ and Qt
+                        </div>
+                        <div class="col-md-6 bucket-link-repo">
+                            <a href="./projects/mcpt.html">Description</a>
+                        </div>
+                    </div>
+                    <p>
+                        <!-- <br>
+                        Rays originate from light sources, bounce off objects, and
+                        into our eyes. 
+                        Path Tracing is similar to how we see objects, except backwards,
+                        where rays originate from the camera and bounce around the scene.
+                        <br> -->
+
+                        <!-- Simulating all the light rays that bounce around
+                        in the real world could take an unnecessarily long time. 
+                        <br>
+                        Path tracing aims to "speed up" this process
+                        by approximating the light energy after an
+                        arbitrary amount of bounces. -->
+                        
+                        Path Tracing is a rendering technique that renders
+                        3D scenes as realistically as possible. 
+                        Monte Carlo estimation is used to
+                        approximate the light energy from all directions 
+                        for any point in a scene.
+                        <br>
+                        Features 
+                        global illumination,
+                        multiple importance sampling, and
+                        volumetric rendering.
+                    </p>
+                </div>
+                <div class="col-md-4 bucket">
+                    <h2>Heatstroke</h2>
+                    <img src="./images/thumb-heatstroke.png" alt="">
+                    <div class="row bucket-link">
+                        <div class="col-md-5 bucket-link-lang">
+                            WebGL and JavaScript
+                        </div>
+                        <div class="col-md-7 bucket-link-repo">
+                            <a href="https://github.com/rms13/WebGL2-Volumetric-Renderer" target="blank">Github Repo</a> | <a href="./projects/heatstroke.html">Description</a> | <a href="http://www.JonLee.xyz/heatstroke" target="blank">Live Demo</a>
+                        </div>
+                    </div>
+                    <p style="text-align: left; padding-left: 0;">
+                        Heatstroke is a real-time physically-based volumetric renderer
+                        that is based on <a href="" target="blank">EA's Frostbite Engine</a>
+                        presented at Siggraph 2014 by Sebastien Hillaire.
+                        Volumetric rendering is a technique to create fog, smoke,
+                        and other similar effects. 
+                        <br>
+                        Features 
+                        heterogeneous and homogenous media, 
+                        god rays, 
+                        shadow mapping,
+                        and tone mapping.
+                    </p>
+                </div>
+                <div class="col-md-4 bucket" id="bucket-last">
+                    <h2>Stay Woke</h2>
+                    <!-- <img src="./images/thumb-staywoke.png" alt=""> -->
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/kXlt8Wv5Asw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <!-- <iframe width="400" height="250" src="https://www.youtube.com/embed/0YEG7jgNYbs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                    <div class="row bucket-link">
+                        <div class="col-md-6 bucket-link-lang">
+                            Unity and C#
+                        </div>
+                        <div class="col-md-6 bucket-link-repo">
+                            <a href="https://github.com/AgentLee/StayWoke" target="blank">Github Repo</a> | <a href="./projects/staywoke.html">Description</a>
+                        </div>
+                    </div>
+                    <p>
+                        VR experience where the player must escape without
+                        waking the bear and getting attacked by the bear. 
+                        <br>
+                        <br>
+                        Check out our game trailer <a href="https://www.youtube.com/watch?v=0YEG7jgNYbs" target="blank">here</a>!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-4 bucket">
+                    <h2>Hand of God</h2>
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/8zP61F2Iodg?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <!-- <img src="./images/handofgod.gif" height="250px" alt=""> -->
+                    <div class="row bucket-link">
+                        <div class="col-md-6 bucket-link-lang">
+                            Unreal Engine
+                        </div>
+                        <div class="col-md-6 bucket-link-repo">
+                            <a href="https://github.com/Aman-Sachan-asach/Hand_of_God" target="blank">Github Repo</a> | <a href="./projects/handofgod.html">Description</a>
+                        </div>
+                    </div>
+                    <p>
+                        Cooperative VR Endless Runner
+                        <br>
+                        The player runs endlessly on a terrain while battling enemies. 
+                        The god player (VR)
+                        must build floor tiles to bridge the gaps between different terrains
+                        for the player to run on. 
+                        <br>
+                        <br>
+                        Check out our game trailer <a href="https://www.youtube.com/watch?v=UKGqr8qPlbg" target="blank">here</a>!
+                    </p>
+                </div>
+                <div class="col-md-4 bucket">
+                    <h2>GPU Rasterizer</h2>
+                    <img src="./images/thumb-rasterizer.png" alt="">
+                    <div class="row bucket-link">
+                        <div class="col-md-6 bucket-link-lang">
+                            CUDA and C++
+                        </div>
+                        <div class="col-md-6 bucket-link-repo">
+                            <a href="https://github.com/AgentLee/GPU-Rasterizer" target="blank">Github Repo</a> | <a href="./projects/rasterizer.html">Description</a>
+                        </div>
+                    </div>
+                    <p>
+                        Implemented a basic graphics pipeline to render meshes. 
+                        <br>
+                        Features UV Texture Mapping, 
+                        Line, Point, and Triangle Rasterization Primitives, and
+                        Naive Backface Culling.
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <div class="col-md-4 bucket">
+                    <h2>Mesh+Rig Editor</h2>
+                    <img src="./images/mesheditor.gif" height="245px" alt="">
+                    <div class="row bucket-link">
+                        <div class="col-md-6 bucket-link-lang">
+                            Qt, C++, and OpenGL
+                        </div>
+                        <div class="col-md-6 bucket-link-repo">
+                            <a href="./projects/mesheditor.html">Description</a>
+                        </div>
+                    </div>
+                    <p>
+                        Meshes (.obj) can be loaded into a half-edge data structure 
+                        and skeletons (.json) are skinned to the mesh. 
+                        The user can move the joints to pose the mesh as well as 
+                        adjust the joint influence on the mesh.
+                        <br> 
+                        <br> 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container sneakpeek">
+            <div class="row">
+                <div class="col-md-6" id="contact">
+                    <span>Jon Lee ©2018</span>
+                    <br>
+                    <span>JonathanHKLee8@gmail.com</span>
+                </div>
+                <div class="col-md-6 social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+.bucket
+{
+    /* border: 1px solid black; */
+    height: auto;
+    padding: 15px 0px;
+}
+
+.bucket img
+{
+    height: auto;
+}
+
+.gallery h2
+{
+    text-align: left !important;
+    padding-left: 100px;
+    margin: 0;
+}
+
+.gallery h2 small
+{
+    font-size: 14px;
+}
+
+#typography img
+{
+    width: 350px;
+}
+
+#models img
+{
+    width: 350px;
+}
+
+#buzz
+{
+    height: 50px !important;
+}

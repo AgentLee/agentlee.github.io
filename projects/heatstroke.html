@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Jon Lee | Software & Graphics Engineer</title>
+
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "../styles/main-style.css">
+        <link rel="stylesheet" href = "../styles/portfolio.css">
+        <link rel="stylesheet" href = "../styles/heatstroke.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Main Scripts -->
+        <script src="../scripts/detectmobile.js"></script>
+		<script src="../scripts/main.js"></script>
+		<script src="../scripts/heatstroke.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../index.html">
+                        Jon Lee
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="../projects.html" class="active">Projects</a></li>
+                        <li><a href="../artwork.html">Artwork</a></li>
+                        <li><a href="../demoreel.html">Demo Reel</a></li>
+                        <li><a href="../resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <span>
+                    <h1>Heatstroke <small>WebGL 2.0, JavaScript</small><a class="header-repo" href="http://www.JonLee.xzy/heatstroke">Live Demo</a><a class="header-repo" href="https://github.com/rms13/WebGL2-Volumetric-Renderer" target="blank">Repo</a></h1>
+                </span>
+            </div>
+            <div class="row gallery" id="first">
+                <div class="col-md-6 mcpt-img">
+                    <img src="../images/heatstroke/demo.gif" id="mcpt-img" alt="" width="550px" width="300px">
+                    <!-- <img src="http://via.placeholder.com/550x350x" alt=""> -->
+                    <!-- <p>
+                        This text describes the image
+                    </p> -->
+
+                    <div id="mcpt-desc-txt" style="padding-top: 0px;">
+                        <h2>Heatstroke in Action</h2>
+                        <p class="heatstroke-img-desc"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p>
+                        Heatstroke is a real-time physically-based volumetric renderer
+                        that is based on <a href="" target="blank">EA's Frostbite Engine</a>
+                        presented at Siggraph 2014 by Sebastien Hillaire.
+                        <a href="https://github.com/rms13" target="blank">Rishabh Shah</a> and I worked on this as our
+                        final project for CIS565: GPU Programming Fall 2017. 
+                        <br>
+                        <br>
+                        WebGL 2.0 offers many features that weren't available in WebGL 1.0
+                        and were indispensible for our implementation,
+                        including 3D textures and multiple render targets. 
+                        <br>
+                        <br>
+                        We developed a pipeline that was built from a clustered deferred renderer:
+                        <br>
+                        Shadow Mapping, G-Buffer Pass, Volumetric Pass, Final Shading and Tone Mapping.
+                        <br>
+                        (You can check out my deferred renderer <a href="http://jonlee.xyz/ClusteredRenderer">here.</a>)
+                        <br>
+                        <br>
+                        For more details and an in-depth performance analysis, visit our <a href="https://github.com/rms13/WebGL2-Volumetric-Renderer" target="blank">repo</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-12">
+                    <div class="mcpt-img-select">
+                        <div class="col-md-6" id="img-select-first">
+                            <span class="gallery-img-title">Pipeline Images</span>
+                            <a href="#" onclick="changeImage(0); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Passes/sponzashadow.PNG" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(1); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Passes/gbuffer.png" alt="" height="100px"></a> 
+                            <a href="#" onclick="changeImage(2); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Passes/sponzavolume.PNG" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(3); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Passes/beforetone.png" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(4); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Passes/final.PNG" alt="" width="100px"></a>
+                            
+                        </div>
+                        <div-col-md-6 id="img-select-last">
+                            <span class="gallery-img-title">Final Images</span>
+                            <a href="#" onclick="changeImage(9); return false;"><img src="../images/heatstroke/demo.gif" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(5); return false;"><img src="../images/heatstroke/heatstroke.png" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(6); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Godrays/goddrays.png" alt="" width="100px"></a> 
+                            <a href="#" onclick="changeImage(7); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Godrays/heterogenous.PNG" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(8); return false;"><img src="https://raw.githubusercontent.com/rms13/WebGL2-Volumetric-Renderer/master/images/Godrays/heterogenous.PNG" alt="" width="100px"></a>
+                        </div-col-md-6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container sneakpeek">
+            <div class="row">
+                <div class="col-md-6 col-sm-12" id="contact">
+                    <span>Jon Lee ©2018</span>
+                    <br>
+                    <span>JonathanHKLee8@gmail.com</span>
+                </div>
+                <div class="col-md-6 col-sm-12 social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

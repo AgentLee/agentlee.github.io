@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Jon Lee | Software & Graphics Engineer</title>
+
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "../styles/main-style.css">
+        <link rel="stylesheet" href = "../styles/portfolio.css">
+        <link rel="stylesheet" href = "../styles/heatstroke.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=be90c90e-0d00-11e8-b263-0edaf8f81e27"></script>
+        <!-- Main Scripts -->
+        <script src="../scripts/detectmobile.js"></script>
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/rasterizer.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../index.html">
+                        Jon Lee
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="../projects.html" class="active">Projects</a></li>
+                        <li><a href="../artwork.html">Artwork</a></li>
+                        <li><a href="../demoreel.html">Demo Reel</a></li>
+                        <li><a href="../resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <span>
+                    <h1>GPU Rasterizer <small>C++, CUDA</small><a class="header-repo" href="https://github.com/agentlee/GPU-Rasterizer" target="blank">Repo</a></h1>
+                </span>
+            </div>
+            <div class="row gallery" id="first">
+                <div class="col-md-6 mcpt-img">
+                    <img src="../images/rasterizer/milktruck.gif" id="mcpt-img" alt="" width="550px" height="300px">
+                    
+                    <div id="mcpt-desc-txt" style="padding-top: 0px;">
+                        <h2>Cesium Milktruck</h2>
+                        <p class="heatstroke-img-desc"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p>
+                        In this project, I implemented a simple rasterization pipeline to render meshes: 
+                        <br>
+                        Vertex Shading, Primitive Assembly, Rasterization, and Fragment Shading.
+                        <br>
+                        <br>
+                        Visit my <a href="https://github.com/agentlee/GPU-Rasterizer" target="blank">repo</a> for more details and an in-depth performance analysis.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-12">
+                    <div class="mcpt-img-select">
+                        <div class="col-md-6" id="img-select-first" style="border-right: none;">
+                            <a href="#" onclick="changeImage(0); return false;"><img src="../images/rasterizer/milktruck.gif" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(1); return false;"><img src="https://raw.githubusercontent.com/AgentLee/GPU-Rasterizer/master/renders/duck_tri.PNG" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(2); return false;"><img src="https://raw.githubusercontent.com/AgentLee/GPU-Rasterizer/master/renders/duck_diff.PNG" alt="" width="100px"></a> 
+                            <a href="#" onclick="changeImage(3); return false;"><img src="https://raw.githubusercontent.com/AgentLee/GPU-Rasterizer/master/renders/duck_line.PNG" alt="" width="100px"></a>
+                            <a href="#" onclick="changeImage(4); return false;"><img src="https://raw.githubusercontent.com/AgentLee/GPU-Rasterizer/master/renders/duck_point.PNG" alt="" width="100px"></a>
+                        </div>
+                        <div class="col-md-6" id="img-select-last">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row gallery">
+                <div class="col-md-12">
+                    <h2>Texturing</h2>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-6">
+                    <iframe frameborder="0" class="juxtapose" id="juxt" width="400px" height="400px" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=be90c90e-0d00-11e8-b263-0edaf8f81e27"></iframe>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p style="text-align: left;">
+                        In path tracing, each pixel gets sampled an arbitrary amount of times. 
+                        Usually, the more samples, the less noisy the render. The incoherent dots
+                        that appear are called fireflies (variance/noise). Rendering a simple scene, such
+                        as the Cornell Box with two lights at an unnecessary 100x100 samples per pixel,
+                        still led to fireflies and took at least a day to render. 
+                        <br>
+                        <br>
+                        I was able to implement an algorithm that not only removes fireflies, but also
+                        cuts down the render time.
+                        <br>
+                        <br>
+                        Each pixel has its variance calculated and if that variance reaches some threshold,
+                        it gets resampled. Not all pixels get resampled, which allows for a <i>lower</i> sample
+                        rate. But in the worst case, this is an <code>O(n^2)</code> algorithm.                          
+                        <br>
+                        <br>
+                        I go more in depth on how I achieved this in my <a href="http://jonleedev.blogspot.com/2017/06/you-would-not-believe-your-eyesif-ten.html" target="blank">blog</a>
+                    </p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Footer -->
+        <div class="container sneakpeek">
+            <div class="row">
+                <div class="col-md-6 col-sm-12" id="contact">
+                    <span>Jon Lee ©2018</span>
+                    <br>
+                    <span>JonathanHKLee8@gmail.com</span>
+                </div>
+                <div class="col-md-6 col-sm-12 social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

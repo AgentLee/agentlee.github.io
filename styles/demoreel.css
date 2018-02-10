@@ -1,0 +1,26 @@
+html, body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main
+{
+    height: 80%;
+}
+
+.sneakpeek
+{
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.mcpt-img
+{
+}
+
+#img-select-first
+{
+    padding-top: 0;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ray Tracer | Jon Lee</title>
+
+<!-- B O O T S T R A P -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	-->
+
+	<link rel = "stylesheet" type = "text/css" href = "../style/style.css">
+	<!--<link rel = "stylesheet" href = "style/animate.css">-->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900|Source+Sans+Pro:400,900|Lato:400,900|Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Frijole|Reem+Kufi" rel="stylesheet">
+
+	<script src = "scripts/scrollFade.js"></script>
+</head>
+
+<body data-spy = "scroll" data-target = "#my-navbar">
+
+<!-- N A V B A R -->
+<div class = "main-container">
+	<nav class = "navbar navbar-inverse navbar-fixed-top" id = "my-navbar">
+		<div class = "container">
+			<div class = "navbar-header">	
+				<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navbar-collapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<a href = "../index.html" class = "navbar-brand">JON LEE</a>
+			</div> <!-- end navbar header -->
+			<div class = "collapse navbar-collapse" id = "navbar-collapse">
+				<!--<a href = "#" class = "btn btn-info navbar-btn navbar-right">Navbar Button</a>-->
+				<ul class = "nav navbar-nav navbar-right">
+					<!--<li><a href = "about.html">about</a></li>-->
+					<li><a href = "../portfolio.html">portfolio</a></li>
+					<li><a href = "../JonLee_Resume_S17.pdf" target="blank">resume</a></li>
+					<li class = "active-link"><a href = "../blog.html">blog</a></li>
+				</ul>
+			</div> <!-- end navbar collapse -->
+		</div> <!-- end container -->
+	</nav>
+
+<!-- E N D  N A V B A R -->
+
+<div class = "container">
+	<div class = "row">
+		<div class = "col-md-12">
+			<h1 class = "sub-nav">
+				Ray Tracer
+			</h1>
+			<hr class = "page-div">
+		</div>
+	</div>	
+
+<!-- F I N A L  I M A G E S -->
+	<div class = "row">
+		<div class = "col-md-12">
+			<center>
+				<img src = "images/raytracer1/final_images/cornell_box.png" alt = "Cornell Box">
+			</center>
+		</div>
+	</div>
+
+	<!-- FIX CAROUSEL
+	<div class = "row">
+		<div class = "col-md-12">
+			<div id = "my-slider" class = "carousel slide" data-ride = "carousel"> 
+				
+			<ol class = "carousel-indicators" data-slide = "carousel">
+				<li data-target = "#my-slider" data-slide-to = "0" class = "active"></li>
+				<li data-target = "#my-slider" data-slide-to = "1"></li>
+			</ol>
+
+				<div class = "carousel-inner" role = "listbox">
+					<div class = "item active">
+						<img src = "images/raytracer1/final_images/cornell_box.png" alt = "Cornell Box">
+						<div class = "carousel-caption">
+							<h1>Cornell Box</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class = "carousel-inner" role = "listbox">
+					<div class = "item">
+						<img src = "images/raytracer1/final_images/default.png" alt = "Default Scene">
+						<div class = "carousel-caption">
+							<h1>Default Scene</h1>
+						</div>
+					</div>
+				</div>
+
+				<a class = "left carousel-control" href = "#my-slider" role = "button" data-slide = "prev">
+					<span class = "glyphicon glyphicon-chevron-left" aria-hidden = "true"></span>
+					<span class = "sr-only">Prev</span>
+				</a>
+
+				<a class = "right carousel-control" href = "#slider" role = "button" data-slide = "next">
+					<span class = "glyphicon glyphicon-chevron-right" aria-hidden = "true"></span>
+					<span class = "sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	-->
+
+<!-- E N D  F I N A L  I M A G E S -->
+
+
+<!-- W E E K  1 -->
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2><small>1/21/17</small></h2>
+		</div>
+	</div>
+<!--		S E C T I O N 		-->
+	<div class = "row">
+		<div class = "col-md-4">
+			<h3 class = "feature">Fixing the Normals</h3>
+			
+			<br>
+			
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Many of the problems I faced dealt with the normals. I think I had a problem with normals with every single geometry that we were given (square, cube, sphere, triangle).
+			</p>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				I think that the blue color is a result from multiplying the normal from object space to world space. As I later learned, this transformation isn't 1:1 like transforming the ray (scale does not preserve the normal). We want to invert the scale and to do this I just multiplied the normal by the <i>Inverse Transpose Matrix</i>. This will preserve the rotation as well as invert the scale.
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Wrong Normal</h4>
+			<img class = "gif" src = "images/raytracer1/test.png">
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Correct Normal</h4>
+			<img class = "gif" src = "images/raytracer1/square_correct_normals.png">
+		</div>
+	</div>
+
+	<hr>
+
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2><small>1/26/17</small></h2>
+		</div>
+	</div>
+
+	<div class = "row">
+		<h3 class = "feature">More Normals...</h3>
+			
+		<div class = "col-md-4">
+			<br>
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				The sphere is almost there. There's a very small error. <i>Very small.</i> I was stuck on this problem for quite some time (not including the day I didn't work because of a fever).
+			</p>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				To see if a ray intersects with a sphere, use of the quadratic formula is needed. There's a tune that accompanies the quadratic formula that goes by "Pop Goes the Weasel" that I learned way back in probably middle school. I'm not going to lie, I would sing the song in my head to remember this formula. But I didn't do it this time for whatever reason. I forgot to divide everything by 2a.
+			</p>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				Even the first time when the sphere wouldn't show up, it was an issue with the intersection test. I didn't solve my <code>b</code> correctly. I guess the third time will be a charm.
+			</p>
+
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				The lesson learned is: <i>Always check your equation</i>. 
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			<h4 class = "gif-text">Cornell Normals</h4>
+			<img class = "gif" src = "images/raytracer1/cornell_normals.png">
+		</div>
+
+		<div class = "col-md-2">
+			<h4 class = "gif-text">Wrong Normal</h4>
+			<img class = "gif" src = "images/raytracer1/sphere_wrong_normal.png">
+		</div>
+
+		<div class = "col-md-2">
+			<h4 class = "gif-text">Correct Normal</h4>
+			<img class = "gif" src = "images/raytracer1/sphere_right_normals.png">
+		</div>
+
+		<div class = "col-md-2">
+			<h4 class = "gif-text">Cornell Normals (wrong)</h4>
+			<img class = "gif" src = "images/raytracer1/cornell_wrong_normals.png">
+		</div>
+	</div>	
+<!-- E N D  S E C T I O N -->		
+
+<!--		S E C T I O N 		-->
+	<div class = "row">
+		<div class = "col-md-12">
+			<h2><small>1/20/17</small></h2>
+		</div>
+	
+		<div class = "col-md-8">
+			<h3 class = "feature">Section</h3>
+			
+			<br>
+			
+			<p class = "" style="font-size:18px; padding-left: 2.75em;">
+				<Lorem>
+				ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</Lorem>
+			</p>
+		</div>
+
+		<div class = "col-md-4">
+			
+		</div>
+	</div>	
+<!-- E N D  S E C T I O N -->		
+
+
+	
+
+
+
+<!-- D I V I D E R -->
+	<div class = "row">
+		<div class = "col-md-12">
+			<hr>
+		</div>
+	</div>
+
+
+<!-- BREATHING ROOM -->
+	<br>
+<!-- E N D  B R E A T H I N G  R O O M -->
+
+<!-- F O O T E R -->
+	<footer class = "footer">
+		<div class = "container">	
+			<div class = "col-md-12" style = "text-align:right;">
+				<nav class = "navbar">
+					<div class = "container-fluid">
+						<div class = "navbar-header">
+							<span style = "text-align:left;">Jon Lee</span>
+							<br>
+							jonathanhklee8@gmail.com
+						</div>
+							<!--<li><img src = "images/git.png" style = "width: 10%;"></li>
+							<li><img src = "images/git.png" style = "width: 10%;"></li>
+							<li><img src = "images/git.png" style = "width: 10%;"></li>
+							<li><img src = "images/git.png" style = "width: 10%;"></li>-->
+						<a href = "https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank"><img src = "../images/youtube.png" style = "width: 5%;"></a>
+						<a href = "https://www.instagram.com/agentlee927/" target = "blank"><img src = "../images/insta.png" style = "width: 5%;"></a>
+						<a href = "https://github.com/AgentLee" target = "blank"><img src = "../images/git.png" style = "width: 5%;"></a>
+						<a href = "https://www.linkedin.com/in/jonathan-lee-821777b0" target = "blank"><img src = "../images/linkedin.png" style = "width: 5%;"></a>
+					</div>
+				</nav>
+			</div>
+	</footer>
+<!-- E N D  F O O T E R -->
+
+
+</div> <!-- end main container -->
+
+<!-- S C R I P T S -->
+	<script src = "https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--<script src = "scripts/scroll.js"></script>-->
+	<!--<script src = "scripts/scrollFade.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+@media(min-width: 1500px)
+{
+    #opening
+    {
+        padding-top: 450px;
+        margin-left: -300px;
+    }
+}
+
+@media(min-width: 651px) and (max-width: 1499px)
+{
+    .navbar
+    {
+        padding-top: 25px;
+        padding-right: 50px;
+        height: 100px;
+        background-color: aqua;
+    }
+
+    .navbar-brand
+    {
+        padding-left: 50px;
+        font-size: 50px;
+    }
+
+    .navbar-brand small
+    {
+        font-size: 15px;
+        padding-top: 100px;
+    }
+
+    .bucket
+    {
+        text-align: center;
+    }
+
+    #opening
+    {
+        padding-top: 300px;
+    }
+}
+
+

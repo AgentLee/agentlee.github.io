@@ -1,0 +1,120 @@
+body
+{
+    padding-bottom: 0;
+    padding-top: 65px;
+    /* height: 100vh; */
+}
+
+@media(min-width: 1440px)
+{
+    body
+    {
+        overflow-y: hidden;        
+    }
+}
+
+/* #portfolio
+{
+    height: 100vh !important;
+    padding-bottom: 0px !important;
+} */
+
+#portfolio
+{
+    width: 100%;
+    height: 100%;
+    background-color: #40565E;
+    padding-right: 145px;
+    padding-left: 145px;
+    padding-bottom: 100px;
+
+    text-align: center;
+}
+
+@media(max-width: 1199px)
+{
+    #portfolio
+    {
+        /* Need this to prevent the buckets from going past the div */
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@media(max-width: 800px) 
+{
+    #portfolio
+    {
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 100px !important;
+    }
+}
+
+.portfolio-bucket
+{
+    /* padding-top: 30px; */
+    /* border-style: solid;
+    border-color: black;
+    border-width: 5px; */
+    text-align: center;
+}
+
+.portfolio-bucket img
+{
+    width: 100%;
+    /* height: 50px; */
+    /* height: 40px;
+    background-color: green;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px; */
+}
+
+.portfolio-bucket h2
+{
+    font-size: 125%;
+}
+
+#boids img
+{
+    /* padding: 115px 0px; */
+}
+
+.portfolio-gallery
+{
+    /* height: 100%; */
+}
+
+.portfolio-img img
+{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+@media(max-width: 1500px)
+{
+    .portfolio-gallery
+    {
+        /* height: 50%; */
+    }
+}
+
+/* @media(max-width: 1000px)
+{
+    .portfolio-gallery
+    {
+        height: 260%;
+    }
+
+    .desc
+    {
+        padding-bottom: 50px;
+    }
+} */
+
+#reel
+{
+    /* padding-top: 50px; */
+}

@@ -2,85 +2,70 @@
     <head>
         <title>Jon Lee | Software & Graphics Engineer</title>
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- CSS -->
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        
-        <!-- JQuery -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "./styles/main-style.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap Script -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
-        <!-- Custom -->
-        <script src = "scripts/script.js"></script>
-        <script src = "https://use.fontawesome.com/89fd9e4cbb.js"></script>
-        
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway|Varela+Round" rel="stylesheet">
+        <script src="scripts/threejs/three.min.js"></script>
+		<script src="scripts/threejs/OrbitControls.js"></script>
+		<script src="scripts/threejs/OBJLoader.js"></script>
+        <!-- Main Scripts -->
+        <script src="scripts/detectmobile.js"></script>
+		<script src="scripts/main.js"></script>
     </head>
 
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="index.html">Jon Lee</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html" id = "projectlink">Projects</a></li>
-                        <li><a href="artwork.html">Artwork</a></li>
-                        <!-- <li><a href="https://vimeo.com/189623959" target = "blank">Demo Reel</a></li> -->
-                        <li><a href="demoreel">Demo Reel</a></li>
-                        <li><a href="resume.pdf" target = "blank">Resume</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class = "container-fluid content" id = "landing">
-            <div class = "row">
-                <div class = "col-md-4">
-                </div>
-                <div class = "col-md-4" id = "title">
-                    <h1 id = "jonlee">Jon Lee</h1>
-                    <h2 id = "eng"><small>Software & Graphics Engineer</small></h2>
-                </div>
-                <div class = "col-md-4">
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class = "container-fluid content" id = "about">
-            <div class = "row">
-                <div class = "col-lg-1">
-                    <img style = "padding-top:100px;" height="50%"src = "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13876637_10210378136156368_7687151933148806534_n.jpg?oh=d3f79d7b6d90b41a380ee3859fce26c4&oe=5A7F86F1">                        
+    <body onload="main()">
+        <div class="container main">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 main-inner">
+                    <div class="intro">
+                        <h3 id="helloworld">hello world!</h3>
+                        <h1 id="im">I'M</h1>
+                        <h1 id="jonlee">JON LEE</h1>
+                        <h3 id="swe">Software & Graphics Engineer</h3>
+                    </div>
+                    
                 </div>
                 
-            </div>
-        </div> -->
-    </body>
 
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class = "row">
-                <div class = "col-md-12" id = "footer-social">
-                    <ul>
-                        <li><a href="http://github.com/agentlee" target = "blank" class="fa fa-github social" aria-hidden="true"></a></li>
-                        <li><a href="https://www.linkedin.com/in/jonleexyz/" target = "blank" class="fa fa-linkedin social" aria-hidden="true"></a></li>
-                        <li><a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" target = "blank" class="fa fa-youtube-play social" aria-hidden="true"></a></li>
-                        <li><a href="https://500px.com/agentlee" target = "blank" class="fa fa-500px social" aria-hidden="true"></a></li>
-                        <!-- <li><a href="https://instagram.com/agentlee927" target = "blank" class="fa fa-instagram social" id = "lastSocial" aria-hidden="true"></a></li> -->
+                <div class="col-lg-6 col-sm-12 obj" id="canvas"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 main-nav">
+                    <ul class="main-nav">
+                        <li><a href="projects.html">portfolio</a> /</li>
+                        <li><a href="artwork.html">artwork</a> /</li>
+                        <li><a href="demoreel.html">demo reel</a> /</li>    
+                        <li><a href="resume.pdf" target="blank">resume</a></li>    
                     </ul>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Footer -->
+        <div class="container sneakpeek">
+            <div class="row">
+                <div class="col-md-6" id="contact">
+                    <span>Jon Lee ©2018</span>
+                    <br>
+                    <span>JonathanHKLee8@gmail.com</span>
+                </div>
+                <div class="col-md-6 social">
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-500px"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-youtube"></i></a>
+                    <a href="#" class="btn btn-default btn-circle"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
