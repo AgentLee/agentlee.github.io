@@ -160,31 +160,31 @@ ul.main-nav li
 
 #email
 {
-    color: #333333;
+    color: #333333 !important;
     text-decoration: underline;
 }
 
 #px500:hover
 {
-    background-color: #0095E9;
+    background-color: #0095E9 !important;
     color: white;
 }
 
 #linkedin:hover
 {
-    background-color: #007bb5;
+    background-color: #007bb5 !important;
     color: white;
 }
 
 #youtube:hover
 {
-    background-color: #bb0000;
+    background-color: #bb0000 !important;
     color: white;
 }
 
 #vimeo:hover
 {
-    background-color: #45bbff;
+    background-color: #45bbff !important;
     color:white;
 }
 
