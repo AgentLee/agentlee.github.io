@@ -1,6 +1,8 @@
 <html>
     <head>
-        <title>Jon Lee | Mesh Editor</title>
+        <title>Jon Lee | Heatstroke Demo</title>
+
+        <meta http-equiv="refresh" content="0; URL='https://rms13.github.io/WebGL2-Volumetric-Renderer'" />
 
         <!-- CSS -->
         <!-- CDN Libraries -->
@@ -17,8 +19,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- Main Scripts -->
-        <script src="scripts/detectmobile.js"></script>
-		<script src="scripts/main.js"></script>
+        <script src="../scripts/detectmobile.js"></script>
+		<script src="../scripts/main.js"></script>
+		<script src="../scripts/heatstroke.js"></script>
     </head>
 
     <body>
@@ -46,29 +49,7 @@
         </nav>
         
         <div class="container main">
-            <div class="col-md-12 header">
-                <span>
-                    <h1>Mesh+Rig Editor <small>C++, OpenGL, Qt</small></h1>
-                </span>
-            </div>
-            <div class="row gallery" id="first">
-                <div class="col-md-6 mcpt-img">
-                    <img src="../images/mesheditor.gif" alt="">
-                </div>
-                <div class="col-md-6 mcpt-desc">
-                    <p>
-                        OBJ files are parsed, loaded into a half-edge mesh data structure,
-                        and are drawn onto the screen with OpenGL. 
-                        JSON files contain skeleton data which are parsed and 
-                        drawn onto the screen with OpenGL. 
-                        When the user presses "Skin Rig", the skeleton gets skinned to the mesh.
-                        This means that when the user manipulates a joint on the skeleton, 
-                        the parts of the mesh that are bound to the joint move as well.
-                        I also implemented a basic heat map to allow the user to adjust the
-                        influence each joint has on the mesh.
-                    </p>
-                </div>
-            </div>
+           
         </div>
 
         <!-- Footer -->
