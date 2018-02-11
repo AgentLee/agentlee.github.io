@@ -7,6 +7,63 @@ html, body
     overflow-x: hidden;
 }
 
+.main2
+{
+    height: 100%;
+    background-color: #d6d6d6;
+    width: 100%;
+    background-image: url('../images/stanford.png');
+    /* background-position: right; */
+    /* background-position-x: -45px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main2 h1
+{
+    margin-top: 100px;
+}
+
+
+#foot
+{
+    text-align: left;
+    padding-top: 50px;
+    background-color: grey;
+    height: 20%;
+}
+
+#foot img
+{
+    margin-top: -25px;
+}
+#foot p
+{
+    padding-left: 100px;
+    background-color: blue;
+    height: 175px;
+    
+}
+
+#stuff
+{
+    background-color: green;
+    height: 60px;
+    margin-top: 100px;
+}
+
+#foot img
+{
+    padding: 15px 0px;
+}
+
+.sneakpeek2
+{
+    height: 25%;
+    background-color: grey;
+    width: 100%;
+}
+
 /* 
  *  Navigation
  */
@@ -78,7 +135,8 @@ html, body
 
 .intro
 {
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-top: 25%;
     margin-left: 70px;
     height: 100%;
 }
@@ -120,6 +178,8 @@ ul.main-nav li
 #swe
 {
     margin-top: -20px;
+    color: white;
+    opacity: .45;
 }
 
 .sneakpeek
@@ -128,6 +188,7 @@ ul.main-nav li
     height: 10%;
     background-color: #939DA3;
     text-align: center;
+    background-color: transparent;
 }
 
 .social
@@ -169,7 +230,7 @@ ul.main-nav li
     text-decoration: underline;
 }
 
-#px500:hover
+/* #px500:hover
 {
     background-color: #0095E9 !important;
     color: white;
@@ -191,7 +252,7 @@ ul.main-nav li
 {
     background-color: #45bbff !important;
     color:white;
-}
+} */
 
 /* Mobile */
 @media(max-width: 700px)
