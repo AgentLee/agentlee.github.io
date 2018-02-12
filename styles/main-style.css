@@ -255,7 +255,7 @@ ul.main-nav li
 } */
 
 /* Mobile */
-@media(max-width: 700px)
+/* @media(max-width: 700px)
 {
     .navbar
     {
@@ -301,4 +301,4 @@ ul.main-nav li
     {
         background-image: none;
     }
-}
+} */
