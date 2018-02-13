@@ -1,0 +1,42 @@
+.main
+{
+    min-height: 100%;
+}
+
+.gallery-img-title
+{
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+#img-select-first
+{
+    border-right: 1px solid black;
+}
+
+.gallery-desc
+{
+    text-align: left;
+}
+
+.gallery-img-desc
+{
+    padding-top: 0px; 
+}
+
+.gallery-img-desc p
+{
+    text-align: left;
+    padding-top: 0px;
+    height: 100px;
+}
+
+#first
+{
+    padding-bottom: 0;
+}
+
+.mcpt-desc p
+{
+    text-align: left;
+}

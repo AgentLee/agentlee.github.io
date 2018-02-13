@@ -1,0 +1,174 @@
+html, body
+{
+    height: auto;
+}
+
+/* 
+ *  Main
+ */
+.main
+{
+    height: auto;
+    margin-top: 75px;
+    background-color: #d6d6d6;
+}
+
+.main-inner
+{  
+    margin-top: 150px; 
+}
+
+.header h1
+{
+    margin-left: 75px;
+}
+
+.header-repo 
+{
+    padding-right: 100px;
+    margin-top: 10px;
+    margin-left: 0;
+    float: right;
+    font-size: 25px;
+}
+
+/* 
+ * Gallery
+ */
+ .gallery
+ {
+     padding-bottom: 50px;
+     text-align: center;
+ }
+
+ .gallery#first
+{
+    padding-top: 25px;
+}
+
+.bucket
+{
+    height: 500px;
+}
+
+.bucket h2
+{
+    font-size: 25px;
+}
+
+.bucket img, iframe
+{
+    width: 450px;
+    height: 280px;
+}
+
+.bucket#art-bucket
+{
+    padding-left: 100px;
+    text-align: left;
+    height: 350px;
+    padding-bottom: 0px;
+}
+
+#middle
+{
+    padding: 0;
+    margin-top: -40px;
+}
+
+#last
+{
+    margin-top: -40px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+
+.bucket#art-bucket iframe
+{
+    padding-right: 25px;
+}
+
+.bucket p
+{
+    padding-top: 10px;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.bucket-last
+{
+    border-right: none !important;
+}
+
+.bucket-link
+{
+    padding-top: 10px;
+}
+
+.bucket-link-lang
+{
+    text-align: left;
+}
+
+.bucket-link-repo
+{
+    text-align: right;
+}
+
+.mcpt-desc
+{
+    padding-left: 0;
+    padding-right: 100px;
+}
+
+.mcpt-desc p
+{
+    text-align: left;
+    min-height:200px;
+}
+
+.mcpt-img-select
+{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.feature
+{
+    font-weight: bold !important;
+}
+
+/*
+ * Footer
+ */
+.social
+{
+    margin-top: 15px;
+    text-align: right;
+}
+
+#contact
+{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.btn-circle 
+{
+    width: 50;
+    height: 50px;
+    text-align: center;
+    padding: 12.5px 0;
+    font-size: 25px;
+    line-height: 1.42;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: #7C8489;
+    color: white;
+}
+
+.btn:hover
+{
+    background-color: #DDDDC7;
+    border-color: transparent;
+}
