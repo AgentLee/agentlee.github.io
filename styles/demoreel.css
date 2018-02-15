@@ -10,6 +10,11 @@ html, body
     height: 80%;
 }
 
+.footer
+{
+    /* height: 30%; */
+}
+
 .sneakpeek
 {
     padding-top: 0;
