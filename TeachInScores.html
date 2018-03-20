@@ -24,20 +24,99 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 style="text-align:left">Drone InvadARs Leaderboard</h2>
-                    <table style="width:50%;" id = "playerData">
-                        <tr>
-                            <th><h3>Player</h3></th>
-                            <th><h3>Score</h3></th>
-                        </tr>
-                    </table>
-
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                    <script src="teachin.js"></script>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="./">
+                        Jon Lee <small style="font-size: 15px; opacity: .5;">Software & Graphics Engineer</small>
+                    </a>
                 </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="projects" class="active">Projects</a></li>
+                        <li><a href="artwork">Artwork</a></li>
+                        <li><a href="demoreel">Demo Reel</a></li>
+                        <li><a href="resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="row gallery" id="first">
+                <div class="col-md-12">
+                    <h1>Penn TeachIn ScavengAR Hunt Instructions</h1>
+                    <p>
+                        1. Press "Begin Hunt" in app.
+                        <br>
+                        2. Open the image in numerical order to begin the scavenger hunt.
+                        <br>
+                        3. Aim your camera at the image to begin the hunt!
+                        <br>
+                        4. Pull up the <a href="images/teachin/shield.jpg" target= "blank">Penn Shield</a> in Drone InvadARs to play.
+                        <br>
+                        5. Visit the <a href="./TeachInScores.html">High Scores</a> page.
+                    </p>                    
+                </div>
+                <div class="col-md-4">
+                    <h3>Target 1</h3>
+                    <a href = "./images/teachin/1.jpeg" target = "blank"><img src="./images/teachin/1.jpeg" alt="" height="50%"></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Target 2</h3>
+                    <a href = "./images/teachin/2.jpg" target = "blank"><img src="./images/teachin/2.jpg" alt="" height="50%"></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Target 3</h3>
+                    <a href = "./images/teachin/3.jpg" target = "blank"><img src="./images/teachin/3.jpg" alt="" width="100%"></a>
+                </div>
+            </div>
+            <div class="row gallery">
+                <div class="col-md-4">
+                    <h3>Target 4</h3>
+                    <a href = "./images/teachin/4.jpg" target = "blank"><img src="./images/teachin/4.jpg" alt="" height="50%"></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Target 5</h3>
+                    <a href = "./images/teachin/5.jpg" target = "blank"><img src="./images/teachin/5.jpg" alt="" width="100%%"></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Target 6</h3>
+                    <a href = "./images/teachin/6.jpg" target = "blank"><img src="./images/teachin/6.jpg" alt="" height="50%"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container footer">
+            <div class="row" style="padding: 2% 0;">
+                <center>
+                    <div class="col-md-3">
+                        <img src="images/profile.png" alt="" align="right" id="profile">
+                    </div>
+                    <div class="col-md-3" style="border-right: 2px black solid;">
+                        <h3 style="margin: 0px;text-align: left;">About</h3>
+                        <p style="text-align: left; padding-top:5%;">
+                            My name is Jonathan Lee and I'm a graduate student
+                            at the University of Pennyslvania studying 
+                            Computer Graphics and Game Technology. 
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="text-align: left; padding-left:1%;">
+                        <h3 style="margin: 0px; padding-bottom: 2%;">Connect</h3>
+                        <a href="mailto:jonathanhklee8@gmail.com" class="btn btn-default btn-circle" id="github"><i class="fa fa-envelope"></i></a>
+                        <a href="https://github.com/agentlee" class="btn btn-default btn-circle" id="github"><i class="fa fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jonleexyz" class="btn btn-default btn-circle" id="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://500px.com/agentlee" class="btn btn-default btn-circle" id="px500"><i class="fa fa-500px"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" class="btn btn-default btn-circle" id="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="https://vimeo.com/user22537960" class="btn btn-default btn-circle" id="vimeo"><i class="fa fa-vimeo"></i></a>
+                    </div>
+                </center>
             </div>
         </div>
     </body>
