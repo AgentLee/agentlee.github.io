@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Jon Lee | ScavengAR Hunt</title>
+
+        <!-- CSS -->
+        <!-- CDN Libraries -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Chivo" rel="stylesheet">
+        <!-- Main Style -->
+        <link rel="stylesheet" href = "../styles/style.css">
+        <link rel="stylesheet" href = "../styles/portfolio.css">
+        <link rel="stylesheet" href = "../styles/heatstroke.css">
+
+        <!-- Scripts -->
+        <!-- JS Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Main Scripts -->
+        <script src="../scripts/detectmobile.js"></script>
+		<script src="../scripts/main.js"></script>
+		<script src="../scripts/teachin.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="../">
+                        Jon Lee <small style="font-size: 15px; opacity: .5;">Software & Graphics Engineer</small>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right" id = "dropdownNav">
+                        <li><a href="../projects" class="active">Projects</a></li>
+                        <li><a href="../artwork">Artwork</a></li>
+                        <li><a href="../demoreel">Demo Reel</a></li>
+                        <li><a href="../resume.pdf" target = "blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container main">
+            <div class="col-md-12 header">
+                <span>
+                    <h1>ScavengAR Hunt <small>C#, Unity</small>
+                        <a class="header-repo" href="https://github.com/rms13/WebGL2-Volumetric-Renderer" target="blank">Repo</a>
+                        <a class="header-repo" href="https://play.google.com/store/apps/details?id=com.JonathanLee.DRONE" target="blank">Google Play Store</a>
+                        <a class="header-repo" href="https://itunes.apple.com/us/app/penn-scavengar-hunt/id1357409012?ls=1&mt=8" target="blank">App Store</a></h1>
+                </span>
+            </div>
+            <div class="row gallery" id="first">
+                <div class="col-md-6 mcpt-img">
+                    <!-- <div class="col-md-6"> -->
+                        <center><img id="mcpt-img" src="https://raw.githubusercontent.com/AgentLee/ScavengAR-Hunt/master/Images/icon.png" alt="" height="350px"></center>
+                    <!-- </div> -->
+
+                    <!-- <div class="col-md-6"> -->
+                        <!-- <center><img id="mcpt-img2" src="https://raw.githubusercontent.com/AgentLee/ScavengAR-Hunt/master/Images/icon.png" alt="" width="100%"></center> -->
+                    <!-- </div> -->
+
+                    <div id="mcpt-desc-txt" style="padding-top: 0px;">
+                        <p class="heatstroke-img-desc"></p>
+                    </div>
+                </div>
+                <div class="col-md-6 mcpt-desc">
+                    <p>
+                        This application was featured for the AI scavenger hunt event during
+                        Penn's Teach-In on March 20, 2018. 
+                        <br>
+                        <br>
+                        This application is an augmented scavenger hunt that introduces participants to
+                        the wonders of aritificial intelligence. Participants would explore Penn's
+                        School of Engineering complex to see what the different labs Penn has to offer.
+                        Each location would have an image target and would provide a major milestone in
+                        artificial intelligence. 
+                        <br>
+                        <br>
+                        There are two parts to this game, the scavenger hunt and Drone InvadARs, 
+                        an augmented reality spin on Space Invaders. 
+                        As players go through the hunt, they get to collect items that are used
+                        for Drone InvadARs. Players can play this at any time, as long as they have a <a href="../PennShield">Penn Shield</a> as their target.
+                        <br>
+                        <br>
+                        Unfortunately, I wasn't able to explore AR Kit and AR Core (native AR APIs for iOS and Android) due to time constraints.
+                        Instead, I utilized Unity and Vuforia which allowed me to create builds for both iOS and Android from a single project. 
+                        To keep things simple for registration and scorekeeping, I used <a href="dreamlo.com" target="blank">dreamlo</a>.        
+                        <br>
+                        <br>
+                        Takeaway: Apple's app review process is intense. My app was rejected 4 times and was approved and on the App Store the <i><b>morning of the event</b></i>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row gallery">
+                <div class="col-md-6">
+                    <div class="mcpt-img-select">
+                        <div class="col-md-12" id="img-select-first">
+                            <span class="gallery-img-title">Image Targets</span>
+                            <!-- <a href="#" onclick="changeImage(0); return false;"><img src="../images/teachin/1.jpeg" alt="" height="100px"></a> -->
+                            <a href="#" onclick="changeImage(1); return false;"><img src="../images/teachin/2.jpg" alt="" height="100px"></a>
+                            <a href="#" onclick="changeImage(2); return false;"><img src="../images/teachin/3.jpg" alt="" height="100px"></a>
+                            <a href="#" onclick="changeImage(3); return false;"><img src="../images/teachin/4.jpg" alt="" height="100px"></a>
+                            <a href="#" onclick="changeImage(4); return false;"><img src="../images/teachin/5.jpg" alt="" height="100px"></a>
+                            <a href="#" onclick="changeImage(5); return false;"><img src="../images/teachin/6.jpg" alt="" height="100px"></a>
+                        </div>
+                    </div>
+                </div>
+                <div-col-md-6 id="img-select-last">
+                    <span class="gallery-img-title">Gameplay Images</span>
+                    <a href="#" onclick="changeImage(11); return false;"><img src="https://raw.githubusercontent.com/AgentLee/ScavengAR-Hunt/master/Images/icon.png" alt="" width="100px"></a>
+                    <a href="#" onclick="changeImage(6); return false;"><img src="https://raw.githubusercontent.com/AgentLee/ScavengAR-Hunt/master/Images/Gameplay/ENIAC.PNG" alt="" width="100px"></a>
+                    <a href="#" onclick="changeImage(7); return false;"><img src="https://raw.githubusercontent.com/AgentLee/ScavengAR-Hunt/master/Images/Gameplay/GRASP.PNG" alt="" width="100px"></a>
+                    <a href="#" onclick="changeImage(8); return false;"><img src="https://github.com/AgentLee/ScavengAR-Hunt/blob/master/Images/Gameplay/SIGLAB.PNG?raw=true" alt="" width="100px"></a> 
+                    <a href="#" onclick="changeImage(9); return false;"><img src="https://github.com/AgentLee/ScavengAR-Hunt/blob/master/Images/Gameplay/Sophia.PNG?raw=true" alt="" width="100px"></a>
+                    <a href="#" onclick="changeImage(10); return false;"><img src="https://github.com/AgentLee/ScavengAR-Hunt/blob/master/Images/Gameplay/droneinvaders.PNG?raw=true" alt="" width="100px"></a>
+                </div-col-md-6>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="container footer">
+            <div class="row" style="padding: 2% 0;">
+                <center>
+                    <div class="col-md-3">
+                        <img src="../images/profile.png" alt="" align="right" id="profile">
+                    </div>
+                    <div class="col-md-3" style="border-right: 2px black solid;">
+                        <h3 style="margin: 0px;text-align: left;">About</h3>
+                        <p style="text-align: left; padding-top:5%;">
+                            My name is Jonathan Lee and I'm a graduate student
+                            at the University of Pennyslvania studying 
+                            Computer Graphics and Game Technology. 
+                        </p>
+                    </div>
+                    <div class="col-md-6" style="text-align: left; padding-left:1%;">
+                        <h3 style="margin: 0px; padding-bottom: 2%;">Connect</h3>
+                        <a href="mailto:jonathanhklee8@gmail.com" class="btn btn-default btn-circle" id="github"><i class="fa fa-envelope"></i></a>
+                        <a href="https://github.com/agentlee" class="btn btn-default btn-circle" id="github"><i class="fa fa-github"></i></a>
+                        <a href="https://linkedin.com/in/jonleexyz" class="btn btn-default btn-circle" id="linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://500px.com/agentlee" class="btn btn-default btn-circle" id="px500"><i class="fa fa-500px"></i></a>
+                        <a href="https://www.youtube.com/channel/UC4BXi9vrZ-065DkYPABNhyw" class="btn btn-default btn-circle" id="youtube"><i class="fa fa-youtube"></i></a>
+                        <a href="https://vimeo.com/user22537960" class="btn btn-default btn-circle" id="vimeo"><i class="fa fa-vimeo"></i></a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </body>
+</html>

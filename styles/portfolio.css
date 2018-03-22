@@ -62,6 +62,12 @@ html, body
     height: 280px;
 }
 
+#appIcon
+{
+    height: 280px;
+    width: auto;
+}
+
 .bucket#art-bucket
 {
     padding-left: 100px;
